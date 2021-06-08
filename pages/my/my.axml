@@ -1,0 +1,59 @@
+<view>
+  <view class="user-profile">
+    <image
+      class="user-profile__avatar"
+      src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*O-qpSpu9vgQAAAAAAAAAAABkARQnAQ"
+      mode="scaleToFill"
+    />
+    <view class="user-profile__right">
+      <view class="user-profile__header">
+        <view class="user-profile__name">
+          {{currentUser.name}}
+        </view>
+        <view class="user-profile__member">
+          {{currentUser.member}}
+        </view>
+      </view>
+      <view class="user-profile__credit">
+        积分：{{currentUser.credit}}
+      </view>
+    </view>
+  </view>
+  <scroll-view
+    class="entries"
+    scroll-x="{{true}}"
+    scroll-y="{{false}}"
+  >
+    <view
+      a:for="{{entries}}"
+      class="entries__item"
+    >
+      <image
+        class="entries__cover"
+        src="{{item.cover}}"
+        mode="scaleToFill"
+      />
+      <view class="entries__title">{{item.title}}</view>
+    </view>
+  </scroll-view>
+  <view class="divider --middle" />
+  <view class="member-center-nav">进入会员中心
+    <image
+      src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*kYnQR4upMIcAAAAAAAAAAABkARQnAQ"
+      mode="scaleToFill"
+    />
+  </view>
+  <block a:for="{{navList}}">
+    <list-item
+      thumb="{{item.thumb}}"
+      className="list-item"
+      arrow="{{true}}"
+      onClick="onListClick"
+      data-index="{{index}}"
+      key="items-{{index}}"
+      last="{{index === (items.length - 1)}}"
+    >
+      {{item.name}}
+    </list-item>
+  </block>
+</view>

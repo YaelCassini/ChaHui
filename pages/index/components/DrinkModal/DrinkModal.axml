@@ -1,0 +1,12 @@
+<view>
+  <modal show="{{ show }}" onClose="onClose">
+    <view class="drink-modal">
+      <view class="drink-modal__header">
+        <image mode="widthFix" src="/images/drink/drink_2x.png" class="drink-modal__image" />
+        <view class="drink-modal__title">{{ title }}</view>
+        <view class="drink-modal__description">{{ description }}</view>
+      </view>
+      <article nodes="{{ content }}"></article>
+    </view>
+  </modal>
+</view>

@@ -1,0 +1,4 @@
+.cover-background {
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "title": "/components/Title/Title",
+    "search": "/components/Search/Search",
+    "category-nav": "/components/category-nav/category-nav"
+  }
+}

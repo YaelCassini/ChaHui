@@ -1,0 +1,31 @@
+<import-sjs
+  name="EmptyType"
+  from="./empty-type.sjs"
+/>
+<view
+  a:if="{{EmptyType[type]}}"
+  class="empty {{className}}"
+>
+  <image
+    class="empty__cover"
+    src="{{EmptyType[type].cover}}"
+    mode="scaleToFill"
+  />
+  <view class="empty__title">
+    {{EmptyType[type].title}}
+  </view>
+  <view
+    a:if="{{EmptyType[type].description}}"
+    class="empty__description"
+  >
+    {{EmptyType[type].description}}
+  </view>
+  <navigator
+    a:if="{{EmptyType[type].actionName}}"
+    class="empty__nav"
+    url="{{EmptyType[type].action}}"
+    open-type="{{EmptyType[type].openType}}"
+  >
+    {{EmptyType[type].actionName}}
+  </navigator>
+</view>

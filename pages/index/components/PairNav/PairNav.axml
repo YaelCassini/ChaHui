@@ -1,0 +1,22 @@
+<view class="pair-nav-container">
+  <navigator url="/pages/store-show/store-show" class="pair-nav-col">
+    <view class="pair-nav pair-nav__left">
+      <view class="pair-nav__title">
+        门店展示
+      </view>
+      <view class="pair-nav__description">
+        5.0空间升级
+      </view>
+    </view>
+  </navigator>
+  <navigator url="/pages/store-show/store-show" class="pair-nav-col">
+    <view class="pair-nav pair-nav__right">
+      <view class="pair-nav__title">
+        加盟合作
+      </view>
+      <view class="pair-nav__description">
+        快速盈利不犹豫
+      </view>
+    </view>
+  </navigator>
+</view>

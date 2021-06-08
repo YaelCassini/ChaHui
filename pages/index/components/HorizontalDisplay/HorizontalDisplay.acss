@@ -1,0 +1,63 @@
+.card-no-shadow {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.card-shadow {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+.cover-background {
+  background-position: center;
+  background-size: cover;
+}
+.display {
+  display: flex;
+  box-sizing: content-box;
+  margin-top: -32rpx;
+  padding: 32rpx;
+}
+.display .display-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  height: 160rpx;
+  margin-right: 32rpx;
+}
+.display .display-item__title {
+  padding-bottom: 8rpx;
+  font-size: 28rpx;
+}
+.display .display-item__description {
+  font-size: 20rpx;
+}
+.display .display-item-gutter {
+  flex-shrink: 0;
+  width: 32rpx;
+}
+.display .display-background {
+  background-position: center;
+  background-size: cover;
+  justify-content: flex-end;
+  width: 300rpx;
+  padding: 32rpx;
+  text-align: right;
+}
+.display .display-more {
+  justify-content: center;
+  width: 160rpx;
+  font-size: 24rpx;
+}
+.display .display-more__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.display .display-more image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 8rpx;
+}

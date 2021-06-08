@@ -1,0 +1,27 @@
+<view class="category">
+  <title class="category-title">宝贝分类</title>
+  <view
+    a:for="{{categories}}"
+    class="category-item"
+  >
+    <view class="category-header">
+      <view class="category-header__title">
+        {{item.name}}
+      </view>
+      <image
+        class="category-header__nav"
+        src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*yeGUSJlo0gsAAAAAAAAAAABkARQnAQ"
+        mode="scaleToFill"
+      />
+    </view>
+    <view class="category-body">
+      <view
+        a:for="{{item.children}}"
+        a:for-item="categoryItem"
+        class="category-body__item"
+      >
+        <view>{{categoryItem}}</view>
+      </view>
+    </view>
+  </view>
+</view>

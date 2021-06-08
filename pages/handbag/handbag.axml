@@ -1,0 +1,43 @@
+<import-sjs
+  name="EmptyType"
+  from="../../components/Empty/empty-type.sjs"
+/>
+<commodity-drawer
+  commodityId="{{selectedCommodityId}}"
+  show="{{showCommodityDrawer}}"
+  onClose="onCloseCommodityDrawer"
+  onConfirm="onConfirm"
+/>
+<view disable-scroll="{{showCommodityDrawer}}">
+
+  <location />
+  <view class="search-nav">
+    <navigator
+      className="search-nav__input"
+      url="/pages/search/search"
+    >
+      <search
+        value="{{searchValue}}"
+        disabled="{{true}}"
+      />
+    </navigator>
+    <category-nav />
+  </view>
+  <tab
+    activeId="{{activeTabId}}"
+    onActiveTabChange="onActiveTabChange"
+    tabs="{{tabs}}"
+  />
+  <masonry
+    a:if="{{currentCommodities.length>0}}"
+    columns="{{activeTabId===TREND?1:2}}"
+    isRanking="{{activeTabId===TREND}}"
+    masonryData="{{currentCommodities}}"
+    onTapCommodity="onTapCommodity"
+  />
+  <empty
+    a:else
+    type="{{searchValue?EmptyType.EMPTY_SEARCH_RESULT:EmptyType.EMPTY_STORE}}"
+    className="empty-position"
+  />
+</view>

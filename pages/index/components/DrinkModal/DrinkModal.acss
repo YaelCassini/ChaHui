@@ -1,0 +1,19 @@
+.drink-modal {
+  position: relative;
+}
+.drink-modal__header {
+  height: 280rpx;
+  color: white;
+  background-image: linear-gradient(to bottom, #b1c1cd 0%, #b1c1cd 70%, #e6e6e6 70%, #e6e6e6 100%);
+  padding: 0 50rpx;
+}
+.drink-modal__title {
+  font-size: 36rpx;
+  padding: 150rpx 0 10rpx;
+}
+.drink-modal__image {
+  position: absolute;
+  left: 400rpx;
+  top: 40rpx;
+  width: 200rpx;
+}

@@ -1,0 +1,47 @@
+.card-no-shadow {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.card-shadow {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+.cover-background {
+  background-position: center;
+  background-size: cover;
+}
+.pair-nav-container {
+  display: flex;
+  padding: 0 16rpx;
+}
+.pair-nav-container .pair-nav-col {
+  width: 50%;
+  padding: 0 16rpx;
+}
+.pair-nav-container .pair-nav {
+  overflow: hidden;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  height: 180rpx;
+  padding: 8rpx;
+}
+.pair-nav-container .pair-nav__left {
+  margin-right: 0;
+  background-image: url('/images/main-page/show_3x.png');
+}
+.pair-nav-container .pair-nav__right {
+  background-image: url('/images/main-page/cooperation_3x.png');
+}
+.pair-nav-container .pair-nav__background {
+  max-height: 100%;
+}
+.pair-nav-container .pair-nav__title {
+  margin-bottom: 8rpx;
+  font-size: 36rpx;
+}
+.pair-nav-container .pair-nav__description {
+  color: gray;
+  font-size: 28rpx;
+}

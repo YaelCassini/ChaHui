@@ -1,0 +1,20 @@
+
+  <view class="swiper-container">
+    <swiper class="swiper" indicator-dots="{{true}}">
+      <block a:for="{{swiperData}}">
+        <swiper-item >
+          <view class="swiper-item">
+            <view class="swiper-item__inner">
+              <view class="swiper-item__title">{{item.title}}</view>
+              <view class="swiper-item__description">
+                {{item.description}}
+              </view>
+              <view class="swiper-item__action" size="default" type="primary">{{item.action}}</view>
+              <view class="swiper-item__author">{{item.author}}</view>
+            </view>
+            <image class="swiper-item__background" mode="aspectFill" src="{{item.background}}"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>

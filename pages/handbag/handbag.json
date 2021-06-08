@@ -1,0 +1,12 @@
+{
+  "defaultTitle": "门店商品",
+  "usingComponents": {
+    "location": "/pages/handbag/components/location/location",
+    "masonry": "/pages/handbag/components/Masonry/Masonry",
+    "commodity-drawer": "/pages/handbag/components/commodity-drawer/commodity-drawer",
+    "search": "/components/Search/Search",
+    "empty": "/components/Empty/Empty",
+    "category-nav": "/components/category-nav/category-nav",
+    "tab": "/components/Tab/Tab"
+  }
+}

@@ -1,0 +1,40 @@
+<view>
+  <title>
+    宝贝搜索
+  </title>
+  <view class="search-nav">
+    <search
+      value="{{searchValue}}"
+      onInput="onSearchInput"
+      onConfirm="onSearchConfirm"
+      onClear="onSearchClear"
+      className="search-nav__input"
+      defaultFocus="{{true}}"
+    />
+    <category-nav a:if="{{!searchValue}}" />
+    <navigator
+      a:else
+      class="search-cancel"
+      url="/pages/handbag/handbag"
+      open-type="navigateBack"
+    >取消</navigator>
+  </view>
+  <view
+    a:if="{{!searchValue}}"
+    class="trend"
+  >
+    <view class="trend-title">
+      热门推荐
+    </view>
+    <view class="trend-body">
+      <view
+        a:for="{{trend}}"
+        class="trend-body__item"
+      >
+        <view>
+          {{item}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

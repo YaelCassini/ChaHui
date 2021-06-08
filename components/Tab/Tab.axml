@@ -1,0 +1,19 @@
+<scroll-view
+  class="tab"
+  scroll-x="{{true}}"
+  scroll-y="{{false}}"
+>
+  <view
+    a:for="{{tabs}}"
+    class="tab-item {{activeId===item.id?'tab-item--active':''}}"
+    onTap="onItemTap"
+    data-index="{{item.id}}"
+  >
+    {{item.title}}
+    <image
+      a:if="{{item.sortable}}"
+      src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WR7tS62_iPwAAAAAAAAAAABkARQnAQ"
+      mode="scaleToFill"
+    />
+  </view>
+</scroll-view>

@@ -1,0 +1,58 @@
+<view class="cart">
+  <view class="cart-section">
+    <checkbox-group>
+      <view class="cart-section-header">
+        <view class="cart-section-header__checkbox">
+          <checkbox color="#FF5000" />
+        </view>
+        <view class="cart-section-header__desc">全部商品</view>
+      </view>
+      <view
+        class="cart-section-body"
+        a:for="{{commodity}}"
+        a:for-item="eachCommodity"
+      >
+        <view class="cart-section-body__checkbox">
+          <checkbox
+            color="#FF5000"
+            value="{{item.id}}"
+          />{{item.value}}
+        </view>
+        <image
+          class="cart-section-body__image"
+          src="{{eachCommodity.image}}"
+          mode="scaleToFill"
+          lazy-load="{{true}}"
+        />
+        <view class="cart-section-body__middle">
+          <view class="cart-section-body__title">
+            {{eachCommodity.title}}
+          </view>
+          <view class="cart-section-body__description">
+            {{eachCommodity.description}}
+          </view>
+          <view class="cart-section-body__price">
+            ¥{{eachCommodity.price}}
+          </view>
+        </view>
+      </view>
+    </checkbox-group>
+  </view>
+
+
+
+  <view class="cart-footer">
+    <view class="cart-footer__desc">
+      <view class="cart-footer__price-section">
+        <view class="cart-footer__total-desc">合计：</view>
+        <view class="cart-footer__total-price">¥{{sum}}</view>
+      </view>
+      <view class="cart-footer__discount">
+        共减 ¥{{totalDiscount}}（店铺减{{shopDiscount}}）
+      </view>
+    </view>
+    <view class="cart-footer__action">
+      结算({{count}})
+    </view>
+  </view>
+</view>

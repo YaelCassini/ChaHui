@@ -1,0 +1,21 @@
+<view>
+  <title>我的券</title>
+  <tab
+    className="tab-margin"
+    tabs="{{tabs}}"
+    activeId="{{activeId}}"
+    onActiveTabChange="onTabItemTap"
+  ></tab>
+  <view
+    a:for="{{tickets}}"
+    class="ticket-container"
+  >
+    <ticket
+      id="{{item.id}}"
+      price="{{item.price}}"
+      baseline="{{item.baseline}}"
+      startAt="{{item.startAt}}"
+      endAt="{{item.endAt}}"
+    ></ticket>
+  </view>
+</view>

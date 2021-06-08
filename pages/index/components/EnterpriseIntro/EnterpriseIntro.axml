@@ -1,0 +1,11 @@
+<navigator url="/pages/about/about" class="enterprise-intro">
+  <image class="enterprise-intro__logo" src="/images/main-page/logo_2x.png"/>
+  <view class="enterprise-intro__name">
+    <view class="enterprise-intro__title">饮悦工坊</view>
+    <view class="enterprise-intro__description">全国第一果茶开创者</view>
+  </view>
+  <view class="enterprise-intro__nav">
+    <view class="enterprise-intro__nav-description">企业介绍</view>
+    <image class="enterprise-intro__nav-logo" mode="aspectFill" src="/images/main-page/nav_2x.png"/>
+  </view>
+</navigator>

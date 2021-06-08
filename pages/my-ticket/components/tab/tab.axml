@@ -1,0 +1,14 @@
+<view class="tab {{className}}">
+  <view
+    a:for="{{tabs}}"
+    class="tab-item"
+    onTap="onItemTap"
+    data-index="{{item.id}}"
+  >
+    {{item.title}}
+    <view
+      class="tab-item--active"
+      a:if="{{activeId===item.id}}"
+    />
+  </view>
+</view>

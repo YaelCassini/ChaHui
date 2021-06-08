@@ -1,0 +1,16 @@
+<scroll-view class="display" scroll-y="{{false}}" scroll-x="{{true}}">
+  <view onTap="onItemSelect" data-item-id="{{item.id}}" class="display-item display-background"
+    style="background-image: url('{{item.background}}');" a:for="{{dataList}}">
+    <view>
+      <view class="display-item__title">{{item.title}}</view>
+      <view class="display-item__description">{{item.description}}</view>
+    </view>
+  </view>
+  <view class="display-item display-more">
+    <view class="display-more__container">
+      <image mode="scaleToFill" src="/images/main-page/more_2x.png" />
+      <view>更多产品</view>
+    </view>
+  </view>
+  <view class="display-item-gutter" />
+</scroll-view>

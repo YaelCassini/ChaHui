@@ -1,0 +1,43 @@
+.card-no-shadow {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.card-shadow {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+.enterprise-intro {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  margin: 32rpx;
+  padding: 48rpx;
+}
+.enterprise-intro__logo {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 100000px;
+}
+.enterprise-intro__name {
+  flex-grow: 1;
+  padding-left: 32rpx;
+}
+.enterprise-intro__title {
+  padding-bottom: 8rpx;
+  font-size: 32rpx;
+}
+.enterprise-intro__description {
+  color: gray;
+  font-size: 24rpx;
+}
+.enterprise-intro__nav {
+  display: flex;
+  align-items: center;
+}
+.enterprise-intro__nav-logo {
+  width: 20rpx;
+  height: 20rpx;
+}

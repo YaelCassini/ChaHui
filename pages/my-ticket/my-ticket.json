@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "title": "/components/Title/Title",
+    "tab": "/pages/my-ticket/components/tab/tab",
+    "ticket": "/pages/my-ticket/components/ticket/ticket"
+  }
+}
