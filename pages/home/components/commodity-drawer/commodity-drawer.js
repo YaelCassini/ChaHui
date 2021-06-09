@@ -8,7 +8,7 @@ Component({
     selectedOptionIds: [],
     currentCommodity: {},
     purchaseNumber: 1,
-    address: '杭州市 余杭区  闲林街道  翡翠城东北区',
+    address: '杭州市 西湖区  灵隐街道  浙江大学玉泉校区',
   },
   props: {
     show: false,

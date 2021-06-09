@@ -17,46 +17,46 @@ export const allCommodity = {
     {
       id: 0,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
-      title: "屈臣氏 新款 燕窝补水光",
+        "../../asserts/picture/caomeixiaoquexing.jpg",
+      title: "草莓小确幸",
       canSelfPickUp: true,
-      price: 669,
+      price: 19,
       sales: 1589,
     },
     {
       id: 1,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
-      title: "屈臣氏 新款 燕窝补水光",
+        "../../asserts/picture/yangzhiganlu.jpg",
+      title: "杨枝甘露",
       canSelfPickUp: true,
-      price: 669,
+      price: 25,
       sales: 1589,
     },
     {
       id: 2,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
-      title: "屈臣氏 新款 燕窝补水光",
+        "../../asserts/picture/zhaopaiyuyuannaicha.jpg",
+      title: "招牌芋圆奶茶",
       canSelfPickUp: false,
-      price: 669,
+      price: 15,
       sales: 1589,
     },
     {
       id: 3,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
-      title: "屈臣氏 新款 燕窝补水光",
+        "../../asserts/picture/caomeixiaoquexing.jpg",
+      title: "草莓小确幸",
       canSelfPickUp: true,
-      price: 669,
+      price: 19,
       sales: 1589,
     },
     {
       id: 4,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
-      title: "屈臣氏 新款 燕窝补水光",
-      canSelfPickUp: false,
-      price: 669,
+        "../../asserts/picture/yangzhiganlu.jpg",
+      title: "杨枝甘露",
+      canSelfPickUp: true,
+      price: 25,
       sales: 1589,
     },
   ],
@@ -67,45 +67,45 @@ export const trendCommodity = {
     {
       id: 0,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "2016夏装新款纯麻女装长裤子休闲运动阔腿裤松紧",
-      canSelfPickUp: true,
+        "../../asserts/picture/chabaidao.jpg",
+      title: "茶百道",
+      //canSelfPickUp: true,
       price: 39,
       sales: 30,
     },
     {
       id: 1,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "2016夏装新款纯麻女装长裤子休闲运动阔腿裤松紧",
-      canSelfPickUp: true,
+        "../../asserts/picture/yidiandian.jpg",
+      title: "一点点",
+      //canSelfPickUp: true,
       price: 39,
       sales: 30,
     },
     {
       id: 2,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "2016夏装新款纯麻女装长裤子休闲运动阔腿裤松紧",
-      canSelfPickUp: false,
+        "../../asserts/picture/cuoneixiaojuancun.jpg",
+      title: "厝内小眷村",
+      //canSelfPickUp: false,
       price: 30,
       sales: 30,
     },
     {
       id: 3,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "2016夏装新款纯麻女装长裤子休闲运动阔腿裤松紧",
-      canSelfPickUp: true,
+        "../../asserts/picture/cuoneixiaojuancun.jpg",
+      title: "厝内小眷村",
+      //canSelfPickUp: false,
       price: 30,
       sales: 39,
     },
     {
       id: 4,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "2016夏装新款纯麻女装长裤子休闲运动阔腿裤松紧",
-      canSelfPickUp: false,
+        "../../asserts/picture/cuoneixiaojuancun.jpg",
+      title: "厝内小眷村",
+      //canSelfPickUp: false,
       price: 30,
       sales: 30,
     },
@@ -115,15 +115,15 @@ export const trendCommodity = {
 export const commodityDetail = {
   data: {
     cover:
-      "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Gru4R66jmTcAAAAAAAAAAABkARQnAQ",
+      "../../asserts/picture/cuoneixiaojuancun.jpg",
     commodityName: "",
-    price: 911,
+    price: 30,
     storage: 774,
-    type: "浅橙色，S",
+    type: "少冰，三分糖",
     shippingMethod: [
       {
         id: 1,
-        name: "送货到家",
+        name: "派送上门",
       },
       {
         id: 2,
@@ -132,39 +132,59 @@ export const commodityDetail = {
     ],
     shippingFrom: {
       type: "同城配送",
-      name: "屈臣氏 (亲橙里店)",
+      name: "饿了么骑手",
     },
     shippingTime: {
       payTime: "11:00",
       receiveDay: "今天",
-      receiveFormatDay: "04月16日",
+      receiveFormatDay: "11:30",
     },
     options: [
       {
         id: 1,
-        name: "净含量",
+        name: "温度",
         values: [
           {
             id: 1,
-            name: "500ml",
+            name: "正常冰",
           },
           {
             id: 2,
-            name: "600ml",
+            name: "少冰",
+          },
+          {
+            id: 3,
+            name: "去冰",
+          },
+          {
+            id: 4,
+            name: "常温",
           },
         ],
       },
       {
         id: 2,
-        name: "颜色",
+        name: "甜度",
         values: [
           {
             id: 1,
-            name: "红色",
+            name: "正常糖",
           },
           {
             id: 2,
-            name: "绿色",
+            name: "七分糖",
+          },
+          {
+            id: 3,
+            name: "五分糖",
+          },
+          {
+            id: 4,
+            name: "三分糖",
+          },
+          {
+            id: 5,
+            name: "不另外加糖",
           },
         ],
       },

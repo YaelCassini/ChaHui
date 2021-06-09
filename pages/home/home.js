@@ -12,11 +12,11 @@ Page({
     tabs: [
       {
         id: ALL,
-        title: '人气店家',
+        title: '新品上市',
       },
       {
         id: TREND,
-        title: '新品上市',
+        title: '人气店家',
       },
       {
         id: NEW,
