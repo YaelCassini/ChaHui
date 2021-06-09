@@ -6,10 +6,11 @@
     "pages/category/category",
     "pages/search/search",
     "pages/my-order/my-order",
-    "pages/my-ticket/my-ticket"
+    "pages/my-ticket/my-ticket",
+    "pages/home/home"
   ],
   "window": {
-    "defaultTitle": "",
+    "defaultTitle": "茶荟",
     "titleBarColor": "#fff",
     "pullRefresh": false
   },
@@ -17,24 +18,30 @@
     "textColor": "#333333",
     "selectedColor": "#009D9A",
     "backgroundColor": "#f2f2f2",
-    "items": [
+    "items": [   
+      {
+        "pagePath": "pages/home/home",
+        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*PXYbS4CiYV8AAAAAAAAAAABkARQnAQ",
+        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*lt8nQZUXZV8AAAAAAAAAAABkARQnAQ",
+        "name": "首页"
+      },
       {
         "pagePath": "pages/handbag/handbag",
         "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
         "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
-        "name": "门店商品"
+        "name": "社区"
       },
       {
         "pagePath": "pages/shopping-cart/shopping-cart",
         "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*PXYbS4CiYV8AAAAAAAAAAABkARQnAQ",
         "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*lt8nQZUXZV8AAAAAAAAAAABkARQnAQ",
-        "name": "购物车"
+        "name": "订单"
       },
       {
         "pagePath": "pages/my/my",
         "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*n1f8SYBo_RkAAAAAAAAAAABkARQnAQ",
         "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*q2eOQpQEzDsAAAAAAAAAAABkARQnAQ",
-        "name": "个人中心"
+        "name": "我的"
       }
     ]
   },

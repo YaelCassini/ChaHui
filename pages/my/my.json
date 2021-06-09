@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "个人中心",
+  "defaultTitle": "我的",
   "backgroundColor": "#ffffff",
   "usingComponents": {
     "list": "mini-antui/es/list/index",

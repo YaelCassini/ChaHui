@@ -37,7 +37,7 @@
     </view>
   </scroll-view>
   <view class="divider --middle" />
-  <view class="member-center-nav">进入会员中心
+  <view class="member-center-nav">查看全部徽章
     <image
       src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*kYnQR4upMIcAAAAAAAAAAABkARQnAQ"
       mode="scaleToFill"
