@@ -4,7 +4,7 @@ Page({
       {
         time: '2019.4.11 12:09',
         state: '商家备货中',
-        sum: '1096.00',
+        sum: '48.00',
         total: 2,
         commodity: [
           {
@@ -28,7 +28,7 @@ Page({
       {
         time: '2019.4.11 12:09',
         state: '配送中',
-        sum: '1096.00',
+        sum: '48.00',
         total: 2,
         commodity: [
           {
