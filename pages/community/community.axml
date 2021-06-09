@@ -1,0 +1,43 @@
+
+<view>
+  <title className="title">茶荟</title>
+
+  <view
+    a:for="{{orderList}}"
+    class="order-section"
+  >
+    <view class="order-section-header">
+      <view class="order-section-header__time">{{item.time}}</view>
+      <view class="order-section-header__state">{{item.state}}</view>
+    </view>
+    <view
+      class="order-section-body"
+      a:for="{{item.commodity}}"
+      a:for-item="eachCommodity"
+    >
+      <image
+        class="order-section-body__image"
+        lazy-load="{{true}}"
+        src="{{eachCommodity.image}}"
+        mode="scaleToFill"
+      />
+      <view class="order-section-body__middle">
+        <view class="order-section-body__title">
+          {{eachCommodity.title}}
+        </view>
+        <view class="order-section-body__description">
+          {{eachCommodity.description}}
+        </view>
+      </view>
+      <view class="order-section-body__right">
+        <view class="order-section-body__price">¥ {{eachCommodity.price}}</view>
+        <view class="order-section-body__num">x{{eachCommodity.num}}</view>
+      </view>
+    </view>
+    <view class="order-section-footer">
+      <view class="order-section-footer__total">共{{item.total}}件商品</view>
+      <view class="order-section-footer__desc">合计：¥</view>
+      <view class="order-section-footer__sum">{{item.sum}}</view>
+    </view>
+  </view>
+</view>

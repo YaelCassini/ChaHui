@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "茶荟",
+  "usingComponents": {
+    "title": "/components/Title/Title"
+  }
+}

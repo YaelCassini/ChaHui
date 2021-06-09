@@ -1,6 +1,12 @@
 {
-  "defaultTitle": "茶荟",
+  "defaultTitle": "门店商品",
   "usingComponents": {
-    "title": "/components/Title/Title"
+    "location": "/pages/home/components/location/location",
+    "masonry": "/pages/home/components/Masonry/Masonry",
+    "commodity-drawer": "/pages/home/components/commodity-drawer/commodity-drawer",
+    "search": "/components/Search/Search",
+    "empty": "/components/Empty/Empty",
+    "category-nav": "/components/category-nav/category-nav",
+    "tab": "/components/Tab/Tab"
   }
 }

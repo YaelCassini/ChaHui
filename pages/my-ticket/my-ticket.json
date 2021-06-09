@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "卡包",
   "usingComponents": {
     "title": "/components/Title/Title",
     "tab": "/pages/my-ticket/components/tab/tab",

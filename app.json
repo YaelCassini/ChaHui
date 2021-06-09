@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/handbag/handbag",
+    "pages/community/community",
     "pages/shopping-cart/shopping-cart",
     "pages/my/my",
     "pages/category/category",
@@ -26,7 +26,7 @@
         "name": "首页"
       },
       {
-        "pagePath": "pages/handbag/handbag",
+        "pagePath": "pages/community/community",
         "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
         "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
         "name": "社区"
