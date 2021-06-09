@@ -5,7 +5,7 @@
     "pages/my/my",
     "pages/category/category",
     "pages/search/search",
-    "pages/my-order/my-order",
+    "pages/order/order",
     "pages/my-ticket/my-ticket",
     "pages/home/home"
   ],
@@ -32,7 +32,7 @@
         "name": "社区"
       },
       {
-        "pagePath": "pages/shopping-cart/shopping-cart",
+        "pagePath": "pages/order/order",
         "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*PXYbS4CiYV8AAAAAAAAAAABkARQnAQ",
         "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*lt8nQZUXZV8AAAAAAAAAAABkARQnAQ",
         "name": "订单"
