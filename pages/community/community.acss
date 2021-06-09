@@ -103,10 +103,27 @@
 .item {
   background: #eeeeee;
   text-align: center;
-  height: 200rpx;
+  height: 300rpx;
 }
 
 .grid-item {
   background: #eeeeee;
   text-align: center;
+}
+
+.demo-steps-class {
+  margin: 5px 0;
+  padding-left:25px;
+  padding-right:25px;
+  margin-top: -30rpx;
+  margin-bottom: -40rpx;
+}
+
+.demo-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.demo-btn {
+  width: 47%;
 }

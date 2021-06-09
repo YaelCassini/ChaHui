@@ -2,6 +2,8 @@
   "defaultTitle": "社区",
   "usingComponents": {
     "container": "mini-ali-ui/es/container/index",
-    "title": "mini-ali-ui/es/title/index"
+    "title": "mini-ali-ui/es/title/index",
+    "steps": "mini-ali-ui/es/steps/index",
+    "card": "mini-ali-ui/es/card/index"
   }
 }

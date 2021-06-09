@@ -7,6 +7,25 @@ Page({
     interval: 1000,
     circular: false,
 
+    activeIndex: 1,
+    failIndex: 0,
+    size: 0,
+
+    thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
+    expand3rd: false, 
+
+    items: [{
+      title: '步骤1',
+    }, {
+      title: '步骤2',
+    }, {
+      title: '步骤3',
+    }, {
+      title: '步骤3',
+    }, {
+      title: '步骤3',
+    }],
+    
     orderList: [
       {
         time: '2019.4.11 12:09',
@@ -82,6 +101,36 @@ Page({
   intervalChange(e) {
     this.setData({
       interval: e.detail.value,
+    });
+  },
+  nextStep() {
+    this.setData({
+      activeIndex: this.data.activeIndex + 1,
+    });
+  },
+  preStep() {
+    this.setData({
+      activeIndex: this.data.activeIndex - 1,
+    });
+  },
+  onCardClick(ev) {
+    my.alert({
+      content: ev.info,
+    });
+  },
+  onActionClick() {
+    my.alert({
+      content: 'action clicked',
+    });
+  },
+  onExtraActionClick() {
+    my.alert({
+      content: 'extra action clicked',
+    });
+  },
+  toggle() {
+    this.setData({
+      expand3rd: !this.data.expand3rd,
     });
   },
 });
