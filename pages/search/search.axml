@@ -15,7 +15,7 @@
     <navigator
       a:else
       class="search-cancel"
-      url="/pages/handbag/handbag"
+      url="/pages/home/home"
       open-type="navigateBack"
     >取消</navigator>
   </view>
