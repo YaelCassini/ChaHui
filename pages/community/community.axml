@@ -1,43 +1,44 @@
 
-<view>
-  <title className="title">茶荟</title>
+<view class="page">
 
-  <view
-    a:for="{{orderList}}"
-    class="order-section"
-  >
-    <view class="order-section-header">
-      <view class="order-section-header__time">{{item.time}}</view>
-      <view class="order-section-header__state">{{item.state}}</view>
-    </view>
-    <view
-      class="order-section-body"
-      a:for="{{item.commodity}}"
-      a:for-item="eachCommodity"
-    >
-      <image
-        class="order-section-body__image"
-        lazy-load="{{true}}"
-        src="{{eachCommodity.image}}"
-        mode="scaleToFill"
-      />
-      <view class="order-section-body__middle">
-        <view class="order-section-body__title">
-          {{eachCommodity.title}}
-        </view>
-        <view class="order-section-body__description">
-          {{eachCommodity.description}}
-        </view>
-      </view>
-      <view class="order-section-body__right">
-        <view class="order-section-body__price">¥ {{eachCommodity.price}}</view>
-        <view class="order-section-body__num">x{{eachCommodity.num}}</view>
-      </view>
-    </view>
-    <view class="order-section-footer">
-      <view class="order-section-footer__total">共{{item.total}}件商品</view>
-      <view class="order-section-footer__desc">合计：¥</view>
-      <view class="order-section-footer__sum">{{item.sum}}</view>
-    </view>
-  </view>
-</view>
+  <container className="container-item">
+    <title slot="header">精选和推荐</title>
+    <swiper indicator-dots="{{true}}" class="item"
+          style="height:150px"
+          class="demo-swiper"
+          previousMargin="10px"
+          nextMargin="10px"
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          vertical="{{vertical}}"
+          interval="{{interval}}"
+          circular="{{circular}}">
+      <block a:for="{{['#0abc80','#00b7f4','#ffb7f4']}}">
+        <swiper-item>
+          <view style="background-color: {{item}};width:100%;height:300rpx;border-radius:16rpx;"/>
+        </swiper-item>
+      </block>
+      <!-- <swiper-item key="swiper-item-{{index}}" a:for="{{background}}">
+          <view class="swiper-item bc_{{item}}"></view>
+      </swiper-item> -->
+    </swiper>
+  </container>
+
+  <container className="container-item">
+    <title slot="header" hasLine="true" showIcon="true">查看我的推荐队列</title>
+
+
+  </container>
+
+  <container className="container-item" type="onewithtwo">
+    <title slot="header" hasLine="true" showIcon="true">热门单品</title>
+    <view class="grid-item" style ="height: 300rpx;" slot="first">first</view>
+    <view class="grid-item" slot="second">second</view>
+    <view class="grid-item" slot="third">third</view>
+  </container>
+
+  <container className="container-item">
+    <title slot="header" hasLine="true" showIcon="true">热门评测</title>
+    
+
+  </container>
