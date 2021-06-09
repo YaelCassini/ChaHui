@@ -1,9 +1,6 @@
 {
   "defaultTitle": "社区",
   "usingComponents": {
-    "title": "/components/Title/Title"
-  },
-  "usingComponents": {
     "container": "mini-ali-ui/es/container/index",
     "title": "mini-ali-ui/es/title/index"
   }

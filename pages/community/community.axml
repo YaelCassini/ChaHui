@@ -3,12 +3,8 @@
 
   <container className="container-item">
     <title slot="header">精选和推荐</title>
-    <swiper indicator-dots="{{true}}" class="item"
+    <swiper indicator-dots="{{indicatorDots}}" class="item"
           style="height:150px"
-          class="demo-swiper"
-          previousMargin="10px"
-          nextMargin="10px"
-          indicator-dots="{{indicatorDots}}"
           autoplay="{{autoplay}}"
           vertical="{{vertical}}"
           interval="{{interval}}"
