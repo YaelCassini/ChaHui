@@ -1,5 +1,5 @@
 <view class="category">
-  <title class="category-title">宝贝分类</title>
+  <title class="category-title">奶茶分类</title>
   <view
     a:for="{{categories}}"
     class="category-item"

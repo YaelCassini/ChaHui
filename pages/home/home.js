@@ -12,15 +12,15 @@ Page({
     tabs: [
       {
         id: ALL,
-        title: '综合',
+        title: '人气店家',
       },
       {
         id: TREND,
-        title: '人气榜',
+        title: '新品上市',
       },
       {
         id: NEW,
-        title: '新品',
+        title: '猜你喜欢',
       },
       {
         id: PRICE,

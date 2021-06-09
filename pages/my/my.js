@@ -48,7 +48,7 @@ Page({
       {
         name: '收藏',
         thumb:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Y8BATYqMN78AAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/collection.png',
         onClick: () =>
           my.navigateTo({
             url: '/pages/my-order/my-order',
@@ -66,7 +66,7 @@ Page({
       {
         name: '我的评价',
         thumb:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9RqXQaxLeCEAAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/comment.png',
         onClick: () =>
           my.navigateTo({
             url: '/pages/my-ticket/my-ticket',
@@ -75,7 +75,7 @@ Page({
       {
         name: '设置',
         thumb:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*-Lp1TZDggnoAAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/setting.png',
         onClick: () => {},
       },
     ],

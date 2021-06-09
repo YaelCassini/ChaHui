@@ -3,6 +3,7 @@
   align-items: center;
   width: 100%;
   padding: 24rpx;
+  box-sizing: border-box;
 }
 .search-nav__input {
   flex-grow: 1;

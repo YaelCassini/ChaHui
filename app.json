@@ -16,31 +16,31 @@
   },
   "tabBar": {
     "textColor": "#333333",
-    "selectedColor": "#009D9A",
+    "selectedColor": "#00b386",
     "backgroundColor": "#f2f2f2",
     "items": [   
       {
         "pagePath": "pages/home/home",
-        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*PXYbS4CiYV8AAAAAAAAAAABkARQnAQ",
-        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*lt8nQZUXZV8AAAAAAAAAAABkARQnAQ",
+        "icon": "./asserts/icon/home.png",
+        "activeIcon": "./asserts/icon/home-active.png",
         "name": "首页"
       },
       {
         "pagePath": "pages/community/community",
-        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
-        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
+        "icon": "./asserts/icon/community.png",
+        "activeIcon": "./asserts/icon/community-active.png",
         "name": "社区"
       },
       {
         "pagePath": "pages/order/order",
-        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*PXYbS4CiYV8AAAAAAAAAAABkARQnAQ",
-        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*lt8nQZUXZV8AAAAAAAAAAABkARQnAQ",
+        "icon": "./asserts/icon/order.png",
+        "activeIcon": "./asserts/icon/order-active.png",
         "name": "订单"
       },
       {
         "pagePath": "pages/my/my",
-        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*n1f8SYBo_RkAAAAAAAAAAABkARQnAQ",
-        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*q2eOQpQEzDsAAAAAAAAAAABkARQnAQ",
+        "icon": "./asserts/icon/mine.png",
+        "activeIcon": "./asserts/icon/mine-active.png",
         "name": "我的"
       }
     ]

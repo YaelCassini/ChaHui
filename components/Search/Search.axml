@@ -9,7 +9,7 @@
   />
 
   <input
-    placeholder="搜索该门店的宝贝"
+    placeholder="搜索奶茶"
     class="search__input"
     value="{{value}}"
     disabled="{{disabled}}"

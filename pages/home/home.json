@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "门店商品",
+  "defaultTitle": "茶荟",
   "usingComponents": {
     "location": "/pages/home/components/location/location",
     "masonry": "/pages/home/components/Masonry/Masonry",
