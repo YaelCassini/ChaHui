@@ -9,7 +9,7 @@ Page({
       {
         title: '奶茶行家',
         cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*HTNURLN0hv8AAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/achievement/Haoyangmaodashi.png',
       },
       {
         title: '尝新达人',
