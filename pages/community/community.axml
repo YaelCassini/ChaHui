@@ -9,9 +9,9 @@
           vertical="{{vertical}}"
           interval="{{interval}}"
           circular="{{circular}}">
-      <block a:for="{{['#0abc80','#00b7f4','#ffb7f4']}}">
+      <block a:for="{{recommend}}">
         <swiper-item>
-          <view style="background-color: {{item}};width:100%;height:300rpx;border-radius:16rpx;"/>
+          <view style="background-image: url({{item}});width:100%;height:300rpx;border-radius:16rpx;background-repeat:no-repeat;background-size:100% 100%;"/>
         </swiper-item>
       </block>
     </swiper>
@@ -26,7 +26,7 @@
     />
     
     <container className="item">
-      <view class="item">a1</view>
+      <view class="item" style="background-image: url('../../asserts/picture/low-hot.jpg');background-size:100%"></view>
     </container>
 
     <button style="margin-left: 0px;" type="primary" size="mini" onTap="preStep">上一个</button>
@@ -36,11 +36,11 @@
 
   <container className="container-item" type="onewithtwo">
     <title slot="header" hasLine="true" showIcon="true">热门单品</title>
-    <view class="grid-item" style ="height: 300rpx;" slot="first">first</view>
-    <view class="grid-item" slot="second">second</view>
-    <view class="grid-item" slot="third">third</view>
+    <view class="grid-item" style ="height: 300rpx;background-image: url('../../asserts/picture/zhaopaiyuyuannaicha.jpg');background-size:100% " slot="first"></view>
+    <view class="grid-item" slot="second" style="background-image: url('../../asserts/picture/heilongtang1.jpg');background-size:100% " ></view>
+    <view class="grid-item" slot="third" style="background-image: url('../../asserts/picture/boba.jpg');background-size:100% "></view>
   </container>
-  
+   
   <container className="container-item">
     <title slot="header" hasLine="true" showIcon="true">热门评测</title>
     <swiper indicator-dots="{{indicatorDots}}" class="item"
@@ -54,8 +54,8 @@
           <!-- <view style="background-color: {{item}};width:100%;height:300rpx;border-radius:16rpx;"/> -->
           <view>
             <card thumb="{{thumb}}" 
-              title="卡片标题3" 
-              subTitle="副标题非必填3" 
+              title="" 
+              subTitle="" 
               onCardClick="toggle" 
               action="描述文字" 
               onActionClick="onActionClick" 
@@ -63,7 +63,7 @@
               onExtraActionClick="onExtraActionClick" 
               info="点击了第三个card" 
               expand=true
-              bgImg="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*OjyRRqjLM6MAAAAAAAAAAABkARQnAQ" />
+              bgImg="../../asserts/picture/cover_recommend.jpg" />
           </view>
         </swiper-item>
       </block>

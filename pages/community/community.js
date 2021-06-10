@@ -5,21 +5,22 @@ Page({
     autoplay: false,
     vertical: false,
     interval: 1000,
-    circular: false,
-
+    circular: false, 
+    recommend:['../../asserts/picture/recommend.jpg','../../asserts/picture/recommend2.jpg','../../asserts/picture/recommend3.jpg'],
+ 
     activeIndex: 1,
     failIndex: 0,
     size: 0,
 
-    thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
+    thumb: '../../asserts/icon/achievement/zailaiyibei.png',
     expand3rd: false, 
 
     items: [{
-      title: '步骤1',
+      title: '低卡奶茶',
     }, {
-      title: '步骤2',
+      title: '夏季果茶',
     }, {
-      title: '步骤3',
+      title: '冷萃咖啡',
     }, {
       title: '步骤3',
     }, {

@@ -103,7 +103,7 @@
 .item {
   background: #eeeeee;
   text-align: center;
-  height: 300rpx;
+  height: 400rpx;
 }
 
 .grid-item {
@@ -118,6 +118,7 @@
   margin-top: -30rpx;
   margin-bottom: -40rpx;
 }
+
 
 .demo-btn-container {
   display: flex;
