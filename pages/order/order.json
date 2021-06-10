@@ -1,6 +1,12 @@
 {
   "defaultTitle": "我的订单",
   "usingComponents": {
-    "title": "/components/Title/Title"
+    "title": "/components/Title/Title",
+    "popup": "mini-ali-ui/es/popup/index",
+    "list": "mini-ali-ui/es/list/index",
+    "input-item": "mini-ali-ui/es/input-item/index",
+    "am-icon": "mini-ali-ui/es/am-icon/index",
+    "container": "mini-ali-ui/es/container/index",
+    "multi-liner": "mini-ali-ui/es/multi-liner/index"
   }
 }

@@ -1,11 +1,14 @@
 Page({
   data: {
+    commentContent: '',
     orderList: [
       {
         time: '2021.4.11 12:09',
         state: '商家备货中',
         sum: '48.00',
         total: 2,
+        value: '内容',
+        controlled: true,
         commodity: [
           {
             title: '杨枝甘露',
@@ -52,4 +55,37 @@ Page({
     ],
   },
   onLoad() {},
+  onButtomBtnTap() {
+    this.setData({
+      showBottom: true,
+    });
+  },
+  onPopupClose() {
+    this.setData({
+      showLeft: false,
+      showRight: false,
+      showTop: false,
+      showBottom: false,
+    });
+  },
+  onInput(e) {
+    this.setData({
+      value: e.detail.value,
+    });
+    this.data.commentContent = e.detail.value
+  },
+  async onAddComment() {
+    my.showLoading({
+      content: '评论提交中',
+    });
+    
+    my.serverless.db.collection('comment').insertOne({
+      name: 'tom',
+      content: this.data.commentContent})
+    .then(res => {})
+    .catch(console.error);
+
+    my.hideLoading();
+    this.onPopupClose();
+  },
 });

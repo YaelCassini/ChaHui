@@ -30,7 +30,7 @@
     </container>
 
     <button style="margin-left: 0px;" type="primary" size="mini" onTap="preStep">上一个</button>
-    <button style="margin-left: 10px;" type="primary" size="mini" onTap="onAdd">下一个</button>
+    <button style="margin-left: 10px;" type="primary" size="mini" onTap="nextStep">下一个</button>
       
   </container>
 

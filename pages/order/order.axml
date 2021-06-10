@@ -36,6 +36,29 @@
       <view class="order-section-footer__total">共{{item.total}}件商品</view>
       <view class="order-section-footer__desc">合计：¥</view>
       <view class="order-section-footer__sum">{{item.sum}}</view>
+      <button style="margin-left: 10px; margin-right: -15px;" type="primary" size="mini" onTap="onButtomBtnTap">评论</button>
     </view>
   </view>
+
+  <popup show="{{showBottom}}" position="bottom" onClose="onPopupClose">
+    <container className="container-item">
+      <view style = "width: 100%;">
+        <view style="margin-top: 10px;" />
+        <view class="title">评论</view>
+        <multi-liner data-field="area"
+          placeholder="字数统计↘" 
+          type="text"
+          value="{{value}}" 
+          onInput="onInput" 
+          last="{{true}}" 
+          auto-height="{{true}}" 
+          controlled="{{controlled}}"/>
+        <view style="margin: 10px;" />
+      </view>
+      
+      <button onTap="onAddComment" showLoading=false dataName="1" type="primary">
+        提交评论
+      </button>
+    </container>
+  </popup>
 </view>
