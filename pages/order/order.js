@@ -56,6 +56,9 @@ Page({
     ],
   },
   onLoad() {
+      this.data.orderList[2] = this.data.orderList[0]
+      this.data.orderList[0].state = 'wtf'
+      this.setData({["orderList"]:this.data.orderList})
 
   },
 
@@ -86,16 +89,16 @@ Page({
       content: '评论提交中',
     });
     
-    my.serverless.db.collection('order')
-      .find()
-      .then(res => {
-        console.log(this.data.orderList)
-        this.data.orderList[2] = this.data.orderList[0]
-        this.data.orderList[0].state = 'wtf'
-        this.setData("orderList", this.data.orderList)
-        console.log(this.data.orderList)
-      })
-      .catch(console.error);
+    // my.serverless.db.collection('order')
+    //   .find()
+    //   .then(res => {
+    //     console.log(this.data.orderList)
+    //     this.data.orderList[2] = this.data.orderList[0]
+    //     this.data.orderList[0].state = 'wtf'
+    //     this.setData({["orderList"]:this.data.orderList})
+    //     console.log(this.data.orderList)
+    //   })
+    //   .catch(console.error);
       
     my.serverless.db.collection('comment').insertOne({
       like: 0,
