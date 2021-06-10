@@ -9,30 +9,30 @@ Page({
       {
         title: '奶茶行家',
         cover:
-          '../../asserts/icon/achievement/Haoyangmaodashi.png',
+          '../../asserts/icon/achievement/naichahangjia.png',
       },
       {
         title: '尝新达人',
         cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*8mUFQZnkpX4AAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/achievement/changxindaren.png',
       },
 
       {
         title: '薅羊毛大师',
         cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*CwXrR4hRcGAAAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/achievement/haoyangmaodashi.png',
       },
 
       {
         title: '再来一杯',
         cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*dyvrR6BIbYgAAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/achievement/zailaiyibei.png',
       },
 
       {
         title: '体重超标',
         cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*7G9XQLcv6tYAAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/achievement/tizhongchaobiao.png',
       },
     ],
     navList: [
