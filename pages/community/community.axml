@@ -30,7 +30,7 @@
     </container>
 
     <button style="margin-left: 0px;" type="primary" size="mini" onTap="preStep">上一个</button>
-    <button style="margin-left: 10px;" type="primary" size="mini" onTap="nextStep">下一个</button>
+    <button style="margin-left: 10px;" type="primary" size="mini" onTap="onAdd">下一个</button>
       
   </container>
 
@@ -50,8 +50,6 @@
           interval="{{interval}}"
           circular="{{circular}}">
       <block a:for="{{['#0abc80','#00b7f4','#ffb7f4','#ffb7f4']}}">
-        <swiper-item>
-          <!-- <view style="background-color: {{item}};width:100%;height:300rpx;border-radius:16rpx;"/> -->
           <view>
             <card thumb="{{thumb}}" 
               title="" 
@@ -65,7 +63,6 @@
               expand=true
               bgImg="../../asserts/picture/cover_recommend.jpg" />
           </view>
-        </swiper-item>
       </block>
     </swiper>
   </container>

@@ -134,4 +134,18 @@ Page({
       expand3rd: !this.data.expand3rd,
     });
   },
+  // 新增数据
+  async onAdd() {
+    my.showLoading({
+      content: '新增记录中',
+    });
+    
+    my.serverless.db.collection('comment').insertOne({
+      name: 'tom',
+      age: 1})
+    .then(res => {})
+    .catch(console.error);
+
+    my.hideLoading();
+  },
 });
