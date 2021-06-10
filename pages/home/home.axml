@@ -30,7 +30,7 @@
   />
   <masonry
     a:if="{{currentCommodities.length>0}}"
-    columns="{{activeTabId===TREND?1:2}}"
+    columns="{{activeTabId===TREND?1:1}}"
     isRanking="{{activeTabId===TREND}}"
     masonryData="{{currentCommodities}}"
     onTapCommodity="onTapCommodity"

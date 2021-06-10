@@ -114,9 +114,9 @@
         <view class="commodity-purchase-number__title">
           购买数量
         </view>
-        <view class="commodity-purchase-number__description">
+        <!-- <view class="commodity-purchase-number__description">
           （仅支持{{currentCommodity.maxPurchaseNumber}}倍购买）
-        </view>
+        </view> -->
       </view>
       <purchase-number
         value="{{purchaseNumber}}"

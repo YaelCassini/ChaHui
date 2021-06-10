@@ -34,6 +34,7 @@
       <view class="masonry-item__container">
         <view class="masonry-item__body">
           <view class="masonry-item__title">{{item.title}}</view>
+          <view class="masonry-item__subtitle">{{item.subtitle}}</view>
         </view>
         <view>
           <view
@@ -49,8 +50,11 @@
               <view class="masonry-item__price">
                 {{item.price}}
               </view>
+              <view class="masonry-item__score">
+                得分：{{item.score}}
+              </view>
               <view class="masonry-item__sales">
-                {{item.sales}}人付款
+                月销量：{{item.sales}}
               </view>
             </view>
             <image

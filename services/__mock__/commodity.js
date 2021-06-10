@@ -19,6 +19,8 @@ export const allCommodity = {
       cover:
         "../../asserts/picture/caomeixiaoquexing.jpg",
       title: "草莓小确幸",
+      subtitle: "厝内小眷村",
+      score: "3.5",
       canSelfPickUp: true,
       price: 19,
       sales: 1589,
@@ -28,6 +30,8 @@ export const allCommodity = {
       cover:
         "../../asserts/picture/yangzhiganlu.jpg",
       title: "杨枝甘露",
+      subtitle: "古茗",
+      score: "3.5",
       canSelfPickUp: true,
       price: 25,
       sales: 1589,
@@ -37,6 +41,8 @@ export const allCommodity = {
       cover:
         "../../asserts/picture/zhaopaiyuyuannaicha.jpg",
       title: "招牌芋圆奶茶",
+      subtitle: "茶百道",
+      score: "3.5",
       canSelfPickUp: false,
       price: 15,
       sales: 1589,
@@ -46,6 +52,8 @@ export const allCommodity = {
       cover:
         "../../asserts/picture/caomeixiaoquexing.jpg",
       title: "草莓小确幸",
+      subtitle: "厝内小眷村",
+      score: "3.5",
       canSelfPickUp: true,
       price: 19,
       sales: 1589,
@@ -55,6 +63,8 @@ export const allCommodity = {
       cover:
         "../../asserts/picture/yangzhiganlu.jpg",
       title: "杨枝甘露",
+      subtitle: "古茗",
+      score: "3.5",
       canSelfPickUp: true,
       price: 25,
       sales: 1589,
