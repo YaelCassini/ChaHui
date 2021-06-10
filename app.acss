@@ -40,7 +40,7 @@ page {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: #49a9ee;
+  color: #8ed18c;
 }
 .page-section-btns > view + view {
   border-left: 1px solid #ddd;
@@ -49,10 +49,12 @@ page {
 button {
   margin-top:20rpx;
   margin-bottom:20rpx;
+  background-color: rgb(99, 182, 120);
+  border: 0; padding: 0;
 }
 
 .bc_blue {
-  background-color: #49A9EE;
+  background-color: rgb(147, 211, 163);
 }
 
 .bc_red {
