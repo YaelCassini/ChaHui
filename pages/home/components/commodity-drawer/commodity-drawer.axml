@@ -122,7 +122,7 @@
         value="{{purchaseNumber}}"
         max="{{currentCommodity.maxPurchaseNumber}}"
         onChange="onPurchaseNumberChange"
-      >
+      />
     </view>
     <view
       class="commodity-confirm"
