@@ -92,6 +92,7 @@ Page({
         console.log(this.data.orderList)
         this.data.orderList[2] = this.data.orderList[0]
         this.data.orderList[0].state = 'wtf'
+        this.setData("orderList", this.data.orderList)
         console.log(this.data.orderList)
       })
       .catch(console.error);
