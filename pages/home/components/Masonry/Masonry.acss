@@ -49,10 +49,14 @@
   line-height: 37rpx;
 }
 .masonry-item__subtitle {
+  background: #f8f8f8;
   font-size: 24rpx;
-  color: #333;
-  text-align: left;
+  color: #999;
   line-height: 40rpx;
+  padding: 8rpx 10rpx;
+  border-radius: 6rpx;
+  display: inline-block;
+
 }
 .masonry-item__self-pick-up {
   display: inline-block;
