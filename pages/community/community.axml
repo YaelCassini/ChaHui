@@ -43,19 +43,20 @@
    
   <container className="container-item">
     <title slot="header" hasLine="true" showIcon="true">热门评测</title>
-    <swiper indicator-dots="{{indicatorDots}}" class="item"
-          style="height:200px"
+      <swiper indicator-dots="{{indicatorDots}}" class="item"
+          style="height:250px"
           autoplay="{{autoplay}}"
-          vertical=true
+          vertical="{{vertical}}"
           interval="{{interval}}"
           circular="{{circular}}">
-      <block a:for="{{['#0abc80','#00b7f4','#ffb7f4','#ffb7f4']}}">
-          <view>
+      <block a:for="{{recommend}}">
+        <swiper-item>
+          <view style="height:190px">
             <card thumb="{{thumb}}" 
-              title="" 
-              subTitle="" 
+              title="发士大夫" 
+              subTitle="发士大夫士大夫" 
               onCardClick="toggle" 
-              action="描述文字" 
+              action="描述文字士大夫士大夫士大夫" 
               onActionClick="onActionClick" 
               extraAction="点击卡片展开/收起↑" 
               onExtraActionClick="onExtraActionClick" 
@@ -63,6 +64,7 @@
               expand=true
               bgImg="../../asserts/picture/cover_recommend.jpg" />
           </view>
+        </swiper-item>
       </block>
     </swiper>
   </container>

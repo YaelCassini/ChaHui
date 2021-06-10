@@ -1,6 +1,7 @@
 Page({
   data: {
     commentContent: '',
+    commentScore: 4,
     orderList: [
       {
         time: '2021.4.11 12:09',
@@ -54,7 +55,10 @@ Page({
       },
     ],
   },
-  onLoad() {},
+  onLoad() {
+
+  },
+
   onButtomBtnTap() {
     this.setData({
       showBottom: true,
@@ -74,13 +78,27 @@ Page({
     });
     this.data.commentContent = e.detail.value
   },
+  onScoreChange(e) {
+    this.data.commentScore = e.detail.value
+  },
   async onAddComment() {
     my.showLoading({
       content: '评论提交中',
     });
     
+    my.serverless.db.collection('order')
+      .find()
+      .then(res => {
+        console.log(this.data.orderList)
+        this.data.orderList[2] = this.data.orderList[0]
+        this.data.orderList[0].state = 'wtf'
+        console.log(this.data.orderList)
+      })
+      .catch(console.error);
+      
     my.serverless.db.collection('comment').insertOne({
-      name: 'tom',
+      like: 0,
+      score: this.data.commentScore,
       content: this.data.commentContent})
     .then(res => {})
     .catch(console.error);
