@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Card",
+  "defaultTitle": "茶饮单品",
   "usingComponents":{
     "card": "mini-ali-ui/es/card/index"
   }
