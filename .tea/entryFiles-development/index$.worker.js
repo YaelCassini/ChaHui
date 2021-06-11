@@ -1,10 +1,9 @@
-/**! __CODEPLACEHOLDER_START__ */ /*[PositionForHostEntryCodeBegin]*/ /**! __CODEPLACEHOLDER_END__ */
 if(!self.__appxInited) {
 self.__appxInited = 1;
 
 
 require('./config$');
-require('./importScripts$');
+
 
       function getUserAgentInPlatformWeb() {
         return typeof navigator !== 'undefined' ? navigator.swuserAgent || navigator.userAgent || '' : '';
@@ -69,6 +68,7 @@ require('../../pages/search/search?hash=ef4fb84887010afe7b7bb71b7080a3b22dd7a410
 require('../../pages/order/order?hash=d1c3ac1873d66fa4b6cf411a70059fc0d010d198');
 require('../../pages/my-ticket/my-ticket?hash=5cbcbd88ecc7642955f3d3ee95e06e8eb58cac86');
 require('../../pages/home/home?hash=7ce3d2799c65128e52db7a63e9cccc4c7c4b031a');
+require('../../pages/card/card?hash=bb6be94eeb1a277c746c1e9a0a8507e056c481bf');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }
