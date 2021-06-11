@@ -7,7 +7,8 @@
     "pages/search/search",
     "pages/order/order",
     "pages/my-ticket/my-ticket",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/card/card"
   ],
   "window": {
     "defaultTitle": "茶荟",

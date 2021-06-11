@@ -30,6 +30,7 @@
         mode="aspectFill"
         class="masonry-item__background"
         style="height:{{columns===1?280:342}}rpx;width:{{columns===1?'280rpx':'100%'}}"
+        onTap="jumpToGoods"
       />
       <view class="masonry-item__container">
         <view class="masonry-item__body">

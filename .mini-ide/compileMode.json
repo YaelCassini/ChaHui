@@ -1,0 +1,8 @@
+{
+  "modes": [
+    {
+      "title": "home",
+      "page": "pages/home/home"
+    }
+  ]
+}
