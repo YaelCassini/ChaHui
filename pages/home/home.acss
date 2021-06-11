@@ -12,3 +12,29 @@
 .empty-position {
   margin-top: 117rpx;
 }
+
+.bottom-bar {
+  width: 100vw;
+  height: 80rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 20rpx rgba(0,0,0,0.2);
+  padding: 0 40rpx;
+}
+.bottom-btn {
+  width: 200rpx;
+  height: 60rpx;
+  background: #FF9966;
+  color: white;
+  font-weight: bold;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  margin-right: 40rpx;
+  border-radius: 30rpx;
+}

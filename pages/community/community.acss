@@ -128,3 +128,17 @@
 .demo-btn {
   width: 47%;
 }
+
+
+.test-mask {
+  position: absolute;
+  left: 0;
+  bottom: 40rpx;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  width: 100%;
+  white-space: normal;
+  word-break: break-all;
+  word-wrap: break-word;
+  display: block;
+}

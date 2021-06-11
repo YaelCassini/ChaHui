@@ -41,3 +41,8 @@
     className="empty-position"
   />
 </view>
+
+<cover-view class="bottom-bar">
+  <cover-view>￥200.0 包邮</cover-view>
+  <button class="bottom-btn">去下单</button>
+</cover-view>
