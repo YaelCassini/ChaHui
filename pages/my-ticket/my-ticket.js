@@ -50,11 +50,49 @@ Page({
         endAt: '2021.12.31',
       },
     ],
+    tickets2: [
+      {
+        id: 0,
+        price: 50,
+        baseline: 100,
+        startAt: '2021.4.01',
+        endAt: '2021.12.31',
+      },
+      {
+        id: 0,
+        price: 20,
+        baseline: 300,
+        startAt: '2021.4.01',
+        endAt: '2021.12.31',
+      },
+      {
+        id: 0,
+        price: 50,
+        baseline: 30,
+        startAt: '2021.4.01',
+        endAt: '2021.12.31',
+      },
+    ],
     activeId: 0,
   },
   onLoad() {},
   onTabItemTap(id) {
     console.log(id);
     this.setData({ activeId: id });
+  },
+  handleTabClick({ index, tabsName }) {
+    this.setData({
+      [tabsName]: index,
+    });
+  },
+  handleTabChange({ index, tabsName }) {
+    this.setData({
+      [tabsName]: index,
+    });
+  },
+  handlePlusClick() {
+    my.alert({
+      content: 'plus clicked',
+    });
   },
 });

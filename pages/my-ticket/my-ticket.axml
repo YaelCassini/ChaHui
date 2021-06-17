@@ -29,7 +29,7 @@
       </tab-content>
       <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:elif="{{index === 1}}">
         <view
-          a:for="{{tickets}}"
+          a:for="{{tickets2}}"
           class="ticket-container"
         >
           <ticket
