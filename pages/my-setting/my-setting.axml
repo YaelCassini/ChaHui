@@ -1,0 +1,51 @@
+<view>
+  <view style="margin-top: 10px;"></view>
+  <view class="setting">
+
+    <input-item data-field="name" 
+      placeholder="昵称" 
+      type="text" 
+      value="{{name}}" 
+      clear="{{true}}" 
+      onInput="onItemInput" 
+      onClear="onClear">昵称</input-item>
+    <input-item data-field="introduction" 
+      placeholder="简介" 
+      type="text" 
+      value="{{introduction}}" 
+      clear="{{true}}" 
+      onInput="onItemInput" 
+      onClear="onClear">简介</input-item>
+    <list-item>
+      显示我的奶茶身份 
+      <am-switch slot="extra" 
+        checked="{{showIDtags}}" 
+        onChange="setInfo"
+        data-name="showIDtags"
+        controlled />
+    </list-item>
+    <list-item>
+      显示我的成就勋章 
+      <am-switch slot="extra" 
+        checked="{{showAchievement}}" 
+        onChange="setInfo"
+        data-name="showAchievement"
+        controlled />
+    </list-item>
+  </view>
+  <button type="primary">保存修改</button>
+  <button type="primary">退出登录</button>
+  <!-- <block a:for="{{navList}}">
+    <list-item
+      thumb="{{item.thumb}}"
+      className="list-item"
+      arrow="{{true}}"
+      onClick="onListClick"
+      data-index="{{index}}"
+      key="items-{{index}}"
+      last="{{index === (items.length - 1)}}"
+    >
+      {{item.name}}
+    </list-item>
+  </block> -->
+</view>

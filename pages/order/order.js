@@ -3,6 +3,8 @@ Page({
     commentContent: '',
     commentScore: 4,
     orderList: [ ],
+    showIDtags: false,
+    showAchievement: false,
   },
   onLoad() {
       // Set data from db

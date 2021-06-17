@@ -72,14 +72,6 @@ page {
   color: #333;
   text-align: center;
 }
-.user-profile__introduction {
-  font-size: 30rpx;
-  line-height: 40rpx;
-  color: #333;
-  margin-top: 35rpx;
-  margin-left: 55rpx;
-  text-align: left;
-}
 .entries {
   display: flex;
   width: 100%;

@@ -10,6 +10,7 @@ Page({
       follow: 20,
       fans:5,
       comment:20,
+      introduction: "该用户还没有简介",
     },
     entries: [
       {
@@ -56,7 +57,7 @@ Page({
           }),
       },
       {
-        name: '收藏',
+        name: '我的收藏',
         thumb:
           '../../asserts/icon/collection.png',
         onClick: () =>
@@ -65,7 +66,7 @@ Page({
           }),
       },
       {
-        name: '卡包',
+        name: '我的卡劵',
         thumb:
           'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9RqXQaxLeCEAAAAAAAAAAABkARQnAQ',
         onClick: () =>
@@ -74,7 +75,7 @@ Page({
           }),
       },
       {
-        name: '我的评价',
+        name: '我的测评',
         thumb:
           '../../asserts/icon/comment.png',
         onClick: () =>
@@ -86,7 +87,10 @@ Page({
         name: '设置',
         thumb:
           '../../asserts/icon/setting.png',
-        onClick: () => {},
+        onClick: () => 
+          my.navigateTo({
+              url: '/pages/my-setting/my-setting',
+            }),
       },
     ],
   },

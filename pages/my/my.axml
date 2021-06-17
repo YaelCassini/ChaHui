@@ -52,6 +52,9 @@
       </view>
     </view>
   </view>
+  <view class = "user-profile__introduction">
+    简介：{{currentUser.introduction}}
+  </view>
   <!-- <scroll-view
     class="entries"
     scroll-x="{{true}}"

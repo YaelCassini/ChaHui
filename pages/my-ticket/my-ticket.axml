@@ -1,5 +1,5 @@
 <view>
-  <title>我的优惠券</title>
+  <title>我的卡券</title>
   <tab
     className="tab-margin"
     tabs="{{tabs}}"

@@ -49,6 +49,8 @@ page {
 button {
   margin-top:20rpx;
   margin-bottom:20rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
   background-color: rgb(99, 182, 120);
   border: 0; padding: 0;
 }

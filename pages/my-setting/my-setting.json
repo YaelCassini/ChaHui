@@ -1,0 +1,15 @@
+{
+  "defaultTitle": "设置",
+  "backgroundColor": "#ffffff",
+  "usingComponents": {
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "input-item": "mini-ali-ui/es/input-item/index",
+    "am-icon": "mini-ali-ui/es/am-icon/index",
+    "list-secondary": "mini-ali-ui/es/list/list-secondary/index",
+    "tag": "mini-ali-ui/es/tag/index",
+    "am-button": "mini-ali-ui/es/button/index",
+    "am-radio": "mini-ali-ui/es/am-radio/index",
+    "am-switch": "mini-ali-ui/es/am-switch/index"
+  }
+}
