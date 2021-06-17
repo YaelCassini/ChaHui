@@ -1,3 +1,5 @@
+const medals = ['再来一杯', '薅羊毛大师', '奶茶行家', '体重超标', '尝新达人'];
+
 Page({
   data: {
     cardNo: '1234****',
@@ -5,6 +7,11 @@ Page({
     layerShow1: '',
     layerShow2: '垂直输入框的布局',
     layerShow3: 'disabled 状态的 input',
+    showAchievement: false,
+    showIDtags: false,
+    IDtag1: "果茶爱好者",
+    IDtag2: "只爱三分糖",
+    medal: '',
   },
   onExtraTap() {
     my.alert({
@@ -37,5 +44,17 @@ Page({
         [name]: e.detail.value,
       });
     }
+  },
+
+  onPickerTap() {
+    my.showActionSheet({
+      title: '选择展示勋章',
+      items: medals,
+      success: (res) => {
+        this.setData({
+          medal: medals[res.index],
+        });
+      },
+    });
   },
 });

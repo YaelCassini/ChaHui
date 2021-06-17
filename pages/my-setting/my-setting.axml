@@ -16,6 +16,20 @@
       clear="{{true}}" 
       onInput="onItemInput" 
       onClear="onClear">简介</input-item>
+    <input-item data-field="IDtag1" 
+      placeholder="奶茶身份①" 
+      type="text" 
+      value="{{IDtag1}}" 
+      clear="{{true}}" 
+      onInput="onItemInput" 
+      onClear="onClear">奶茶身份①</input-item>
+    <input-item data-field="IDtag2" 
+      placeholder="奶茶身份①" 
+      type="text" 
+      value="{{IDtag2}}" 
+      clear="{{true}}" 
+      onInput="onItemInput" 
+      onClear="onClear">奶茶身份②</input-item>
     <list-item>
       显示我的奶茶身份 
       <am-switch slot="extra" 
@@ -32,6 +46,14 @@
         data-name="showAchievement"
         controlled />
     </list-item>
+    <picker-item
+      data-field="medal"
+      placeholder="选择展示勋章"
+      value="{{medal}}"
+      onPickerTap="onPickerTap"
+    >
+      展示勋章①
+    </picker-item>
   </view>
   <button type="primary">保存修改</button>
   <button type="primary">退出登录</button>
