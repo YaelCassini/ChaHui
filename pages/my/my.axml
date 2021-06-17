@@ -2,24 +2,57 @@
   <view class="user-profile">
     <image
       class="user-profile__avatar"
-      src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*O-qpSpu9vgQAAAAAAAAAAABkARQnAQ"
+      src="/asserts/my/avatar.jpg"    
       mode="scaleToFill"
     />
     <view class="user-profile__right">
-      <view class="user-profile__header">
         <view class="user-profile__name">
           {{currentUser.name}}
         </view>
-        <view class="user-profile__member">
-          {{currentUser.member}}
+      <view class="user-profile__status">
+        <view class="user-profile__sex">
+          <image
+            class="sex_item"
+            src="/asserts/my/woman.png"
+            mode="scaleToFill"
+          />
+        </view>
+        <view class="user-profile__tag">
+          {{currentUser.tag1}}
+        </view>
+        <view class="user-profile__tag">
+          {{currentUser.tag2}}
         </view>
       </view>
-      <view class="user-profile__credit">
-        积分：{{currentUser.credit}}
+      <view class="user-profile__infos">
+        <view class="user-profile__info">
+          <view class="user-profile__infocount">
+            {{currentUser.follow}}
+          </view>
+          <view class="user-profile__infotag">
+            关注
+          </view>
+        </view>
+        <view class="user-profile__info">
+          <view class="user-profile__infocount">
+            {{currentUser.fans}}
+          </view>
+          <view class="user-profile__infotag">
+            粉丝
+          </view>
+        </view>
+        <view class="user-profile__info">
+          <view class="user-profile__infocount">
+            {{currentUser.comment}}
+          </view>
+          <view class="user-profile__infotag">
+            测评
+          </view>
+        </view>
       </view>
     </view>
   </view>
-  <scroll-view
+  <!-- <scroll-view
     class="entries"
     scroll-x="{{true}}"
     scroll-y="{{false}}"
@@ -35,14 +68,29 @@
       />
       <view class="entries__title">{{item.title}}</view>
     </view>
-  </scroll-view>
-  <view class="divider --middle" />
-  <view class="member-center-nav">查看全部徽章
+  </scroll-view> -->
+  <view
+    class="entries"
+  >
+    <view
+      a:for="{{entries}}"
+      class="entries__item"
+    >
+      <image
+        class="entries__cover"
+        src="{{item.cover}}"
+        mode="scaleToFill"
+      />
+      <view class="entries__title">{{item.title}}</view>
+    </view>
+  </view>
+  <!-- <view class="divider --middle" /> -->
+  <!-- <view class="member-center-nav">查看全部徽章
     <image
       src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*kYnQR4upMIcAAAAAAAAAAABkARQnAQ"
       mode="scaleToFill"
     />
-  </view>
+  </view> -->
   <block a:for="{{navList}}">
     <list-item
       thumb="{{item.thumb}}"

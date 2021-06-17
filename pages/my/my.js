@@ -4,6 +4,12 @@ Page({
       name: '奶茶品鉴大师',
       credit: 100,
       member: '尝新达人',
+      sex:"../../asserts/my/women.png",
+      tag1:"果茶爱好者",
+      tag2:"只爱三分糖",
+      follow: 20,
+      fans:5,
+      comment:20,
     },
     entries: [
       {
@@ -16,24 +22,28 @@ Page({
         cover:
           '../../asserts/icon/achievement/changxindaren.png',
       },
-
       {
         title: '薅羊毛大师',
         cover:
           '../../asserts/icon/achievement/haoyangmaodashi.png',
       },
-
       {
-        title: '再来一杯',
+        title: '查看更多',
         cover:
-          '../../asserts/icon/achievement/zailaiyibei.png',
+          '../../asserts/my/more.png',
       },
 
-      {
-        title: '体重超标',
-        cover:
-          '../../asserts/icon/achievement/tizhongchaobiao.png',
-      },
+      // {
+      //   title: '再来一杯',
+      //   cover:
+      //     '../../asserts/icon/achievement/zailaiyibei.png',
+      // },
+
+      // {
+      //   title: '体重超标',
+      //   cover:
+      //     '../../asserts/icon/achievement/tizhongchaobiao.png',
+      // },
     ],
     navList: [
       {
