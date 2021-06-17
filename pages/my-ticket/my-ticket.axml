@@ -1,4 +1,55 @@
-<view>
+<view style="padding: 24rpx;">
+  <tabs
+    tabs="{{tabs}}"
+    tabsName="activeTab"
+    onTabClick="handleTabClick"
+    onChange="handleTabChange"
+    onPlusClick="handlePlusClick"
+    activeTab="{{activeTab}}"
+    showPlus="{{hasPlus}}"
+    swipeable="{{false}}"
+    capsule="{{typeCapsule}}"
+    hasSubTitle="{{typeHasSubTitle}}"
+    tabBarUnderlineWidth="20px"
+  >
+    <block a:for="{{tabs}}">
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 0}}">
+        <view
+          a:for="{{tickets}}"
+          class="ticket-container"
+        >
+          <ticket
+            id="{{item.id}}"
+            price="{{item.price}}"
+            baseline="{{item.baseline}}"
+            startAt="{{item.startAt}}"
+            endAt="{{item.endAt}}"
+          ></ticket>
+        </view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:elif="{{index === 1}}">
+        <view
+          a:for="{{tickets}}"
+          class="ticket-container"
+        >
+          <ticket
+            id="{{item.id}}"
+            price="{{item.price}}"
+            baseline="{{item.baseline}}"
+            startAt="{{item.startAt}}"
+            endAt="{{item.endAt}}"
+          ></ticket>
+        </view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:else>
+        <view class="tab-content">content of {{item.title}}</view>
+      </tab-content>
+    </block>
+  </tabs>
+</view>
+
+
+<!-- <view>
   <title>我的卡券</title>
   <tab
     className="tab-margin"
@@ -18,4 +69,4 @@
       endAt="{{item.endAt}}"
     ></ticket>
   </view>
-</view>
+</view> -->

@@ -1,4 +1,5 @@
 const medals = ['再来一杯', '薅羊毛大师', '奶茶行家', '体重超标', '尝新达人'];
+const sexs = ['男', '女'];
 
 Page({
   data: {
@@ -12,6 +13,7 @@ Page({
     IDtag1: "果茶爱好者",
     IDtag2: "只爱三分糖",
     medal: '',
+    sex: '',
   },
   onExtraTap() {
     my.alert({
@@ -53,6 +55,17 @@ Page({
       success: (res) => {
         this.setData({
           medal: medals[res.index],
+        });
+      },
+    });
+  },
+  onPickerTap1() {
+    my.showActionSheet({
+      title: '您的性别',
+      items: sexs,
+      success: (res) => {
+        this.setData({
+          sex: sexs[res.index],
         });
       },
     });

@@ -7,14 +7,24 @@ Page({
     OFFLINE,
     tabs: [
       {
-        id: ONLINE,
-        title: '线上使用优惠券',
-        onClick: () => {},
+        title: '外卖优惠券',
+        subTitle: '描述文案',
+        // number: '6',
+        showBadge: true,
+        badge: {
+          arrow: true,
+          stroke: true,
+        },
       },
       {
-        id: OFFLINE,
-        title: '到店使用优惠券',
-        onClick: () => {},
+        title: '到店优惠券',
+        subTitle: '描述文案描述',
+        // number: '66',
+        showBadge: true,
+        badge: {
+          arrow: false,
+          stroke: true,
+        },
       },
     ],
     tickets: [
