@@ -33,18 +33,6 @@ Page({
         cover:
           '../../asserts/my/more.png',
       },
-
-      // {
-      //   title: '再来一杯',
-      //   cover:
-      //     '../../asserts/icon/achievement/zailaiyibei.png',
-      // },
-
-      // {
-      //   title: '体重超标',
-      //   cover:
-      //     '../../asserts/icon/achievement/tizhongchaobiao.png',
-      // },
     ],
     navList: [
       {
@@ -90,7 +78,7 @@ Page({
         onClick: () => 
           my.navigateTo({
               url: '/pages/my-setting/my-setting',
-            }),
+          }),
       },
     ],
   },
@@ -100,5 +88,11 @@ Page({
     if (onClick) {
       onClick();
     }
+  },
+  jumpToComment() {
+    print("test");
+    my.navigateTo({
+      url: '/pages/my-comment/my-comment',
+    })
   },
 });

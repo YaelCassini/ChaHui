@@ -41,7 +41,7 @@
             粉丝
           </view>
         </view>
-        <view class="user-profile__info">
+        <view class="user-profile__info" onClick="jumpToComment">
           <view class="user-profile__infocount">
             {{currentUser.comment}}
           </view>

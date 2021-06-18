@@ -24,63 +24,95 @@ export const Comment1 = {
       time: "2021-06-18  10:31",
 
       score: 3,
-      
-      
 
       cover: "../../asserts/picture/caomeixiaoquexing.jpg",
       title: "草莓小确幸",
       subtitle: "厝内小眷村",
-      score: "3.5",
-      canSelfPickUp: true,
-      price: 19,
-      sales: 1589,
-      
 
+      addition: "椰果",
+      temperature: "少冰",
+      sweetness: "三分糖",
+      detail: "强烈安利！和椰果绝配！",
     },
     {
-      id: 1,
-      cover:
-        "../../asserts/picture/yangzhiganlu.jpg",
-      title: "杨枝甘露",
-      subtitle: "古茗",
-      score: "3.5",
-      canSelfPickUp: true,
-      price: 25,
-      sales: 1589,
       isMyComment: true,
-    },
-    {
-      id: 2,
-      cover:
-        "../../asserts/picture/zhaopaiyuyuannaicha.jpg",
-      title: "招牌芋圆奶茶",
-      subtitle: "茶百道",
-      score: "3.5",
-      canSelfPickUp: false,
-      price: 15,
-      sales: 1589,
-    },
-    {
-      id: 3,
-      cover:
-        "../../asserts/picture/caomeixiaoquexing.jpg",
+      name: '奶茶品鉴大师',
+      avatar: "/asserts/my/avatar.jpg",
+      sex:"../../asserts/my/women.png",
+      tag1:"果茶爱好者",
+      tag2:"只爱三分糖",
+      time: "2021-06-18  10:31",
+
+      score: 1,
+
+      cover: "../../asserts/picture/caomeixiaoquexing.jpg",
       title: "草莓小确幸",
       subtitle: "厝内小眷村",
-      score: "3.5",
-      canSelfPickUp: true,
-      price: 19,
-      sales: 1589,
+
+      addition: "椰果",
+      temperature: "少冰",
+      sweetness: "三分糖",
+      detail: "强烈安利！和椰果绝配！",
     },
     {
-      id: 4,
-      cover:
-        "../../asserts/picture/yangzhiganlu.jpg",
-      title: "杨枝甘露",
-      subtitle: "古茗",
-      score: "3.5",
-      canSelfPickUp: true,
-      price: 25,
-      sales: 1589,
+      isMyComment: false,
+      name: '奶茶品鉴大师',
+      avatar: "/asserts/my/avatar.jpg",
+      sex:"../../asserts/my/women.png",
+      tag1:"果茶爱好者",
+      tag2:"只爱三分糖",
+      time: "2021-06-18  10:31",
+
+      score: 5,
+
+      cover: "../../asserts/picture/caomeixiaoquexing.jpg",
+      title: "草莓小确幸",
+      subtitle: "厝内小眷村",
+
+      addition: "椰果",
+      temperature: "少冰",
+      sweetness: "三分糖",
+      detail: "强烈安利！和椰果绝配！",
+    },
+    {
+      isMyComment: true,
+      name: '奶茶品鉴大师',
+      avatar: "/asserts/my/avatar.jpg",
+      sex:"../../asserts/my/women.png",
+      tag1:"果茶爱好者",
+      tag2:"只爱三分糖",
+      time: "2021-06-18  10:31",
+
+      score: 3,
+
+      cover: "../../asserts/picture/caomeixiaoquexing.jpg",
+      title: "草莓小确幸",
+      subtitle: "厝内小眷村",
+
+      addition: "椰果",
+      temperature: "少冰",
+      sweetness: "三分糖",
+      detail: "强烈安利！和椰果绝配！",
+    },
+    {
+      isMyComment: true,
+      name: '奶茶品鉴大师',
+      avatar: "/asserts/my/avatar.jpg",
+      sex:"../../asserts/my/women.png",
+      tag1:"果茶爱好者",
+      tag2:"只爱三分糖",
+      time: "2021-06-18  10:31",
+
+      score: 3,
+
+      cover: "../../asserts/picture/caomeixiaoquexing.jpg",
+      title: "草莓小确幸",
+      subtitle: "厝内小眷村",
+
+      addition: "椰果",
+      temperature: "少冰",
+      sweetness: "三分糖",
+      detail: "强烈安利！和椰果绝配！",
     },
   ],
 };
