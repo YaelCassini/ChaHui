@@ -80,7 +80,7 @@ Page({
           '../../asserts/icon/comment.png',
         onClick: () =>
           my.navigateTo({
-            url: '/pages/my-ticket/my-ticket',
+            url: '/pages/my-comment/my-comment',
           }),
       },
       {

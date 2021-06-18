@@ -1,0 +1,85 @@
+<view
+  class="comment"
+  style="grid-template-columns:{{columns===1?'1fr':'1fr 1fr'}};"
+>
+
+  <view
+    class="comment-col"
+    a:for="{{commentData}}"
+    style="background:{{item.isMyComment?'#eee':'#fff'}};"
+  >
+    <view 
+      a:if="{{!item.isMyComment}}"
+      class="user-profile">
+      <image
+        class="user-profile__avatar"
+        src="{{item.avatar}}"    
+        mode="scaleToFill"
+      />
+      <view class="user-profile__right">
+          <view class="user-profile__name">
+            {{item.name}}
+          </view>
+        <view class="user-profile__status">
+          <view class="user-profile__sex">
+            <image
+              class="sex_item"
+              src="/asserts/my/woman.png"
+              mode="scaleToFill"
+            />
+          </view>
+          <view class="user-profile__tag">
+            {{item.tag1}}
+          </view>
+          <view class="user-profile__tag">
+            {{item.tag2}}
+          </view>
+        </view>
+        <view class="user-profile__time">
+          {{item.time}}
+        </view>
+      </view>
+    </view>
+    <view
+      onTap="onTapCommodity"
+      data-id="{{item.id}}"
+      class="comment-item"
+      style="flex-direction:{{columns===1?'row':'column'}};"
+    >
+    
+      <image
+        src="{{item.cover}}"
+        mode="aspectFill"
+      />
+      <view class="comment-item__container">
+        <view class="comment-item__body">
+          <view class="comment-item__title">{{item.title}}</view>
+          <view class="comment-item__subtitle">{{item.subtitle}}</view>
+        </view>
+        <view>
+          <view
+            a:if="{{item.canSelfPickUp}}"
+            class="comment-item__self-pick-up"
+          >
+            可自提
+          </view>
+          <view class="comment-item__footer">
+
+            <view class="comment-item__footer-left">
+              <view class="comment-item__price-logo">¥</view>
+              <view class="comment-item__price">
+                {{item.price}}
+              </view>
+              <view class="comment-item__score">
+                得分：{{item.score}}
+              </view>
+              <view class="comment-item__sales">
+                月销量：{{item.sales}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

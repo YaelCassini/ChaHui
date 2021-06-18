@@ -72,9 +72,7 @@
       <view class="entries__title">{{item.title}}</view>
     </view>
   </scroll-view> -->
-  <view
-    class="entries"
-  >
+  <view class="entries">
     <view
       a:for="{{entries}}"
       class="entries__item"

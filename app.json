@@ -9,7 +9,8 @@
     "pages/my-ticket/my-ticket",
     "pages/home/home",
     "pages/card/card",
-    "pages/my-setting/my-setting"
+    "pages/my-setting/my-setting",
+    "pages/my-comment/my-comment"
   ],
   "window": {
     "defaultTitle": "茶荟",

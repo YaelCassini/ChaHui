@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "茶荟",
+  "defaultTitle": "我的测评",
   "usingComponents": {
     "location": "/pages/home/components/location/location",
     "masonry": "/pages/home/components/Masonry/Masonry",

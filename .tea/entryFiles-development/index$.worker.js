@@ -71,6 +71,7 @@ require('../../node_modules/mini-ali-ui/es/button/index?hash=e1617a0257fb9de746f
 require('../../node_modules/mini-ali-ui/es/am-radio/index?hash=5a0c180d5ccf7c9d483dd4817cdab5489824013c');
 require('../../node_modules/mini-ali-ui/es/am-switch/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../node_modules/mini-ali-ui/es/picker-item/index?hash=5a0c180d5ccf7c9d483dd4817cdab5489824013c');
+require('../../pages/my-comment/components/Comment/Comment?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../pages/community/community?hash=fadb02f92b9940602f0b2594946e244094bb7d90');
 require('../../pages/shopping-cart/shopping-cart?hash=32d7d2807ed4e666ef03b4b3fe8c38ecf2e34e68');
 require('../../pages/my/my?hash=3e2e5e2d473d03821badb5452a72c12422f436f6');
@@ -81,6 +82,7 @@ require('../../pages/my-ticket/my-ticket?hash=d6b8fa15a17672571e95a1bb0f53f7d98c
 require('../../pages/home/home?hash=7ce3d2799c65128e52db7a63e9cccc4c7c4b031a');
 require('../../pages/card/card?hash=bb6be94eeb1a277c746c1e9a0a8507e056c481bf');
 require('../../pages/my-setting/my-setting?hash=e8d9165148084b5197ce4ba4fb3222f7e3756919');
+require('../../pages/my-comment/my-comment?hash=2d07ca871cd851f39d56985d64b7fe24a682606a');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

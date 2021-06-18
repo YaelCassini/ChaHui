@@ -1,0 +1,28 @@
+<import-sjs
+  name="EmptyType"
+  from="../../components/Empty/empty-type.sjs"
+/>
+<view disable-scroll=false>
+  <!-- <view class="search-nav">
+    <navigator
+      className="search-nav__input"
+      url="/pages/search/search"
+    >
+      <search
+        value="{{searchValue}}"
+        disabled="{{true}}"
+      />
+    </navigator>
+  </view> -->
+  <comment
+    a:if="{{currentCommodities.length>0}}"
+    columns="{{activeTabId===TREND?1:1}}"
+    isRanking="{{activeTabId===TREND}}"
+    commentData="{{currentCommodities}}"
+  />
+  <empty
+    a:else
+    type="{{searchValue?EmptyType.EMPTY_SEARCH_RESULT:EmptyType.EMPTY_STORE}}"
+    className="empty-position"
+  />
+</view>
