@@ -30,39 +30,41 @@
         mode="aspectFill"
         class="masonry-item__background"
         style="height:{{columns===1?280:342}}rpx;width:{{columns===1?'280rpx':'100%'}}"
-        onTap="jumpToGoods"
       />
       <view class="masonry-item__container">
         <view class="masonry-item__body">
           <view class="masonry-item__title">{{item.title}}</view>
-          <view class="masonry-item__subtitle">{{item.subtitle}}</view>
         </view>
         <view>
-          <view
+          <!-- <view
             a:if="{{item.canSelfPickUp}}"
             class="masonry-item__self-pick-up"
           >
-            可自提
+            明星店家
+          </view> -->
+          <view class="masonry_score">
+            <image mode="scaleToFill" 
+            src="../../../../asserts/picture/star.png" 
+            style="width: 40rpx;height:40rpx;" />
+            <text space="ensp"> {{item.score}}分</text>
           </view>
+
           <view class="masonry-item__footer">
 
             <view class="masonry-item__footer-left">
-              <view class="masonry-item__price-logo">¥</view>
+              <!-- <view class="masonry-item__price-logo">¥</view>
               <view class="masonry-item__price">
                 {{item.price}}
-              </view>
-              <view class="masonry-item__score">
-                得分：{{item.score}}
-              </view>
+              </view> -->
               <view class="masonry-item__sales">
-                月销量：{{item.sales}}
+                {{item.sales}}人在喝
               </view>
             </view>
-            <image
+            <!-- <image
               mode="scaleToFill"
               src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*7iWdR5ix18UAAAAAAAAAAABkARQnAQ"
               class="masonry-item__shopping-cart"
-            />
+            /> -->
           </view>
         </view>
       </view>
