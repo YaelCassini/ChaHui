@@ -4,10 +4,9 @@
 />
 <view disable-scroll=false>
   <comment
-    a:if="{{currentCommodities.length>0}}"
-    columns="{{activeTabId===TREND?1:1}}"
-    isRanking="{{activeTabId===TREND}}"
-    commentData="{{currentCommodities}}"
+    a:if="{{commentInfo.length>0}}"
+    columns="{{1}}"
+    commentData="{{commentInfo}}"
   />
   <!-- <empty
     a:else

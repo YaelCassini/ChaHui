@@ -3,7 +3,7 @@
   <image class="image"
     data-name="test"
     onTap="onTap"
-    mode="aspectFill" src="/asserts/picture/boba.jpg"  onError="imageError" onLoad="imageLoad" />
+    mode="aspectFill" src={{CommodityInfo.pic}}  onError="imageError" onLoad="imageLoad" />
 
   <container className="container-item">
     <view class="aline">
@@ -11,18 +11,18 @@
         className="changeColor"
         hasLine="true"
         onActionTap="titleGo"
-        >{{GoodName}}
+        >{{CommodityInfo.name}}
       </title>
     </view>
 
-      <view class="aline" style="margin-top:30px; font-size: 13px; color: #777777;">
-        月售1000000
-      </view>
+    <view class="aline" style="margin-top:30px; font-size: 13px; color: #777777;">
+      月售{{CommodityInfo.salePerMonth}}
+    </view>
       
     <view>
       <view class="aline">
         <view style="margin-top: 10px; font-size: 28px; color: #f36436;">
-          ￥18
+          ￥{{CommodityInfo.price}}
         </view>
       </view>
     </view>
@@ -42,13 +42,13 @@
           >商品描述
         </title>
       </view>
-      <view a:for="{{descriptor}}" style="width:100%; ">
+      <view a:for="{{CommodityInfo.description}}" style="width:100%; ">
         <view class="aline" style="display: flex; padding-top: 5px">
           <view style="width:20%; line-height:20px; font-size: 13px; color: #777777;">
-            商品描述
+            {{item.type}}
           </view>
           <view style="padding-left:5px; line-height:20px; width:80%; font-size: 14px; color: #000000; word-break:break-all;">
-            商品描述ssfdsdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            {{item.content}}
           </view>
         </view>
     </view>
@@ -56,42 +56,34 @@
 
   
   <container className="container-item">
-      <view class="aline">
-        <title
-          hasLine="true"
-          className="subTitle"
-          onActionTap="titleGo"
-          >卖家评价
-        </title>
-      </view>
-      
-      <view class="aline">
-        <view style="display: flex; margin-top: 20px;">
-          <view a:for="{{tag}}" style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
-            <tag size="sm" type="primary">NBSSS</tag>
-          </view>
+    <view class="aline">
+      <title
+        hasLine="true"
+        className="subTitle"
+        onActionTap="titleGo"
+        >卖家评价
+      </title>
+    </view>
+    
+    <view class="aline" style="margin-bottom: 20px;">
+      <view style="display: flex; margin-top: 20px;">
+        <view a:for="{{CommodityInfo.tag}}" style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
+          <tag size="sm" type="primary">{{item.value}}</tag>
         </view>
       </view>
-      
-    <container className="container-item">
-        <view className="comment-item" style="
-          border-style:solid;
-          border-width:5px;
-          border-color:#63B678;">
-              <view class="aline" style="padding-top: 10px;padding-bottom: 10px; margin-right:-100px; background-color: #63B678;">
-                <view style="margin-left: 5px; color: white">奶茶鉴赏大师</view>
-              </view>
-              <view a:for="{{descriptor}}" style="width:100%; margin: 5px 5px">
-                <view class="aline" style="display: flex; padding-top: 5px">
-                  <view style="width:20%; line-height:20px; font-size: 13px; color: #777777;">
-                    商品描述
-                  </view>
-                  <view style="padding-left:5px; line-height:20px; width:70%; font-size: 14px; color: #000000; word-break:break-all;">
-                    商品描述ssfdsdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-                  </view>
-                </view>
-            </view>
-        </view>
-    </container>
+    </view>
+
+    <view disable-scroll=false>
+      <comment
+        a:if="{{currentCommodities.length>0}}"
+        columns="{{1}}"
+        commentData="{{currentCommodities}}"
+      />
+      <empty
+        a:else
+        type="{{EmptyType.EMPTY_SEARCH_RESULT}}"
+        className="empty-position"
+      />
+    </view>
 
   </container>

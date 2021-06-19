@@ -17,7 +17,7 @@ export const allCommodity = {
     {
       id: 0,
       cover:
-        "../../asserts/picture/shop/ALittle.jpg",
+        "../../asserts/picture/yidiandian.jpg",
       title: "一点点",
       canSelfPickUp: true,
       price: 19,

@@ -43,7 +43,8 @@ Page({
     this.fetchCurrentCommodities(id);
   },
   onTapCommodity(id) {
-    this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
+    // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
+    my.navigateTo({url:'../business/business'});
   },
   onCloseCommodityDrawer() {
     this.setData({ showCommodityDrawer: false });

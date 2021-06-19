@@ -1,24 +1,35 @@
 {
-  "modes": [
-    {
-      "title": "home",
-      "page": "pages/home/home"
-    },
-    {
-      "title": "community",
-      "page": "pages/community/community"
-    },
-    {
-      "title": "card",
-      "page": "pages/card/card"
-    },
-    {
-      "title": "buss",
-      "page": "pages/business/business"
-    },
-    {
-      "title": "order",
-      "page": "pages/order/order"
-    }
-  ]
+    "modes": [{
+            "title": "home",
+            "page": "pages/home/home"
+        },
+        {
+            "title": "community",
+            "page": "pages/community/community"
+        },
+        {
+            "title": "card",
+            "page": "pages/card/card"
+        },
+        {
+            "title": "buss",
+            "page": "pages/business/business"
+        },
+        {
+            "title": "order",
+            "page": "pages/order/order"
+        },
+        {
+            "title": ",cate",
+            "page": "pages/category/category"
+        },
+        {
+            "title": "collection",
+            "page": "pages/my-collection/my-collection"
+        },
+        {
+            "title": "mycomment",
+            "page": "pages/my-comment/my-comment"
+        }
+    ]
 }

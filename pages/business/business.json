@@ -4,11 +4,14 @@
     "container": "mini-ali-ui/es/container/index",
     "card": "mini-ali-ui/es/card/index",
     "tab": "/components/Tab/Tab",
+    "search": "/components/Search/Search",
     "title": "mini-ali-ui/es/title/index",
     "tag": "mini-ali-ui/es/tag/index",
     "list-item": "mini-ali-ui/es/list/list-item/index",
     "am-switch": "mini-ali-ui/es/am-switch/index",
     "empty": "/components/Empty/Empty",
-    "comment": "/pages/my-comment/components/Comment/Comment"
+    "comment": "/pages/my-comment/components/Comment/Comment",
+    "category-nav": "/components/category-nav/category-nav",
+    "masonry": "/pages/business/components/Masonry/Masonry"
   }
 }

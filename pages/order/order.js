@@ -10,6 +10,25 @@ Page({
       { id: 1, value: '衣服', selected: true },
       { id: 1, value: '橱柜' },
     ],
+    commentInfo:
+    {
+      userid: 0,
+      isMyComment: true,
+      avatar: "/asserts/my/avatar.jpg",
+      sex: 1,
+      tag1: "果茶爱好者",
+      tag2: "只爱三分甜",
+      time: "2021-06-18  10:31",
+      score: 5,
+      cover: "../../asserts/picture/caomeixiaoquexing.jpg",
+      title: "草莓小确幸",
+      subtitle: "厝内小眷村",
+      addition: "椰果",
+      temperature: "少冰",
+      sweetness: "三分糖",
+      detail: "强烈安利！和椰果绝配",
+      url: "/pages/commodity/commodity/id?=undefined"
+    }
   },
   handleCallBack(data) {
     my.alert({
@@ -40,6 +59,11 @@ Page({
       showBottom: true,
     });
   },
+  onOneMoreOrder(){
+    my.navigateTo({
+              url: '/pages/business/business',
+          })
+  },
   onPopupClose() {
     this.setData({
       showLeft: false,
@@ -63,10 +87,7 @@ Page({
       content: '评论提交中',
     });
 
-    my.serverless.db.collection('comment').insertOne({
-      like: 0,
-      score: this.data.commentScore,
-      content: this.data.commentContent})
+    my.serverless.db.collection('comment').insertOne(this.data.commentInfo)
     .then(res => {})
     .catch(console.error);
 

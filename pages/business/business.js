@@ -1,20 +1,27 @@
 import { getCommodity } from '../../services/comment';
 import * as log from '../../utils/log';
-import { ALL, TREND, NEW, PRICE } from '../../asserts/CommentType';
 
 Page({
   data: {
-    thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
-    expand3rd: false,
-    SellerName: '一点点',
-    descriptor: [{
-      title: '商品描述',
-      content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
-    },{
-      title: '商品描述',
-      content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
-    }] ,
-    src: '../asserts/picture/yangzhiganlu.jpg',
+    SellerInfo:
+    {
+      id: 0,
+      name: 'Loading',
+      salePerMonth: '-',
+      waitingTime: '-',
+      waitingCup: '-',
+      pic: "/asserts/picture/loading.gif",
+      tag: [{value:'-'}],
+    },
+    // {      
+    //   id: 1,
+    //   name: '茶百道（玉泉北门店）',
+    //   salePerMonth: '7976',
+    //   waitingTime: '34',
+    //   waitingCup: '14',
+    //   pic: "/asserts/picture/seller/chabaidao.jpg",
+    //   tag: [{value:'超棒'},{value:'性价比高'},{value:'芋圆不错'},{value:'很快'}],
+    // },
     tabs: [
       {
         id: 0,
@@ -25,16 +32,30 @@ Page({
         title: '评价',
       },
     ],
+    searchValue: '',
     activeTabId: 0,
     currentCommodities: [],
-    selectedCommodityId: '',
-    showCommodityDrawer: false,
   },
   onActiveTabChange(id) {
     this.setData({ activeTabId: id });
   },
-  onShow() {
+  onLoad(options)
+  {
     this.fetchCurrentCommodities(1);
+    my.serverless.db.collection('seller').find()
+      .then(res => {
+        this.setData({["SellerInfo"]:res.result[1]})
+      })
+      .catch(console.error);
+
+    // this.onAddSellerInfo()
+  },
+  onShow() {
+    
+  },
+  onTapCommodity(id) {
+    // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
+    my.navigateTo({url:'../card/card'});
   },
   fetchCurrentCommodities(commodityType) {
     this.setData({ currentCommodities: [] });
@@ -48,5 +69,17 @@ Page({
       .catch(err =>
         log.error('handbag.fetchCurrentCommodities.getComment1', err)
       );
+  },
+  async onAddSellerInfo() {
+    my.showLoading({
+      content: '记录提交中',
+    });
+    my.serverless.db.collection('seller').insertOne(
+      this.data.SellerInfo)
+    .then(res => {})
+    .catch(console.error);
+
+    my.hideLoading();
+    this.onPopupClose();
   },
 });
