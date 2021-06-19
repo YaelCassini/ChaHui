@@ -8,7 +8,7 @@
   >
     <view
       onTap="onTapCommodity"
-      data-id="{{item.id}}"
+      data-id="{{index}}"
       class="masonry-item"
       style="flex-direction:{{columns===1?'row':'column'}};"
     >
@@ -26,14 +26,14 @@
         mode="scaleToFill"
       />
       <image
-        src="{{item.cover}}"
+        src="{{item.pic}}"
         mode="aspectFill"
         class="masonry-item__background"
         style="height:{{columns===1?280:342}}rpx;width:{{columns===1?'280rpx':'100%'}}"
       />
       <view class="masonry-item__container">
         <view class="masonry-item__body">
-          <view class="masonry-item__title">{{item.title}}</view>
+          <view class="masonry-item__title">{{item.name}}</view>
         </view>
         <view>
           <!-- <view
@@ -68,7 +68,7 @@
                 {{item.price}}
               </view> -->
               <view class="masonry-item__sales">
-                {{item.sales}}人喝过
+                {{item.salePerMonth}}人喝过
               </view>
             </view>
             <!-- <image
