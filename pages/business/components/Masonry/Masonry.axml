@@ -8,7 +8,7 @@
   >
     <view
       onTap="onTapCommodity"
-      data-id="{{item.id}}"
+      data-id="{{index}}"
       class="masonry-item"
       style="flex-direction:{{columns===1?'row':'column'}};"
     >

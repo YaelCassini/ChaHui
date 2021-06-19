@@ -67,9 +67,12 @@ Page({
   },
   onTapCommodity(id) {
     // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
+    console.log("before navigate")
+    console.log(id, this.data.commodities)
     const commodity_id = this.data.commodities[id].id;
     const seller_id = this.data.commodities[id].seller_id;
     console.log(commodity_id, seller_id)
+    console.log("start navigate")
     my.navigateTo({url:'../card/card?id='+commodity_id+'&seller_id='+seller_id});
   },
   fetchCurrentCommodities(commodityType) {
