@@ -5,6 +5,21 @@ Page({
     orderList: [ ],
     showIDtags: false,
     showAchievement: false,
+    show: true,
+    items: [
+      { id: 1, value: '衣服', selected: true },
+      { id: 1, value: '橱柜' },
+    ],
+  },
+  handleCallBack(data) {
+    my.alert({
+      content: data,
+    });
+  },
+  toggleFilter() {
+    this.setData({
+      show: !this.data.show,
+    });
   },
   onLoad() {
       // Set data from db

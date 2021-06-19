@@ -47,7 +47,6 @@
 .changeColor {
   font-size: 28px;
   width: 100%;
-  padding-top: -90px;
 }
 
 .subTitle {
