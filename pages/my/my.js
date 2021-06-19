@@ -1,44 +1,34 @@
+const achievementsData = {
+  name:[
+    "查看更多",
+    "尝新达人",
+    "薅羊毛大师",
+    "奶茶行家",
+    "体重超标",
+    "再来一杯",
+    "遍尝百家"
+  ],
+  pic:[
+    '../../asserts/icon/achievement/chakangengduo.png',
+    '../../asserts/icon/achievement/changxindaren.png',
+    '../../asserts/icon/achievement/haoyangmaodashi.png',
+    '../../asserts/icon/achievement/naichahangjia.png',
+    '../../asserts/icon/achievement/tizhongchaobiao.png',
+    '../../asserts/icon/achievement/zailaiyibei.png',
+    '../../asserts/icon/achievement/bianchangbaijia.png'
+  ]
+};
+
 Page({
   data: {
     currentUser: {
-      name: '奶茶品鉴大师',
-      credit: 100,
-      member: '尝新达人',
-      sex:"../../asserts/my/women.png",
-      tag1:"果茶爱好者",
-      tag2:"只爱三分糖",
-      follow: 20,
-      fans:5,
-      comment:20,
-      introduction: "该用户还没有简介",
     },
-    achievements: [
-      {
-        title: '奶茶行家',
-        cover:
-          '../../asserts/icon/achievement/naichahangjia.png',
-      },
-      {
-        title: '尝新达人',
-        cover:
-          '../../asserts/icon/achievement/changxindaren.png',
-      },
-      {
-        title: '薅羊毛大师',
-        cover:
-          '../../asserts/icon/achievement/haoyangmaodashi.png',
-      },
-      {
-        title: '查看更多',
-        cover:
-          '../../asserts/my/more.png',
-      },
-    ],
+    achievementsData,
     navList: [
       {
         name: '愿望单',
         thumb:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Y8BATYqMN78AAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/wish.png',
         onClick: () =>
           my.navigateTo({
             url: '/pages/my-achievement/my-achievement',
@@ -56,7 +46,7 @@ Page({
       {
         name: '我的卡劵',
         thumb:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9RqXQaxLeCEAAAAAAAAAAABkARQnAQ',
+          '../../asserts/icon/ticket.png',
         onClick: () =>
           my.navigateTo({
             url: '/pages/my-ticket/my-ticket',
@@ -82,7 +72,19 @@ Page({
       },
     ],
   },
-  onLoad() {},
+  onLoad() {
+    // Set data from db
+      my.serverless.db.collection('user')
+        .find()
+        .then(res => {
+          console.log(res.result)
+          this.data.userList = res.result
+          this.setData({["currentUser"]:this.data.userList[0]})
+          console.log(this.data.userList[0])
+        })
+        .catch(console.error);
+      this.setData({["currentUser"]:this.data.userList[0]})
+  },
   onAchievementClick() {
     my.navigateTo({
       url: '/pages/my-achievement/my-achievement',

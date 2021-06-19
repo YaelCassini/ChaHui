@@ -1,25 +1,32 @@
+const achievementsData = {
+  name:[
+    "查看更多",
+    "尝新达人",
+    "薅羊毛大师",
+    "奶茶行家",
+    "体重超标",
+    "再来一杯",
+    "遍尝百家"
+  ],
+  pic:[
+    '../../asserts/icon/achievement/chakangengduo.png',
+    '../../asserts/icon/achievement/changxindaren.png',
+    '../../asserts/icon/achievement/haoyangmaodashi.png',
+    '../../asserts/icon/achievement/naichahangjia.png',
+    '../../asserts/icon/achievement/tizhongchaobiao.png',
+    '../../asserts/icon/achievement/zailaiyibei.png',
+    '../../asserts/icon/achievement/bianchangbaijia.png'
+  ]
+};
+
 Component({
   mixins: [],
-  data: {},
+  data: {
+    achievementsData,
+  },
   props: {
     commentData: [],
-    columns: 2,
     isRanking: false,
-    onTapCommodity: () => {},
-    jumpToGoods: () => {},
   },
-  didMount() {},
-  didUpdate() {},
-  didUnmount() {},
-  methods: {
-    onTapCommodity(e) {
-      this.props.onTapCommodity(e.target.dataset.id);
-    },
-    jumpToGoods()
-    {
-      // 事件处理
-		  console.log('我是点击事件')
-      my.navigateTo({ url: '../card/card' })
-    }
-  },
+  
 });

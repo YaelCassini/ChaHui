@@ -9,72 +9,59 @@ Page({
     NEW,
     PRICE,
     searchValue: '',
-    tabs: [
-      {
-        id: ALL,
-        title: '新品上市',
-      },
-      {
-        id: TREND,
-        title: '人气店家',
-      },
-      {
-        id: NEW,
-        title: '猜你喜欢',
-      },
-      {
-        id: PRICE,
-        title: '价格',
-        sortable: true,
-      },
-    ],
     activeTabId: ALL,
     currentCommodities: [],
     selectedCommodityId: '',
     showCommodityDrawer: false,
   },
-  onShow() {
-    const { searchValue = '' } = getApp();
-    this.setData({ searchValue });
-    this.fetchCurrentCommodities(this.data.activeTabId);
-  },
-  onActiveTabChange(id) {
-    this.setData({ activeTabId: id });
-    this.fetchCurrentCommodities(id);
-  },
-  onTapCommodity(id) {
-    this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
-  },
-  onCloseCommodityDrawer() {
-    this.setData({ showCommodityDrawer: false });
-  },
-  getCommodityDetailPagePath(id) {
-    return `/pages/commodity/commodity?id=${id}`;
-  },
-  mapCommodityItemToViewList(commodities = []) {
-    return commodities.map(item => ({
-      ...item,
-      url: this.getCommodityDetailPagePath(item.id),
-    }));
-  },
-  fetchCurrentCommodities(commodityType) {
-    this.setData({ currentCommodities: [] });
-    getCommodity({ type: commodityType })
-      .then(({ data = [] }) =>
-        this.setData({
-          currentCommodities: this.mapCommodityItemToViewList(data),
+  onLoad() {
+    // Set data from db
+      my.serverless.db.collection('user')
+        .find()
+        .then(res => {
+          //console.log(res.result)
+          this.data.userList = res.result
+          this.setData({["currentCommodities"]:this.data.userList})
+          //console.log(this.data.userList)
         })
-      )
-      .catch(err =>
-        log.error('handbag.fetchCurrentCommodities.getComment1', err)
-      );
+        .catch(console.error);
+      this.setData({["currentCommodities"]:this.data.userList});
+      // console.log(currentCommodities);
   },
-  onConfirm() {
-    this.onCloseCommodityDrawer();
-    my.showToast({
-      type: 'success',
-      content: '添加成功，在购物车等亲',
-      duration: 3000,
-    });
-  },
+  // onShow() {
+  //   const { searchValue = '' } = getApp();
+  //   this.setData({ searchValue });
+  //   this.fetchCurrentCommodities(this.data.activeTabId);
+  // },
+  // onActiveTabChange(id) {
+  //   this.setData({ activeTabId: id });
+  //   this.fetchCurrentCommodities(id);
+  // },
+  // onTapCommodity(id) {
+  //   this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
+  // },
+  // onCloseCommodityDrawer() {
+  //   this.setData({ showCommodityDrawer: false });
+  // },
+  // getCommodityDetailPagePath(id) {
+  //   return `/pages/commodity/commodity?id=${id}`;
+  // },
+  // mapCommodityItemToViewList(commodities = []) {
+  //   return commodities.map(item => ({
+  //     ...item,
+  //     url: this.getCommodityDetailPagePath(item.id),
+  //   }));
+  // },
+  // fetchCurrentCommodities(commodityType) {
+  //   this.setData({ currentCommodities: [] });
+  //   getCommodity({ type: commodityType })
+  //     .then(({ data = [] }) =>
+  //       this.setData({
+  //         currentCommodities: this.mapCommodityItemToViewList(data),
+  //       })
+  //     )
+  //     .catch(err =>
+  //       log.error('handbag.fetchCurrentCommodities.getComment1', err)
+  //     );
+  // },
 });
