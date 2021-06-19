@@ -1,0 +1,11 @@
+{
+  "defaultTitle": "茶荟",
+  "usingComponents": {
+    "comment": "/pages/my-follow/components/User/User",
+    "User": "/pages/my-follow/components/User/User",
+    "search": "/components/Search/Search",
+    "empty": "/components/Empty/Empty",
+    "category-nav": "/components/category-nav/category-nav",
+    "tab": "/components/Tab/Tab"
+  }
+}

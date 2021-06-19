@@ -9,7 +9,6 @@
     style="background:{{item.isMyComment?'#eee':'#fff'}};"
   >
     <view 
-      a:if="{{!item.isMyComment}}"
       class="user-profile">
       <image
         class="user-profile__avatar"
@@ -48,7 +47,7 @@
       </view>
     </view>
     
-    <view
+    <!-- <view
       class="score-item"
     >
       <view class="score-item__star" a:if="{{item.score>=1}}"> <image src = "/asserts/icon/star1.png"></image> </view>
@@ -66,10 +65,10 @@
       <view class="score-item__star" a:if="{{item.score>=5}}"> <image src = "/asserts/icon/star1.png"></image> </view>
       <view class="score-item__star" a:else> <image src = "/asserts/icon/star0.png"></image> </view>
 
-    </view>
+    </view> -->
 
 
-    <view
+    <!-- <view
       class="comment-item"
       style="flex-direction:{{columns===1?'row':'column'}};"
     >  
@@ -98,6 +97,9 @@
             </view>
           </view>
       </view>
-    </view>
+    </view> -->
+
+
+    
   </view>
 </view>

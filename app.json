@@ -10,7 +10,9 @@
     "pages/home/home",
     "pages/card/card",
     "pages/my-setting/my-setting",
-    "pages/my-comment/my-comment"
+    "pages/my-comment/my-comment",
+    "pages/my-collection/my-collection",
+    "pages/my-follow/my-follow"
   ],
   "window": {
     "defaultTitle": "茶荟",

@@ -15,13 +15,13 @@ export const searchTrend = {
 export const Comment1 = {
   data: [
     {
-      isMyComment: true,
-      // name: '奶茶品鉴大师',
-      // avatar: "/asserts/my/avatar.jpg",
-      // sex: 2,
-      // tag1:"果茶爱好者",
-      // tag2:"只爱三分糖",
-      // time: "2021-06-18  10:31",
+      isMyComment: false,
+      name: '奶茶品鉴大师',
+      avatar: "/asserts/my/avatar.jpg",
+      sex: 1,
+      tag1:"果茶爱好者",
+      tag2:"只爱三分糖",
+      time: "2021-06-18  10:31",
 
       score: 3,
 
@@ -35,13 +35,13 @@ export const Comment1 = {
       detail: "强烈安利！和椰果绝配！",
     },
     {
-      isMyComment: true,
-      // name: '奶茶品鉴大师',
-      // avatar: "/asserts/my/avatar.jpg",
-      // sex: 1,
-      // tag1:"果茶爱好者",
-      // tag2:"只爱三分糖",
-      // time: "2021-06-18  10:31",
+      isMyComment: false,
+      name: 'XYZ',
+      avatar: "/asserts/my/avatar.jpg",
+      sex: 2,
+      tag1:"奶盖爱好者",
+      tag2:"只爱七分糖",
+      time: "2021-06-18  10:31",
 
       score: 1,
 
@@ -55,13 +55,13 @@ export const Comment1 = {
       detail: "强烈安利！和椰果绝配！",
     },
     {
-      isMyComment: true,
-      // name: '奶茶品鉴大师',
-      // avatar: "/asserts/my/avatar.jpg",
-      // sex: 1,
-      // tag1:"果茶爱好者",
-      // tag2:"只爱三分糖",
-      // time: "2021-06-18  10:31",
+      isMyComment: false,
+      name: '茶百道代言人',
+      avatar: "/asserts/my/avatar.jpg",
+      sex: 2,
+      tag1:"果茶爱好者",
+      tag2:"酷爱满糖",
+      time: "2021-06-18  10:31",
 
       score: 5,
 
@@ -75,13 +75,13 @@ export const Comment1 = {
       detail: "强烈安利！和椰果绝配！",
     },
     {
-      isMyComment: true,
-      // name: '奶茶品鉴大师',
-      // avatar: "/asserts/my/avatar.jpg",
-      // sex: 2,
-      // tag1:"果茶爱好者",
-      // tag2:"只爱三分糖",
-      // time: "2021-06-18  10:31",
+      isMyComment: false,
+      name: '我爱奶茶',
+      avatar: "/asserts/my/avatar.jpg",
+      sex: 1,
+      tag1:"果茶爱好者",
+      tag2:"只爱三分糖",
+      time: "2021-06-18  10:31",
 
       score: 3,
 
@@ -95,13 +95,13 @@ export const Comment1 = {
       detail: "强烈安利！和椰果绝配！",
     },
     {
-      isMyComment: true,
-      // name: '奶茶品鉴大师',
-      // avatar: "/asserts/my/avatar.jpg",
-      // sex: 2,
-      // tag1:"果茶爱好者",
-      // tag2:"只爱三分糖",
-      // time: "2021-06-18  10:31",
+      isMyComment: false,
+      name: '拒绝身材焦虑',
+      avatar: "/asserts/my/avatar.jpg",
+      sex: 2,
+      tag1:"每天喝粥",
+      tag2:"只爱三分糖",
+      time: "2021-06-18  10:31",
 
       score: 3,
 
@@ -165,85 +165,4 @@ export const trendCommodity = {
       sales: 30,
     },
   ],
-};
-
-export const commodityDetail = {
-  data: {
-    cover:
-      "../../asserts/picture/cuoneixiaojuancun.jpg",
-    commodityName: "",
-    price: 30,
-    storage: 774,
-    type: "少冰，三分糖",
-    shippingMethod: [
-      {
-        id: 1,
-        name: "派送上门",
-      },
-      {
-        id: 2,
-        name: "门店自提",
-      },
-    ],
-    shippingFrom: {
-      type: "同城配送",
-      name: "饿了么骑手",
-    },
-    shippingTime: {
-      payTime: "11:00",
-      receiveDay: "今天",
-      receiveFormatDay: "11:30",
-    },
-    options: [
-      {
-        id: 1,
-        name: "温度",
-        values: [
-          {
-            id: 1,
-            name: "正常冰",
-          },
-          {
-            id: 2,
-            name: "少冰",
-          },
-          {
-            id: 3,
-            name: "去冰",
-          },
-          {
-            id: 4,
-            name: "常温",
-          },
-        ],
-      },
-      {
-        id: 2,
-        name: "甜度",
-        values: [
-          {
-            id: 1,
-            name: "正常糖",
-          },
-          {
-            id: 2,
-            name: "七分糖",
-          },
-          {
-            id: 3,
-            name: "五分糖",
-          },
-          {
-            id: 4,
-            name: "三分糖",
-          },
-          {
-            id: 5,
-            name: "不另外加糖",
-          },
-        ],
-      },
-    ],
-    maxPurchaseNumber: 2,
-  },
 };
