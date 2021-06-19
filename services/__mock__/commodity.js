@@ -83,6 +83,7 @@ export const trendCommodity = {
       price: 39,
       sales: 1749,
       score:4.7,
+      seller_id: 1,
     },
     {
       id: 1,
@@ -93,6 +94,7 @@ export const trendCommodity = {
       price: 39,
       sales: 1589,
       score:4.9,
+      seller_id: 0,
     },
     {
       id: 2,
@@ -103,6 +105,7 @@ export const trendCommodity = {
       price: 30,
       sales: 1130,
       score:4.7,
+      seller_id: 5,
     },
     {
       id: 3,
@@ -113,6 +116,7 @@ export const trendCommodity = {
       price: 30,
       sales: 1092,
       score:4.6,
+      seller_id: 3,
     },
     {
       id: 4,
@@ -123,6 +127,7 @@ export const trendCommodity = {
       price: 30,
       sales: 989,
       score:4.3,
+      seller_id: 4,
     },
   ],
 };

@@ -14,13 +14,13 @@ Page({
       tag: [{value:'-'}],
     },
     // {      
-    //   id: 4,
-    //   name: '喜茶（黄龙万科GO）',
-    //   salePerMonth: '438',
-    //   waitingTime: '60',
-    //   waitingCup: '5',
-    //   pic: "/asserts/picture/seller/xicha.jpg",
-    //   tag: [{value:'很喜欢'},{value:'清爽可口'},{value:'多肉葡萄停不下来'}],
+    //   id: 5,
+    //   name: '厝内小眷村（文三店）',
+    //   salePerMonth: '1633',
+    //   waitingTime: '30',
+    //   waitingCup: '12',
+    //   pic: "/asserts/picture/seller/cuonei.jpg",
+    //   tag: [{value:'超值'},{value:'性价比很高'},{value:'涓豆腐奶茶不错'}],
     // },
     tabs: [
       {
