@@ -1,6 +1,5 @@
 import { getCommodity } from '../../services/comment';
 import * as log from '../../utils/log';
-import { ALL, TREND, NEW, PRICE } from '../../asserts/CommentType';
 
 Page({
   data: {
@@ -27,8 +26,6 @@ Page({
     ],
     activeTabId: 0,
     currentCommodities: [],
-    selectedCommodityId: '',
-    showCommodityDrawer: false,
   },
   onActiveTabChange(id) {
     this.setData({ activeTabId: id });
