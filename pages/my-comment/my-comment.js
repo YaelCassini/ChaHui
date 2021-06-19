@@ -9,7 +9,9 @@ Page({
   onLoad() {
     // Set data from db
     my.serverless.db.collection('comment')
-      .find()
+      .find({
+        isMyComment: { $eq: true }
+      })
       .then(res => {
         this.setData({["commentInfo"]:res.result})
       })
