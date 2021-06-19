@@ -1,8 +1,9 @@
 {
-  "defaultTitle": "茶饮单品",
+  "defaultTitle": "商家主页",
   "usingComponents":{
     "container": "mini-ali-ui/es/container/index",
     "card": "mini-ali-ui/es/card/index",
+    "tab": "/components/Tab/Tab",
     "title": "mini-ali-ui/es/title/index"
   }
 }

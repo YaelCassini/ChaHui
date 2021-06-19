@@ -7,6 +7,14 @@
     {
       "title": "community",
       "page": "pages/community/community"
+    },
+    {
+      "title": "card",
+      "page": "pages/card/card"
+    },
+    {
+      "title": "buss",
+      "page": "pages/business/business"
     }
   ]
 }

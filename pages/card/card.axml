@@ -1,13 +1,51 @@
 <view class="container">
-  <!-- <card title="卡片标题1" 
-    onCardClick="onCardClick" 
-    info="点击了第一个card" />
-  <view style="margin-top: 10px;" />
-  <card thumb="{{thumb}}" 
-    title="卡片标题2" 
-    subTitle="副标题非必填2" 
-    onCardClick="onCardClick" 
-    info="点击了第二个card" /> -->
+
+  <image class="image"
+    data-name="test"
+    onTap="onTap"
+    mode="aspectFill" src="/asserts/picture/boba.jpg"  onError="imageError" onLoad="imageLoad" />
+
+  <container className="container-item">
+    <view class="aline">
+      <title
+        hasLine="true"
+        className="changeColor"
+        onActionTap="titleGo"
+        >{{GoodName}}
+      </title>
+    </view>
+    <view class="aline" style="font-size: 13px; color: #777777;">
+      月售1
+    </view>
+    <view class="aline">
+      <view style="font-size: 20px; color: #f36436;">
+        ￥18起
+      </view>
+    
+    </view>
+  </container>
+
+  <container className="container-item">
+      <view class="aline">
+        <title
+          hasLine="true"
+          className="subTitle"
+          onActionTap="titleGo"
+          >商品描述
+        </title>
+      </view>
+      <view a:for="{{descriptor}}" style="width:100%; ">
+        <view class="aline" style="display: flex; padding-top: 5px">
+          <view style="width:20%; line-height:20px; font-size: 13px; color: #777777;">
+            商品描述
+          </view>
+          <view style="padding-left:5px; line-height:20px; width:80%; font-size: 14px; color: #000000; word-break:break-all;">
+            商品描述ssfdsdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+          </view>
+        </view>
+    </view>
+  </container>
+
   <view style="margin-top: 10px;" />
   <view>
     <card thumb="{{thumb}}" 
