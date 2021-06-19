@@ -1,9 +1,10 @@
+/**! __CODEPLACEHOLDER_START__ */ /*[PositionForHostEntryCodeBegin]*/ /**! __CODEPLACEHOLDER_END__ */
 if(!self.__appxInited) {
 self.__appxInited = 1;
 
 
 require('./config$');
-
+require('./importScripts$');
 
       function getUserAgentInPlatformWeb() {
         return typeof navigator !== 'undefined' ? navigator.swuserAgent || navigator.userAgent || '' : '';
@@ -69,11 +70,11 @@ require('../../components/Empty/Empty?hash=05d2a9730dd6009bf9446182f9c985f40f8c0
 require('../../components/Tab/Tab?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../node_modules/mini-ali-ui/es/tag/index?hash=5a0c180d5ccf7c9d483dd4817cdab5489824013c');
 require('../../node_modules/mini-ali-ui/es/am-switch/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
+require('../../pages/my-comment/components/Comment/Comment?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../node_modules/mini-ali-ui/es/list/list-secondary/index?hash=f75be69226a587e5ccc990c4b63309fd714f1354');
 require('../../node_modules/mini-ali-ui/es/button/index?hash=e1617a0257fb9de746f60d50b03404ad924976c9');
 require('../../node_modules/mini-ali-ui/es/am-radio/index?hash=5a0c180d5ccf7c9d483dd4817cdab5489824013c');
 require('../../node_modules/mini-ali-ui/es/picker-item/index?hash=5a0c180d5ccf7c9d483dd4817cdab5489824013c');
-require('../../pages/my-comment/components/Comment/Comment?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../pages/my-follow/components/User/User?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../pages/community/community?hash=fadb02f92b9940602f0b2594946e244094bb7d90');
 require('../../pages/shopping-cart/shopping-cart?hash=32d7d2807ed4e666ef03b4b3fe8c38ecf2e34e68');
@@ -83,7 +84,7 @@ require('../../pages/search/search?hash=ef4fb84887010afe7b7bb71b7080a3b22dd7a410
 require('../../pages/order/order?hash=a2528adc7fb10265c840f8e051b5adb5432bd218');
 require('../../pages/my-ticket/my-ticket?hash=d6b8fa15a17672571e95a1bb0f53f7d98c60308b');
 require('../../pages/home/home?hash=7ce3d2799c65128e52db7a63e9cccc4c7c4b031a');
-require('../../pages/card/card?hash=4e240ef2334a023eed98c4ed77526176f9ef854b');
+require('../../pages/card/card?hash=76c95e9e29395b1937f5377f76b95e79a913815d');
 require('../../pages/my-setting/my-setting?hash=e8d9165148084b5197ce4ba4fb3222f7e3756919');
 require('../../pages/my-comment/my-comment?hash=2d07ca871cd851f39d56985d64b7fe24a682606a');
 require('../../pages/my-collection/my-collection?hash=2d07ca871cd851f39d56985d64b7fe24a682606a');
