@@ -12,57 +12,75 @@ export const searchTrend = {
   ],
 };
 
-export const allCommodity = {
+export const Comment1 = {
   data: [
     {
-      id: 0,
-      cover:
-        "../../asserts/picture/shop/ALittle.jpg",
-      title: "一点点",
+      isMyComment: false,
+      name: '奶茶品鉴大师',
+      avatar: "/asserts/my/avatar.jpg",
+      sex:"../../asserts/my/women.png",
+      tag1:"果茶爱好者",
+      tag2:"只爱三分糖",
+      time: "2021-06-18  10:31",
+
+      score: 3,
+      
+      
+
+      cover: "../../asserts/picture/caomeixiaoquexing.jpg",
+      title: "草莓小确幸",
+      subtitle: "厝内小眷村",
+      score: "3.5",
       canSelfPickUp: true,
       price: 19,
       sales: 1589,
-      score:4.9,
+      
+
     },
     {
       id: 1,
       cover:
-        "../../asserts/picture/shop/long.jpg",
-      title: "黑泷堂",
+        "../../asserts/picture/yangzhiganlu.jpg",
+      title: "杨枝甘露",
+      subtitle: "古茗",
+      score: "3.5",
       canSelfPickUp: true,
       price: 25,
-      sales: 1249,
-      score:4.8,
+      sales: 1589,
+      isMyComment: true,
     },
     {
       id: 2,
       cover:
-        "../../asserts/picture/shop/coco.jpg",
-      title: "coco",
+        "../../asserts/picture/zhaopaiyuyuannaicha.jpg",
+      title: "招牌芋圆奶茶",
+      subtitle: "茶百道",
+      score: "3.5",
       canSelfPickUp: false,
       price: 15,
-      sales: 1092,
-      score:4.2,
+      sales: 1589,
     },
     {
       id: 3,
       cover:
-        "../../asserts/picture/shop/xi.png",
-      title: "喜茶",
+        "../../asserts/picture/caomeixiaoquexing.jpg",
+      title: "草莓小确幸",
+      subtitle: "厝内小眷村",
+      score: "3.5",
       canSelfPickUp: true,
       price: 19,
-      sales: 989,
-      score:4.3,
+      sales: 1589,
     },
     {
       id: 4,
       cover:
-        "../../asserts/picture/shop/cha.png",
-      title: "茶百道",
+        "../../asserts/picture/yangzhiganlu.jpg",
+      title: "杨枝甘露",
+      subtitle: "古茗",
+      score: "3.5",
       canSelfPickUp: true,
       price: 25,
-      sales: 1749,
-      score:4.7,
+      sales: 1589,
     },
   ],
 };
@@ -74,50 +92,45 @@ export const trendCommodity = {
       cover:
         "../../asserts/picture/chabaidao.jpg",
       title: "茶百道",
-      canSelfPickUp: false,
+      //canSelfPickUp: true,
       price: 39,
-      sales: 1749,
-      score:4.7,
+      sales: 30,
     },
     {
       id: 1,
       cover:
         "../../asserts/picture/yidiandian.jpg",
       title: "一点点",
-      canSelfPickUp: false,
+      //canSelfPickUp: true,
       price: 39,
-      sales: 1589,
-      score:4.9,
+      sales: 30,
     },
     {
       id: 2,
       cover:
         "../../asserts/picture/cuoneixiaojuancun.jpg",
       title: "厝内小眷村",
-      canSelfPickUp: false,
+      //canSelfPickUp: false,
       price: 30,
-      sales: 1130,
-      score:4.7,
+      sales: 30,
     },
     {
       id: 3,
       cover:
-        "../../asserts/picture/shop/coco.jpg",
-      title: "coco",
-      canSelfPickUp: false,
+        "../../asserts/picture/cuoneixiaojuancun.jpg",
+      title: "厝内小眷村",
+      //canSelfPickUp: false,
       price: 30,
-      sales: 1092,
-      score:4.6,
+      sales: 39,
     },
     {
       id: 4,
       cover:
-        "../../asserts/picture/shop/xi.png",
-      title: "喜茶",
-      canSelfPickUp: false,
+        "../../asserts/picture/cuoneixiaojuancun.jpg",
+      title: "厝内小眷村",
+      //canSelfPickUp: false,
       price: 30,
-      sales: 989,
-      score:4.3,
+      sales: 30,
     },
   ],
 };
