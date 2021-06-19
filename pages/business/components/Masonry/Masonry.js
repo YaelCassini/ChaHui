@@ -1,7 +1,9 @@
-import {cost} from
+
 Component({
   mixins: [],
-  data: {},
+  data: {
+    test:1,
+  },
   props: {
     masonryData: [],
     columns: 2,
@@ -15,7 +17,8 @@ Component({
   didUnmount() {},
   methods: {
     onTapCommodity(e) {
-      this.props.onTapCommodity(e.target.dataset.id);
+      this.props.onTapCommodity(0,e.target.dataset.id);
+      console.log(e);
     },
     jumpToGoods(id, seller_id)
     {
@@ -24,8 +27,11 @@ Component({
       my.navigateTo({ url: '../../../card/card?id='+id+'&seller_id='+ seller_id})
     },
     addtoShoppingcar(event) {
-      onsole.log('加入购物车');
-
+      console.log(event);
+      var price=event.target.dataset.id;
+      console.log("test",price);
+      this.props.onTapCommodity(1,price);
+      
     },
   },
 });

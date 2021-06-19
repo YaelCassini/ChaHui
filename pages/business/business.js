@@ -4,6 +4,7 @@ import * as log from '../../utils/log';
 Page({
   data: {
     seller_id: 0,
+    cost:0,
     SellerInfo:
     {
       id: 0,
@@ -65,16 +66,27 @@ Page({
   onShow() {
     
   },
-  onTapCommodity(id) {
-    // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
-    console.log("before navigate")
-    console.log(id, this.data.commodities)
-    const commodity_id = this.data.commodities[id].id;
-    const seller_id = this.data.commodities[id].seller_id;
-    console.log(commodity_id, seller_id)
-    console.log("start navigate")
-    my.navigateTo({url:'../card/card?id='+commodity_id+'&seller_id='+seller_id});
+  
+  onTapCommodity(flag,id) {
+    if(flag==0){
+      // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
+      console.log("before navigate1")
+      console.log(id, this.data.commodities)
+      const commodity_id = this.data.commodities[id].id;
+      const seller_id = this.data.commodities[id].seller_id;
+      console.log(commodity_id, seller_id)
+      console.log("start navigate")
+      my.navigateTo({url:'../card/card?id='+commodity_id+'&seller_id='+seller_id});
+    }
+    else{
+      var cost1=this.data.cost;
+      cost1=cost1+parseInt(id);
+      console.log("bbb");
+      this.setData({cost:cost1,});
+    }
+    
   },
+
   fetchCurrentCommodities(commodityType) {
     this.setData({ currentCommodities: [] });
     getCommodity({ type: commodityType })
