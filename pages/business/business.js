@@ -3,6 +3,7 @@ import * as log from '../../utils/log';
 
 Page({
   data: {
+    seller_id: 0,
     SellerInfo:
     {
       id: 0,
@@ -35,19 +36,30 @@ Page({
     searchValue: '',
     activeTabId: 0,
     currentCommodities: [],
+    commodities: [],
   },
   onActiveTabChange(id) {
     this.setData({ activeTabId: id });
   },
   onLoad(options)
   {
+    this.data.seller_id = parseInt(options.id);
     this.fetchCurrentCommodities(1);
+    // seller info
     my.serverless.db.collection('seller').find()
       .then(res => {
         this.setData({["SellerInfo"]:res.result[options.id]})
       })
       .catch(console.error);
-
+    // commodity info
+    console.log(this.data.seller_id)
+    my.serverless.db.collection('commodity').find({
+        seller_id: { $eq: this.data.seller_id }
+      })
+      .then(res => {
+        this.setData({["commodities"]:res.result})
+      })
+      .catch(console.error);
     // this.onAddSellerInfo()
   },
   onShow() {
@@ -55,7 +67,10 @@ Page({
   },
   onTapCommodity(id) {
     // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
-    my.navigateTo({url:'../card/card'});
+    const commodity_id = this.data.commodities[id].id;
+    const seller_id = this.data.commodities[id].seller_id;
+    console.log(commodity_id, seller_id)
+    my.navigateTo({url:'../card/card?id='+commodity_id+'&seller_id='+seller_id});
   },
   fetchCurrentCommodities(commodityType) {
     this.setData({ currentCommodities: [] });

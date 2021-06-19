@@ -48,10 +48,9 @@
       </view>
     </scroll-view> -->
     <masonry
-      a:if="{{currentCommodities.length>0}}"
+      a:if="{{commodities.length>0}}"
       columns="{{1}}"
-      isRanking="{{activeTabId===TREND}}"
-      masonryData="{{currentCommodities}}"
+      masonryData="{{commodities}}"
       onTapCommodity="onTapCommodity"
    />
 
