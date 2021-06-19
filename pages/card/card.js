@@ -55,10 +55,10 @@ Page({
       expand3rd: !this.data.expand3rd,
     });
   },
-  onLoad(options)
+  async onLoad(options)
   {
-    this.fetchCurrentCommodities(1);
-    // this.onAddCommodity()
+    await this.fetchCurrentCommodities(1);
+    console.log(this.data.currentCommodities)
   },
   onShow() {
   },
