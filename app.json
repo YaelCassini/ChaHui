@@ -12,7 +12,8 @@
     "pages/my-setting/my-setting",
     "pages/my-comment/my-comment",
     "pages/my-collection/my-collection",
-    "pages/my-follow/my-follow"
+    "pages/my-follow/my-follow",
+    "pages/business/business"
   ],
   "window": {
     "defaultTitle": "茶荟",

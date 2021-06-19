@@ -1,5 +1,4 @@
 <view>
-  <title className="title">我的订单</title>
   <view
     a:for="{{orderList}}"
     class="order-section"
@@ -30,26 +29,71 @@
       <view class="order-section-body__right">
         <view class="order-section-body__price">¥ {{eachCommodity.price}}</view>
         <view class="order-section-body__num">x{{eachCommodity.num}}</view>
+      <button style="margin-right: 10px;" type="primary" size="mini" onTap="onButtomBtnTap">评论</button>
+
       </view>
     </view>
     <view class="order-section-footer">
       <view class="order-section-footer__total">共{{item.total}}件商品</view>
       <view class="order-section-footer__desc">合计：¥</view>
       <view class="order-section-footer__sum">{{item.sum}}</view>
-      <button style="margin-left: 10px; margin-right: -15px;" type="primary" size="mini" onTap="onButtomBtnTap">评论</button>
+      <button style="background-color:#2E8B57	; margin-left: 10px; margin-right: -15px; width: 80px" type="primary" size="mini" onTap="onButtomBtnTap">再来一单</button>
     </view>
   </view>
 
   <popup show="{{showBottom}}" position="bottom" onClose="onPopupClose">
     <container className="container-item">
-      <view class="page-section-title" style = "width: 100%;">评分</view>
-      <view class="page-section-demo">
+      <view class="page-section-title" style = "width: 100%; font-weight:bold;">评分</view>
+      <view class="page-section-demo" style=" margin-top:-20px">
         <slider value="4" onChange="onScoreChange" min="0" max="5" show-value/>
       </view>
 
-      <view style = "width: 100%;">
-        <view style="margin-top: 10px;" />
-        <view class="title">评论</view>
+      <view style = "width: 100%; margin-top:-15px">
+        <view class="title" style=" font-weight:bold;">推荐温度</view>
+          <view class="page-section">
+            <view class="page-section-demo" style="padding-left:10px; margin-top:-20px">
+              <radio-group name="radio-group">
+                <label style="margin-right:15px;"><radio value="radio1" />少冰</label>
+                <label style="margin-right:15px;"><radio value="radio2" />去冰</label>
+                <label style="margin-right:15px;"><radio value="radio3" />常温</label>
+                <label style="margin-right:15px;"><radio value="radio4" />热饮</label>
+              </radio-group>
+            </view>
+          </view>
+      </view>
+      
+      <view style = "width: 100%; margin-top:-25px">
+        <view class="title" style=" font-weight:bold;">推荐甜度</view>
+          <view class="page-section">
+            <view class="page-section-demo" style="padding-left:10px; margin-top:-20px">
+              <radio-group name="radio-group">
+                <label style="margin-right:15px;"><radio value="radio1" />不加糖</label>
+                <label style="margin-right:15px;"><radio value="radio2" />三分糖</label>
+                <label style="margin-right:15px;"><radio value="radio3" />五分糖</label>
+                <label style="margin-right:15px;"><radio value="radio4" />七分糖</label>
+                <label style="margin-right:15px;"><radio value="radio5" />正常糖</label>
+              </radio-group>
+            </view>
+          </view>
+      </view>
+      
+      <view style = "width: 100%; margin-top:-25px">
+        <view class="title" style=" font-weight:bold;">推荐加料</view>
+        <view class="page-section">
+        <view class="page-section-demo" style="padding-left:10px; margin-top:-20px">
+          <checkbox-group name="checkbox">
+            <label style="margin-right:5px;"><checkbox value="checkbox1" />燕麦</label>
+            <label style="margin-right:5px;"><checkbox value="checkbox2" />花生</label>
+            <label style="margin-right:5px;"><checkbox value="checkbox3" />奶霜</label>
+            <label style="margin-right:5px;"><checkbox value="checkbox4" />布丁</label>
+            <label style="margin-right:5px;"><checkbox value="checkbox5" />红豆</label>
+          </checkbox-group>
+        </view>
+      </view>
+      </view>
+
+      <view style = "width: 100%; margin-top:-25px">
+        <view class="title" style=" font-weight:bold;">评论</view>
         <multi-liner data-field="area"
           placeholder="输入文字评论" 
           type="text"
@@ -58,9 +102,8 @@
           last="{{true}}" 
           auto-height="{{true}}" 
           controlled="{{controlled}}"/>
-        <view style="margin: 10px;" />
       </view>
-      
+
       <button onTap="onAddComment" showLoading=false dataName="1" type="primary">
         提交评论
       </button>
