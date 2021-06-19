@@ -12,7 +12,7 @@ Page({
       comment:20,
       introduction: "该用户还没有简介",
     },
-    entries: [
+    achievements: [
       {
         title: '奶茶行家',
         cover:
@@ -33,6 +33,26 @@ Page({
         cover:
           '../../asserts/my/more.png',
       },
+      {
+        title: '查看更多',
+        cover:
+          '../../asserts/my/more.png',
+      },
+      {
+        title: '查看更多',
+        cover:
+          '../../asserts/my/more.png',
+      },
+      {
+        title: '查看更多',
+        cover:
+          '../../asserts/my/more.png',
+      },
+      {
+        title: '查看更多',
+        cover:
+          '../../asserts/my/more.png',
+      },
     ],
     navList: [
       {
@@ -41,7 +61,7 @@ Page({
           'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Y8BATYqMN78AAAAAAAAAAABkARQnAQ',
         onClick: () =>
           my.navigateTo({
-            url: '/pages/my-achievement/my-achievement',
+            url: '/pages/my-follow/my-follow',
           }),
       },
       {

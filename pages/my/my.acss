@@ -53,6 +53,19 @@ page {
   display: flex;
   margin-top: 15rpx;
 }
+button {
+  background: #fff;
+  padding: 0rpx;
+  margin: 0rpx;
+}
+button:hover {
+  background: #fff;
+  color: #eee;
+}
+button:active {
+  background: #fff;
+  color: #eee;
+}
 .user-profile__info {
   display: flex;
   flex-direction: column;

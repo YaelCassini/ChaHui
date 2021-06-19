@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "我的关注",
+  "defaultTitle": "我的粉丝",
   "usingComponents": {
     "comment": "/pages/my-follow/components/User/User",
     "User": "/pages/my-follow/components/User/User",

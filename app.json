@@ -13,6 +13,8 @@
     "pages/my-comment/my-comment",
     "pages/my-collection/my-collection",
     "pages/my-follow/my-follow",
+    "pages/my-fans/my-fans",
+    "pages/my-achievement/my-achievement",
     "pages/business/business"
   ],
   "window": {

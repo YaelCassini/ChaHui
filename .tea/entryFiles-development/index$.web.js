@@ -54,4 +54,6 @@ require('../../pages/my-setting/my-setting?hash=e8d9165148084b5197ce4ba4fb3222f7
 require('../../pages/my-comment/my-comment?hash=2d07ca871cd851f39d56985d64b7fe24a682606a');
 require('../../pages/my-collection/my-collection?hash=2d07ca871cd851f39d56985d64b7fe24a682606a');
 require('../../pages/my-follow/my-follow?hash=fc7fa7c57352ef3ff627e27882f3efcc5405582f');
+require('../../pages/my-fans/my-fans?hash=fc7fa7c57352ef3ff627e27882f3efcc5405582f');
+require('../../pages/my-achievement/my-achievement?hash=3e2e5e2d473d03821badb5452a72c12422f436f6');
 require('../../pages/business/business?hash=b4727e429e9c4489167e4c5ce8cfe12142d0e05b');

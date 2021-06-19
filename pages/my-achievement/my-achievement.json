@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "我的成就",
+  "backgroundColor": "#ffffff",
+  "usingComponents": {
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index"
+  }
+}
