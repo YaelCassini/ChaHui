@@ -3,7 +3,6 @@ page {
 }
 .entries {
   display: flex;
-  flex-direction: column;
   width: 100%;
   box-sizing: content-box;
   padding: 39rpx 0;
@@ -14,14 +13,15 @@ page {
   align-items: center;
   flex-shrink: 0;
   width: 180rpx;
+  margin: 10rpx;
 }
 .entries__cover {
   flex-shrink: 0;
-  width: 80rpx;
-  height: 80rpx;
+  width: 150rpx;
+  height: 150rpx;
 }
 .entries__title {
-  font-size: 24rpx;
+  font-size: 36rpx;
   color: #333;
   margin-top: 9rpx;
 }
