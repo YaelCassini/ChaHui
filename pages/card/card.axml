@@ -9,27 +9,20 @@
     <view class="aline">
       <title
         className="changeColor"
+        hasLine="true"
         onActionTap="titleGo"
         >{{GoodName}}
       </title>
     </view>
 
-      <view class="aline" style="font-size: 13px; color: #777777;">
-        月售1000000    本店销量第1名
-      </view>
-      <view class="aline">
-      
-        <view style="display: flex; margin-top: 20px;">
-          <view a:for="{{tag}}" style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
-            <tag size="sm" type="primary">NB</tag>
-          </view>
-        </view>
+      <view class="aline" style="margin-top:30px; font-size: 13px; color: #777777;">
+        月售1000000
       </view>
       
     <view>
       <view class="aline">
         <view style="margin-top: 10px; font-size: 28px; color: #f36436;">
-          ￥18起
+          ￥18
         </view>
       </view>
     </view>
@@ -72,6 +65,13 @@
         </title>
       </view>
       
+      <view class="aline">
+        <view style="display: flex; margin-top: 20px;">
+          <view a:for="{{tag}}" style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
+            <tag size="sm" type="primary">NBSSS</tag>
+          </view>
+        </view>
+      </view>
       
     <container className="container-item">
         <view className="comment-item" style="
