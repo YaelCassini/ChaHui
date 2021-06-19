@@ -14,13 +14,13 @@ Page({
       tag: [{value:'-'}],
     },
     // {      
-    //   id: 1,
-    //   name: '茶百道（玉泉北门店）',
-    //   salePerMonth: '7976',
-    //   waitingTime: '34',
-    //   waitingCup: '14',
-    //   pic: "/asserts/picture/seller/chabaidao.jpg",
-    //   tag: [{value:'超棒'},{value:'性价比高'},{value:'芋圆不错'},{value:'很快'}],
+    //   id: 4,
+    //   name: '喜茶（黄龙万科GO）',
+    //   salePerMonth: '438',
+    //   waitingTime: '60',
+    //   waitingCup: '5',
+    //   pic: "/asserts/picture/seller/xicha.jpg",
+    //   tag: [{value:'很喜欢'},{value:'清爽可口'},{value:'多肉葡萄停不下来'}],
     // },
     tabs: [
       {
@@ -44,7 +44,7 @@ Page({
     this.fetchCurrentCommodities(1);
     my.serverless.db.collection('seller').find()
       .then(res => {
-        this.setData({["SellerInfo"]:res.result[1]})
+        this.setData({["SellerInfo"]:res.result[options.id]})
       })
       .catch(console.error);
 

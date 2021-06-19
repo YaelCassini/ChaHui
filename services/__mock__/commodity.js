@@ -23,6 +23,7 @@ export const allCommodity = {
       price: 19,
       sales: 1589,
       score:4.9,
+      seller_id: 0,
     },
     {
       id: 1,
@@ -33,6 +34,7 @@ export const allCommodity = {
       price: 25,
       sales: 1249,
       score:4.8,
+      seller_id: 2,
     },
     {
       id: 2,
@@ -43,6 +45,7 @@ export const allCommodity = {
       price: 15,
       sales: 1092,
       score:4.2,
+      seller_id: 3,
     },
     {
       id: 3,
@@ -53,6 +56,7 @@ export const allCommodity = {
       price: 19,
       sales: 989,
       score:4.3,
+      seller_id: 4,
     },
     {
       id: 4,
@@ -63,6 +67,7 @@ export const allCommodity = {
       price: 25,
       sales: 1749,
       score:4.7,
+      seller_id: 1,
     },
   ],
 };

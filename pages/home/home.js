@@ -43,8 +43,10 @@ Page({
     this.fetchCurrentCommodities(id);
   },
   onTapCommodity(id) {
+    const seller_id = this.data.currentCommodities[id].seller_id
+    console.log(seller_id)
     // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
-    my.navigateTo({url:'../business/business'});
+    my.navigateTo({url:'../business/business?id='+seller_id});
   },
   onCloseCommodityDrawer() {
     this.setData({ showCommodityDrawer: false });
