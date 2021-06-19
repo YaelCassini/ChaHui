@@ -14,7 +14,7 @@
 }
 
 .container {
-  background: #F5F5F5;
+  background: rgb(245, 245, 245);
   padding: 24rpx;
   height: 100%;
 }
@@ -71,7 +71,9 @@
 .container {
   padding: 24rpx;
 }
-
+.container__comment{
+    background-color: white;
+}
 .row {
   display: flex;
   align-items: center;

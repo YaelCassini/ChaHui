@@ -61,7 +61,7 @@
         hasLine="true"
         className="subTitle"
         onActionTap="titleGo"
-        >卖家评价
+        >买家评价
       </title>
     </view>
     

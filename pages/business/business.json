@@ -12,6 +12,7 @@
     "empty": "/components/Empty/Empty",
     "comment": "/pages/my-comment/components/Comment/Comment",
     "category-nav": "/components/category-nav/category-nav",
-    "masonry": "/pages/business/components/Masonry/Masonry"
+    "masonry": "/pages/business/components/Masonry/Masonry",
+    "subutton": "/pages/business/components/Su-Button/Su-Button"
   }
 }

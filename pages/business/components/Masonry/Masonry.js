@@ -1,3 +1,4 @@
+import {cost} from
 Component({
   mixins: [],
   data: {},
@@ -7,6 +8,7 @@ Component({
     isRanking: false,
     onTapCommodity: () => {},
     jumpToGoods: () => {},
+    addtoShoppingcar:() =>{},
   },
   didMount() {},
   didUpdate() {},
@@ -20,6 +22,10 @@ Component({
       // 事件处理
 		  console.log('我是点击事件')
       my.navigateTo({ url: '../../../card/card?id='+id+'&seller_id='+ seller_id})
-    }
+    },
+    addtoShoppingcar(event) {
+      onsole.log('加入购物车');
+
+    },
   },
 });

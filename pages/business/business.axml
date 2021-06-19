@@ -53,16 +53,19 @@
       masonryData="{{commodities}}"
       onTapCommodity="onTapCommodity"
    />
+  <subutton>a</subutton>
 
-  
   </view>
   <!-- 评价 -->
-  <view a:if="{{activeTabId==1}}">
-    <view disable-scroll="false">
-      <comment a:if="{{currentCommodities.length>0}}" columns="{{1}}" commentData="{{currentCommodities}}"></comment>
-      <empty a:else type="{{EmptyType.EMPTY_SEARCH_RESULT}}" className="empty-position"></empty>
+  <view class="container__comment">
+    <view a:if="{{activeTabId==1}}">
+      <view disable-scroll="false" >
+        <comment a:if="{{currentCommodities.length>0}}" columns="{{1}}" commentData="{{currentCommodities}}"></comment>
+        <empty a:else type="{{EmptyType.EMPTY_SEARCH_RESULT}}" className="empty-position"></empty>
+      </view>
     </view>
   </view>
+  
 
 
 
