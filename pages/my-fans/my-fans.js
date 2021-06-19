@@ -1,6 +1,6 @@
-import { getCommodity } from '../../services/commodity';
+import { getCommodity } from '../../services/fans';
 import * as log from '../../utils/log';
-import { ALL, TREND, NEW, PRICE } from '../../asserts/CommodityType';
+import { ALL, TREND, NEW, PRICE } from '../../asserts/CommentType';
 
 Page({
   data: {
@@ -12,7 +12,7 @@ Page({
     tabs: [
       {
         id: ALL,
-        title: '附近的店',
+        title: '新品上市',
       },
       {
         id: TREND,
@@ -24,7 +24,7 @@ Page({
       },
       {
         id: PRICE,
-        title: '大家在看',
+        title: '价格',
         sortable: true,
       },
     ],
@@ -66,7 +66,7 @@ Page({
         })
       )
       .catch(err =>
-        log.error('handbag.fetchCurrentCommodities.getAllCommodity', err)
+        log.error('handbag.fetchCurrentCommodities.getComment1', err)
       );
   },
   onConfirm() {

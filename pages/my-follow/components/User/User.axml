@@ -16,9 +16,29 @@
         mode="scaleToFill"
       />
       <view class="user-profile__right">
+        <view class="user-profile__head">
           <view class="user-profile__name">
             {{item.name}}
           </view>
+          <view class="user-profile__achievement">
+            <image
+              src="/asserts/icon/achievement/changxindaren.png"
+              mode="scaleToFill"
+            />
+          </view>
+          <view class="user-profile__achievement">
+            <image
+              src="/asserts/icon/achievement/zailaiyibei.png"
+              mode="scaleToFill"
+            />
+          </view>
+          <view class="user-profile__achievement">
+            <image
+              src="/asserts/icon/achievement/tizhongchaobiao.png"
+              mode="scaleToFill"
+            />
+          </view>
+        </view>
         <view class="user-profile__status">
           <view class="user-profile__sex">
             <image
@@ -41,63 +61,34 @@
             {{item.tag2}}
           </view>
         </view>
-        <view class="user-profile__time">
-          {{item.time}}
+              <view class="user-profile__infos">
+        <view class="user-profile__info">
+          <view class="user-profile__infocount">
+            {{item.follow}}
+          </view>
+          <view class="user-profile__infotag">
+            关注
+          </view>
         </view>
+        <view class="user-profile__info">
+          <view class="user-profile__infocount">
+            {{item.fans}}
+          </view>
+          <view class="user-profile__infotag">
+            粉丝
+          </view>
+        </view>
+        <view class="user-profile__info" onClick="jumpToComment">
+          <view class="user-profile__infocount">
+            {{item.comment}}
+          </view>
+          <view class="user-profile__infotag">
+            测评
+          </view>
+        </view>
+      </view>
       </view>
     </view>
-    
-    <!-- <view
-      class="score-item"
-    >
-      <view class="score-item__star" a:if="{{item.score>=1}}"> <image src = "/asserts/icon/star1.png"></image> </view>
-      <view class="score-item__star" a:else> <image src = "/asserts/icon/star0.png"></image> </view>
-
-      <view class="score-item__star" a:if="{{item.score>=2}}"> <image src = "/asserts/icon/star1.png"></image> </view>
-      <view class="score-item__star" a:else> <image src = "/asserts/icon/star0.png"></image> </view>
-
-      <view class="score-item__star" a:if="{{item.score>=3}}"> <image src = "/asserts/icon/star1.png"></image> </view>
-      <view class="score-item__star" a:else> <image src = "/asserts/icon/star0.png"></image> </view>
-
-      <view class="score-item__star" a:if="{{item.score>=4}}"> <image src = "/asserts/icon/star1.png"></image> </view>
-      <view class="score-item__star" a:else> <image src = "/asserts/icon/star0.png"></image> </view>
-
-      <view class="score-item__star" a:if="{{item.score>=5}}"> <image src = "/asserts/icon/star1.png"></image> </view>
-      <view class="score-item__star" a:else> <image src = "/asserts/icon/star0.png"></image> </view>
-
-    </view> -->
-
-
-    <!-- <view
-      class="comment-item"
-      style="flex-direction:{{columns===1?'row':'column'}};"
-    >  
-      <image
-        src="{{item.cover}}"
-        mode="aspectFill"
-      />
-      <view class="comment-item__container">
-        <view class="comment-item__body">
-          <view class="comment-item__title">{{item.title}}</view>
-          <view class="comment-item__subtitle">{{item.subtitle}}</view>
-        </view>
-          <view class="comment-item__design">
-            <view class="comment-item__design-addition">
-              推荐配料：{{item.addition}}
-            </view>
-            <view class="comment-item__design-temperature">
-              推荐温度：{{item.temperature}}
-            </view>
-            <view class="comment-item__design-sweetness">
-              推荐甜度：{{item.sweetness}}
-            </view>
-
-            <view class="comment-item__detail">
-              {{item.detail}}
-            </view>
-          </view>
-      </view>
-    </view> -->
 
 
     

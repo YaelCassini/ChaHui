@@ -25,30 +25,30 @@
         </view>
       </view>
       <view class="user-profile__infos">
-        <view class="user-profile__info">
+        <button class="user-profile__info"  onTap="jumpToFollow">
           <view class="user-profile__infocount">
             {{currentUser.follow}}
           </view>
           <view class="user-profile__infotag">
             关注
           </view>
-        </view>
-        <view class="user-profile__info">
+        </button>
+        <button class="user-profile__info"  onTap="jumpToFans">
           <view class="user-profile__infocount">
             {{currentUser.fans}}
           </view>
           <view class="user-profile__infotag">
             粉丝
           </view>
-        </view>
-        <view class="user-profile__info" onClick="jumpToComment">
+        </button>
+        <button class="user-profile__info" onTap="jumpToComment">
           <view class="user-profile__infocount">
             {{currentUser.comment}}
           </view>
           <view class="user-profile__infotag">
             测评
           </view>
-        </view>
+        </button>
       </view>
     </view>
   </view>

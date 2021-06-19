@@ -30,7 +30,7 @@
   />
   <masonry
     a:if="{{currentCommodities.length>0}}"
-    columns="{{activeTabId===TREND?1:1}}"
+    columns="{{activeTabId===TREND?1:2}}"
     isRanking="{{activeTabId===TREND}}"
     masonryData="{{currentCommodities}}"
     onTapCommodity="onTapCommodity"
@@ -41,8 +41,3 @@
     className="empty-position"
   />
 </view>
-
-<cover-view class="bottom-bar">
-  <cover-view>￥200.0 包邮</cover-view>
-  <button class="bottom-btn">去下单</button>
-</cover-view>

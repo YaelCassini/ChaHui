@@ -1,0 +1,27 @@
+page {
+  background-color: #fff;
+}
+.entries {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: content-box;
+  padding: 39rpx 0;
+}
+.entries__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 180rpx;
+}
+.entries__cover {
+  flex-shrink: 0;
+  width: 80rpx;
+  height: 80rpx;
+}
+.entries__title {
+  font-size: 24rpx;
+  color: #333;
+  margin-top: 9rpx;
+}

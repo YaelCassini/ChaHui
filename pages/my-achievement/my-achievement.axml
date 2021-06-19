@@ -1,0 +1,17 @@
+<view>
+  <view class="entries">
+    <view
+      a:for="{{achievements}}"
+      class="entries__item"
+      column = "{{3}}"
+    >
+      <image
+        class="entries__cover"
+        src="{{item.cover}}"
+        mode="scaleToFill"
+      />
+      <view class="entries__title">{{item.title}}</view>
+    </view>
+  </view>
+  
+</view>
