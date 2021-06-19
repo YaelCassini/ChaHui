@@ -10,25 +10,17 @@ Page({
       salePerMonth: '-',
       waitingTime: '-',
       waitingCup: '-',
-      description:
-      [{type: "-", content: "---"}
-      ],
       pic: "/asserts/picture/loading.gif",
       tag: [{value:'-'}],
     },
-    // {
-    //   id: 0,
-    //   name: '一点点（玉泉北门店）',
-    //   salePerMonth: '3089',
-    //   waitingTime: '30',
-    //   waitingCup: '12',
-    //   description:
-    //   [{type: "商品描述", content: "四季春茶搭配特选植脂末，经由黄金比例调制而成，香顺可口。。"},
-    //    {type: "辅料", content: "植脂末"},
-    //    {type: "原料", content: "四季春茶"},
-    //   ],
-    //   pic: "/asserts/picture/seller/onedotdot.jpg",
-    //   tag: [{value:'适合三分甜'},{value:'喜欢少冰'},{value:'环境不错'},{value:'芒果很甜'}],
+    // {      
+    //   id: 1,
+    //   name: '茶百道（玉泉北门店）',
+    //   salePerMonth: '7976',
+    //   waitingTime: '34',
+    //   waitingCup: '14',
+    //   pic: "/asserts/picture/seller/chabaidao.jpg",
+    //   tag: [{value:'超棒'},{value:'性价比高'},{value:'芋圆不错'},{value:'很快'}],
     // },
     tabs: [
       {
@@ -51,7 +43,7 @@ Page({
     this.fetchCurrentCommodities(1);
     my.serverless.db.collection('seller').find()
       .then(res => {
-        this.setData({["SellerInfo"]:res.result[0]})
+        this.setData({["SellerInfo"]:res.result[1]})
       })
       .catch(console.error);
 
