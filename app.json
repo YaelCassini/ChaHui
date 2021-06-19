@@ -15,7 +15,8 @@
     "pages/my-follow/my-follow",
     "pages/my-fans/my-fans",
     "pages/my-achievement/my-achievement",
-    "pages/business/business"
+    "pages/business/business",
+    "pages/my-shop/my-shop"
   ],
   "window": {
     "defaultTitle": "茶荟",
@@ -26,7 +27,7 @@
     "textColor": "#333333",
     "selectedColor": "#00b386",
     "backgroundColor": "#f2f2f2",
-    "items": [   
+    "items": [
       {
         "pagePath": "pages/home/home",
         "icon": "./asserts/icon/home.png",

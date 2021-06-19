@@ -20,6 +20,7 @@ export const Comment1 = {
       
       cover: "../../asserts/picture/caomeixiaoquexing.jpg",
       title: "草莓小确幸",
+      price:20,
       subtitle: "厝内小眷村",
       addition: "椰果",
       temperature: "少冰",
@@ -30,7 +31,7 @@ export const Comment1 = {
     {
       isMyComment: true,
       score: 3,
-      
+      price:20,
       cover: "../../asserts/picture/caomeixiaoquexing.jpg",
       title: "草莓小确幸",
       subtitle: "厝内小眷村",
@@ -42,7 +43,7 @@ export const Comment1 = {
     {
       isMyComment: true,
       score: 3,
-      
+      price:20,
       cover: "../../asserts/picture/caomeixiaoquexing.jpg",
       title: "草莓小确幸",
       subtitle: "厝内小眷村",
@@ -54,7 +55,7 @@ export const Comment1 = {
     {
       isMyComment: true,
       score: 3,
-      
+      price:20,
       cover: "../../asserts/picture/caomeixiaoquexing.jpg",
       title: "草莓小确幸",
       subtitle: "厝内小眷村",
@@ -66,7 +67,7 @@ export const Comment1 = {
     {
       isMyComment: true,
       score: 3,
-      
+      price:20,
       cover: "../../asserts/picture/caomeixiaoquexing.jpg",
       title: "草莓小确幸",
       subtitle: "厝内小眷村",

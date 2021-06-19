@@ -1,24 +1,13 @@
 <view class="container">
-
-  <image class="image"
-    data-name="test"
-    onTap="onTap"
-    mode="aspectFill" src="/asserts/picture/onedotdot.jpg"  onError="imageError" onLoad="imageLoad" />
-
+  <image class="image" data-name="test" onTap="onTap" mode="aspectFill" src="/asserts/picture/onedotdot.jpg" onError="imageError" onLoad="imageLoad"></image>
   <container className="container-item">
     <view class="aline" style="margin-top: -10px; margin-bottom: -10px;">
-      <title
-        hasLine="true"
-        className="changeColor"
-        onActionTap="titleGo"
-        >{{SellerName}}
-      </title>
-      
+      <title hasLine="true" className="changeColor" onActionTap="titleGo">{{SellerName}}</title>
     </view>
     <view class="aline" style="display: flex; font-size: 13px; color: #777777;">
-      <view style="padding-right: 20px" > 月售12 </view>
-      <view style="padding-right: 20px" > 大约39分钟 </view>
-      <view style="padding-right: 20px" > 前面还有6杯正在排队 </view>
+      <view style="padding-right: 20px">月售12</view>
+      <view style="padding-right: 20px">大约39分钟</view>
+      <view style="padding-right: 20px">前面还有6杯正在排队</view>
     </view>
     <view class="aline">
       <view style="display: flex; margin-top: 20px;">
@@ -31,31 +20,41 @@
       </view>
     </view>
   </container>
-  
-  <tab
-    activeId="{{activeTabId}}"
-    onActiveTabChange="onActiveTabChange"
-    tabs="{{tabs}}"
-  />
-  
-<!-- 奶茶 -->
-  <view a:if="{{activeTabId==0}}">
-  奶茶
+  <tab activeId="{{activeTabId}}" onActiveTabChange="onActiveTabChange" tabs="{{tabs}}"></tab>
+  <view class="search-nav">
+    <navigator className="search-nav__input" url="/pages/search/search">
+      <search value="{{searchValue}}" disabled="{{true}}"></search>
+    </navigator>
+    <category-nav></category-nav>
   </view>
 
-<!-- 评价 -->
+  <!-- 奶茶 -->
+  <view a:if="{{activeTabId==0}}">奶茶
+    <!-- <scroll-view class='category-container' scroll-y='true' scroll-with-animation='true'>
+      <view a:if='{{category.level == 1}}' class="category {{categorySelected.id==category.id?'active':''}}" a:for='{{categories}}' a:for-item='category' key='{{id}}' data-id='{{category.id}}' ref-numbers='{{categories}}' onTap='antmoveAction' data-antmove-tap='onCategoryClick'>
+        <view class="name {{categorySelected.id==category.id?'active':''}}">
+          {{category.name}}
+        </view>
+      </view>
+    </scroll-view> -->
+    <masonry
+      a:if="{{currentCommodities.length>0}}"
+      columns="{{1}}"
+      isRanking="{{activeTabId===TREND}}"
+      masonryData="{{currentCommodities}}"
+      onTapCommodity="onTapCommodity"
+   />
+
+  
+  </view>
+  <!-- 评价 -->
   <view a:if="{{activeTabId==1}}">
-    <view disable-scroll=false>
-      <comment
-        a:if="{{currentCommodities.length>0}}"
-        columns="{{1}}"
-        commentData="{{currentCommodities}}"
-      />
-      <empty
-        a:else
-        type="{{EmptyType.EMPTY_SEARCH_RESULT}}"
-        className="empty-position"
-      />
+    <view disable-scroll="false">
+      <comment a:if="{{currentCommodities.length>0}}" columns="{{1}}" commentData="{{currentCommodities}}"></comment>
+      <empty a:else type="{{EmptyType.EMPTY_SEARCH_RESULT}}" className="empty-position"></empty>
     </view>
   </view>
+
+
+
 </view>

@@ -19,6 +19,10 @@
     {
       "title": "order",
       "page": "pages/order/order"
+    },
+    {
+      "title": ",cate",
+      "page": "pages/category/category"
     }
   ]
 }

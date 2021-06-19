@@ -25,6 +25,7 @@ Page({
         title: '评价',
       },
     ],
+    searchValue: '',
     activeTabId: 0,
     currentCommodities: [],
     selectedCommodityId: '',
@@ -35,6 +36,10 @@ Page({
   },
   onShow() {
     this.fetchCurrentCommodities(1);
+  },
+  onTapCommodity(id) {
+    // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
+    my.navigateTo({url:'../card/card'});
   },
   fetchCurrentCommodities(commodityType) {
     this.setData({ currentCommodities: [] });

@@ -19,6 +19,18 @@
   height: 100%;
 }
 
+.search-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.search-nav__input {
+  flex-grow: 1;
+  margin-right: 36rpx;
+}
+
 .container-item {
   margin-bottom: 24rpx;
 }
@@ -80,4 +92,16 @@
   font-size: 32rpx;
   color: #888;
   margin-right: 12px;
+}
+
+.under_line{
+ width: 100%;
+ border-top: 1rpx solid #efefef;
+}
+.scrollY {
+ width: 200rpx;
+ position: fixed;
+ left: 0;
+ top: 0;
+ border-right: 1rpx solid #efefef;
 }
