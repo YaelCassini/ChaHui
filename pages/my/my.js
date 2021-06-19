@@ -12,7 +12,7 @@ Page({
       comment:20,
       introduction: "该用户还没有简介",
     },
-    entries: [
+    achievements: [
       {
         title: '奶茶行家',
         cover:

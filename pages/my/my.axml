@@ -6,9 +6,10 @@
       mode="scaleToFill"
     />
     <view class="user-profile__right">
-        <view class="user-profile__name">
-          {{currentUser.name}}
-        </view>
+      <view class="user-profile__name">
+        {{currentUser.name}}
+      </view>
+
       <view class="user-profile__status">
         <view class="user-profile__sex">
           <image
@@ -24,6 +25,7 @@
           {{currentUser.tag2}}
         </view>
       </view>
+
       <view class="user-profile__infos">
         <button class="user-profile__info"  onTap="jumpToFollow">
           <view class="user-profile__infocount">
@@ -50,24 +52,26 @@
           </view>
         </button>
       </view>
+
     </view>
   </view>
+
   <view class = "user-profile__introduction">
     简介：{{currentUser.introduction}}
   </view>
 
-  <view class="entries">
+  <view class="achievements">
     <view
-      a:for="{{entries}}"
-      class="entries__item"
+      a:for="{{achievements}}"
+      class="achievements__item"
       onTap="onAchievementClick"
     >
       <image
-        class="entries__cover"
+        class="achievements__cover"
         src="{{item.cover}}"
         mode="scaleToFill"
       />
-      <view class="entries__title">{{item.title}}</view>
+      <view class="achievements__title">{{item.title}}</view>
     </view>
   </view>
 
@@ -75,8 +79,9 @@
     <list-item
       thumb="{{item.thumb}}"
       className="list-item"
-      arrow="{{true}}"
       onClick="onListClick"
+      
+      arrow="{{true}}"
       data-index="{{index}}"
       key="items-{{index}}"
       last="{{index === (items.length - 1)}}"
