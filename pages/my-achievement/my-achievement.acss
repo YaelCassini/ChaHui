@@ -3,9 +3,13 @@ page {
 }
 .entries {
   display: flex;
+  flex-flow: row wrap;  
+  align-content: space-around;
   width: 100%;
   box-sizing: content-box;
   padding: 39rpx 0;
+  align-content: center;
+  
 }
 .entries__item {
   display: flex;
@@ -13,7 +17,8 @@ page {
   align-items: center;
   flex-shrink: 0;
   width: 180rpx;
-  margin: 10rpx;
+  margin: 30rpx;
+  margin-bottom: 40rpx;
 }
 .entries__cover {
   flex-shrink: 0;
