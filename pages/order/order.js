@@ -40,6 +40,11 @@ Page({
       showBottom: true,
     });
   },
+  onOneMoreOrder(){
+    my.navigateTo({
+              url: '/pages/business/business',
+          })
+  },
   onPopupClose() {
     this.setData({
       showLeft: false,

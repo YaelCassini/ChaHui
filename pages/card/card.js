@@ -5,34 +5,40 @@ Page({
   data: {
     CommodityInfo:
     {
-      id: 0,
-      name: '波霸奶茶',
-      price: '18',
-      salePerMonth: '1024',
+      id: 1,
+      seller_id: 0,
+      name: '四季奶青',
+      price: '14',
+      salePerMonth: '351',
       description:
-      [{type: "商品描述", content: "奶茶搭配波霸，口感软Q。"},
-       {type: "辅料", content: "波霸、植脂末"},
-       {type: "原料", content: "阿萨姆红茶"},
+      [{type: "商品描述", content: "四季春茶搭配特选植脂末，经由黄金比例调制而成，香顺可口。。"},
+       {type: "辅料", content: "植脂末"},
+       {type: "原料", content: "四季春茶"},
       ],
-      pic: '/asserts/picture/commodity/0001.jpg',
+      pic: '/asserts/picture/commodity/0002.jpg',
+      tag: [{value:'适合三分甜'},{value:'喜欢少冰'},{value:'加红豆不错'},],
     },
-    thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
     expand3rd: false,
-    tag: [
-      'hello','hello2','hello3','hello4', 'test'],
-    descriptor: [{
-      title: '商品描述',
-      content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
-    },{
-      title: '商品描述',
-      content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
-    }]
     
   },
   onCardClick(ev) {
     my.alert({
       content: ev.info,
     });
+  },
+  async onAddCommodity() {
+    
+    my.showLoading({
+      content: '评论提交中',
+    });
+
+    my.serverless.db.collection('commodity').insertOne(
+      this.data.CommodityInfo)
+    .then(res => {})
+    .catch(console.error);
+
+    my.hideLoading();
+    this.onPopupClose();
   },
   onActionClick() {
     my.alert({
@@ -49,8 +55,12 @@ Page({
       expand3rd: !this.data.expand3rd,
     });
   },
-  onShow() {
+  onLoad(options)
+  {
     this.fetchCurrentCommodities(1);
+    // this.onAddCommodity()
+  },
+  onShow() {
   },
   fetchCurrentCommodities(commodityType) {
     this.setData({ currentCommodities: [] });

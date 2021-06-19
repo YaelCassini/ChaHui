@@ -3,17 +3,33 @@ import * as log from '../../utils/log';
 
 Page({
   data: {
-    thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
-    expand3rd: false,
-    SellerName: '一点点',
-    descriptor: [{
-      title: '商品描述',
-      content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
-    },{
-      title: '商品描述',
-      content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
-    }] ,
-    src: '../asserts/picture/yangzhiganlu.jpg',
+    SellerInfo:
+    {
+      id: 0,
+      name: 'Loading',
+      salePerMonth: '-',
+      waitingTime: '-',
+      waitingCup: '-',
+      description:
+      [{type: "-", content: "---"}
+      ],
+      pic: "/asserts/picture/loading.gif",
+      tag: [{value:'-'}],
+    },
+    // {
+    //   id: 0,
+    //   name: '一点点（玉泉北门店）',
+    //   salePerMonth: '3089',
+    //   waitingTime: '30',
+    //   waitingCup: '12',
+    //   description:
+    //   [{type: "商品描述", content: "四季春茶搭配特选植脂末，经由黄金比例调制而成，香顺可口。。"},
+    //    {type: "辅料", content: "植脂末"},
+    //    {type: "原料", content: "四季春茶"},
+    //   ],
+    //   pic: "/asserts/picture/seller/onedotdot.jpg",
+    //   tag: [{value:'适合三分甜'},{value:'喜欢少冰'},{value:'环境不错'},{value:'芒果很甜'}],
+    // },
     tabs: [
       {
         id: 0,
@@ -30,8 +46,19 @@ Page({
   onActiveTabChange(id) {
     this.setData({ activeTabId: id });
   },
-  onShow() {
+  onLoad(options)
+  {
     this.fetchCurrentCommodities(1);
+    my.serverless.db.collection('seller').find()
+      .then(res => {
+        this.setData({["SellerInfo"]:res.result[0]})
+      })
+      .catch(console.error);
+
+    // this.onAddSellerInfo()
+  },
+  onShow() {
+    
   },
   fetchCurrentCommodities(commodityType) {
     this.setData({ currentCommodities: [] });
@@ -45,5 +72,17 @@ Page({
       .catch(err =>
         log.error('handbag.fetchCurrentCommodities.getComment1', err)
       );
+  },
+  async onAddSellerInfo() {
+    my.showLoading({
+      content: '记录提交中',
+    });
+    my.serverless.db.collection('seller').insertOne(
+      this.data.SellerInfo)
+    .then(res => {})
+    .catch(console.error);
+
+    my.hideLoading();
+    this.onPopupClose();
   },
 });

@@ -15,9 +15,9 @@
       </title>
     </view>
 
-      <view class="aline" style="margin-top:30px; font-size: 13px; color: #777777;">
-        月售{{CommodityInfo.salePerMonth}}
-      </view>
+    <view class="aline" style="margin-top:30px; font-size: 13px; color: #777777;">
+      月售{{CommodityInfo.salePerMonth}}
+    </view>
       
     <view>
       <view class="aline">
@@ -56,22 +56,22 @@
 
   
   <container className="container-item">
-      <view class="aline">
-        <title
-          hasLine="true"
-          className="subTitle"
-          onActionTap="titleGo"
-          >卖家评价
-        </title>
-      </view>
-      
-      <view class="aline" style="margin-bottom: 20px;">
-        <view style="display: flex; margin-top: 20px;">
-          <view a:for="{{tag}}" style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
-            <tag size="sm" type="primary">NBSSS</tag>
-          </view>
+    <view class="aline">
+      <title
+        hasLine="true"
+        className="subTitle"
+        onActionTap="titleGo"
+        >卖家评价
+      </title>
+    </view>
+    
+    <view class="aline" style="margin-bottom: 20px;">
+      <view style="display: flex; margin-top: 20px;">
+        <view a:for="{{CommodityInfo.tag}}" style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
+          <tag size="sm" type="primary">{{item.value}}</tag>
         </view>
       </view>
+    </view>
 
     <view disable-scroll=false>
       <comment
