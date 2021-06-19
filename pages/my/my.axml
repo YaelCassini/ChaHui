@@ -55,27 +55,12 @@
   <view class = "user-profile__introduction">
     简介：{{currentUser.introduction}}
   </view>
-  <!-- <scroll-view
-    class="entries"
-    scroll-x="{{true}}"
-    scroll-y="{{false}}"
-  >
-    <view
-      a:for="{{entries}}"
-      class="entries__item"
-    >
-      <image
-        class="entries__cover"
-        src="{{item.cover}}"
-        mode="scaleToFill"
-      />
-      <view class="entries__title">{{item.title}}</view>
-    </view>
-  </scroll-view> -->
+
   <view class="entries">
     <view
       a:for="{{entries}}"
       class="entries__item"
+      onTap="onAchievementClick"
     >
       <image
         class="entries__cover"
@@ -85,13 +70,7 @@
       <view class="entries__title">{{item.title}}</view>
     </view>
   </view>
-  <!-- <view class="divider --middle" /> -->
-  <!-- <view class="member-center-nav">查看全部徽章
-    <image
-      src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*kYnQR4upMIcAAAAAAAAAAABkARQnAQ"
-      mode="scaleToFill"
-    />
-  </view> -->
+
   <block a:for="{{navList}}">
     <list-item
       thumb="{{item.thumb}}"

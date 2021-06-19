@@ -83,6 +83,11 @@ Page({
     ],
   },
   onLoad() {},
+  onAchievementClick() {
+    my.navigateTo({
+      url: '/pages/my-achievement/my-achievement',
+    })
+  },
   onListClick({ target: { dataset } }) {
     const { onClick } = this.data.navList[dataset.index];
     if (onClick) {
