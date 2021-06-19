@@ -93,61 +93,30 @@ button:active {
   margin-left: 55rpx;
   text-align: left;
 }
-.entries {
+.achievements {
   display: flex;
   width: 100%;
   box-sizing: content-box;
   padding: 39rpx 0;
 }
-.entries__item {
+.achievements__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
   width: 180rpx;
 }
-.entries__cover {
+.achievements__cover {
   flex-shrink: 0;
   width: 80rpx;
   height: 80rpx;
 }
-.entries__title {
+.achievements__title {
   font-size: 24rpx;
   color: #333;
   margin-top: 9rpx;
 }
-.divider {
-  height: 1rpx;
-  background-color: #eee;
-}
-.divider.--middle {
-  width: 677rpx;
-  margin: 0 auto;
-}
-.divider.--right {
-  width: 713rpx;
-  float: right;
-}
-.divider.--right::after {
-  content: '';
-  display: block;
-  clear: both;
-  height: 0;
-}
-.member-center-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28rpx;
-  color: #009d9a;
-  line-height: 26px;
-  padding: 30rpx 0;
-}
-.member-center-nav image {
-  width: 10rpx;
-  height: 18rpx;
-  margin-left: 9rpx;
-}
+
 .list-item {
   font-size: 32rpx;
   color: #333;
