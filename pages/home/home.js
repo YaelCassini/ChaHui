@@ -12,7 +12,7 @@ Page({
     tabs: [
       {
         id: ALL,
-        title: '新品上市',
+        title: '附近的店',
       },
       {
         id: TREND,
@@ -24,7 +24,7 @@ Page({
       },
       {
         id: PRICE,
-        title: '价格',
+        title: '大家在看',
         sortable: true,
       },
     ],
