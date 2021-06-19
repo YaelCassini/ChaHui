@@ -83,6 +83,7 @@
           <view class="comment-item__subtitle">{{item.subtitle}}</view>
         </view>
           <view class="comment-item__design">
+          <view class="comment-item__design2">
             <view class="comment-item__design-addition">
               推荐配料：{{item.addition}}
             </view>
@@ -92,9 +93,14 @@
             <view class="comment-item__design-sweetness">
               推荐甜度：{{item.sweetness}}
             </view>
+          </view>
+            
 
             <view class="comment-item__detail">
-              {{item.detail}}
+            <view class="comment-comment-item__detail__text">
+               <text decode="true">&ensp;{{item.detail}}</text>
+            </view>
+             
             </view>
           </view>
       </view>

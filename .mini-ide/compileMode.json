@@ -23,6 +23,10 @@
     {
       "title": ",cate",
       "page": "pages/category/category"
+    },
+    {
+      "title": "coll",
+      "page": "pages/my-collection/my-collection"
     }
   ]
 }
