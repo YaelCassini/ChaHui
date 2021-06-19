@@ -15,6 +15,10 @@
     {
       "title": "buss",
       "page": "pages/business/business"
+    },
+    {
+      "title": "order",
+      "page": "pages/order/order"
     }
   ]
 }

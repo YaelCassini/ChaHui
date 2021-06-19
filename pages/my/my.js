@@ -41,7 +41,7 @@ Page({
           'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Y8BATYqMN78AAAAAAAAAAABkARQnAQ',
         onClick: () =>
           my.navigateTo({
-            url: '/pages/my-order/my-order',
+            url: '/pages/my-follow/my-follow',
           }),
       },
       {
@@ -50,7 +50,7 @@ Page({
           '../../asserts/icon/collection.png',
         onClick: () =>
           my.navigateTo({
-            url: '/pages/my-order/my-order',
+            url: '/pages/my-collection/my-collection',
           }),
       },
       {

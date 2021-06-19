@@ -7,6 +7,8 @@
     "title": "mini-ali-ui/es/title/index",
     "tag": "mini-ali-ui/es/tag/index",
     "list-item": "mini-ali-ui/es/list/list-item/index",
-    "am-switch": "mini-ali-ui/es/am-switch/index"
+    "am-switch": "mini-ali-ui/es/am-switch/index",
+    "empty": "/components/Empty/Empty",
+    "comment": "/pages/my-comment/components/Comment/Comment"
   }
 }

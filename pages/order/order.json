@@ -7,6 +7,9 @@
     "input-item": "mini-ali-ui/es/input-item/index",
     "am-icon": "mini-ali-ui/es/am-icon/index",
     "container": "mini-ali-ui/es/container/index",
-    "multi-liner": "mini-ali-ui/es/multi-liner/index"
+    "multi-liner": "mini-ali-ui/es/multi-liner/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "filter": "mini-ali-ui/es/filter/index",
+    "filter-item": "mini-ali-ui/es/filter/filter-item/index"
   }
 }

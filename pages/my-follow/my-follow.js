@@ -1,21 +1,14 @@
-import { getCommodity } from '../../services/comment';
+import { getCommodity } from '../../services/user';
 import * as log from '../../utils/log';
 import { ALL, TREND, NEW, PRICE } from '../../asserts/CommentType';
 
 Page({
   data: {
-    thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
-    expand3rd: false,
-    SellerName: '一点点',
-    descriptor: [{
-      title: '商品描述',
-      content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
-    },{
-      title: '商品描述',
-      content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
-    }] ,
-    src: '../asserts/picture/yangzhiganlu.jpg',
-
+    ALL,
+    TREND,
+    NEW,
+    PRICE,
+    searchValue: '',
     tabs: [
       {
         id: ALL,
@@ -36,38 +29,9 @@ Page({
       },
     ],
     activeTabId: ALL,
-    ALL,
-    TREND,
-    NEW,
-    PRICE,
-    searchValue: '',
     currentCommodities: [],
     selectedCommodityId: '',
     showCommodityDrawer: false,
-  },
-  onActiveTabChange(id) {
-    this.setData({ activeTabId: id });
-    this.fetchCurrentCommodities(id);
-  },
-  onCardClick(ev) {
-    my.alert({
-      content: ev.info,
-    });
-  },
-  onActionClick() {
-    my.alert({
-      content: 'action clicked',
-    });
-  },
-  onExtraActionClick() {
-    my.alert({
-      content: 'extra action clicked',
-    });
-  },
-  toggle() {
-    this.setData({
-      expand3rd: !this.data.expand3rd,
-    });
   },
   onShow() {
     const { searchValue = '' } = getApp();

@@ -12,6 +12,7 @@
   padding: 10rpx;
 }
 
+
 .comment-col {
   box-sizing: border-box;
   padding: 10rpx;

@@ -48,4 +48,17 @@
   评价
   </view>
 
+<view disable-scroll=false>
+  <comment
+    a:if="{{currentCommodities.length>0}}"
+    columns="{{activeTabId===TREND?1:1}}"
+    isRanking="{{activeTabId===TREND}}"
+    commentData="{{currentCommodities}}"
+  />
+  <empty
+    a:else
+    type="{{searchValue?EmptyType.EMPTY_SEARCH_RESULT:EmptyType.EMPTY_STORE}}"
+    className="empty-position"
+  />
+</view>
 </view>

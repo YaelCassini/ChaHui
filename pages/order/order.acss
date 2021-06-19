@@ -18,7 +18,7 @@
 }
 .order-section-header__state {
   font-size: 24rpx;
-  color: #ff5000;
+  color: #3CB371	;
 }
 .order-section-body {
   margin-bottom: 42rpx;
