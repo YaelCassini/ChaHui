@@ -3,6 +3,7 @@ import * as log from '../../utils/log';
 
 Page({
   data: {
+    seller_id: 0,
     SellerInfo:
     {
       id: 0,
@@ -14,13 +15,13 @@ Page({
       tag: [{value:'-'}],
     },
     // {      
-    //   id: 1,
-    //   name: '茶百道（玉泉北门店）',
-    //   salePerMonth: '7976',
-    //   waitingTime: '34',
-    //   waitingCup: '14',
-    //   pic: "/asserts/picture/seller/chabaidao.jpg",
-    //   tag: [{value:'超棒'},{value:'性价比高'},{value:'芋圆不错'},{value:'很快'}],
+    //   id: 5,
+    //   name: '厝内小眷村（文三店）',
+    //   salePerMonth: '1633',
+    //   waitingTime: '30',
+    //   waitingCup: '12',
+    //   pic: "/asserts/picture/seller/cuonei.jpg",
+    //   tag: [{value:'超值'},{value:'性价比很高'},{value:'涓豆腐奶茶不错'}],
     // },
     tabs: [
       {
@@ -35,19 +36,30 @@ Page({
     searchValue: '',
     activeTabId: 0,
     currentCommodities: [],
+    commodities: [],
   },
   onActiveTabChange(id) {
     this.setData({ activeTabId: id });
   },
   onLoad(options)
   {
+    this.data.seller_id = parseInt(options.id);
     this.fetchCurrentCommodities(1);
+    // seller info
     my.serverless.db.collection('seller').find()
       .then(res => {
-        this.setData({["SellerInfo"]:res.result[1]})
+        this.setData({["SellerInfo"]:res.result[options.id]})
       })
       .catch(console.error);
-
+    // commodity info
+    console.log(this.data.seller_id)
+    my.serverless.db.collection('commodity').find({
+        seller_id: { $eq: this.data.seller_id }
+      })
+      .then(res => {
+        this.setData({["commodities"]:res.result})
+      })
+      .catch(console.error);
     // this.onAddSellerInfo()
   },
   onShow() {
@@ -55,7 +67,13 @@ Page({
   },
   onTapCommodity(id) {
     // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
-    my.navigateTo({url:'../card/card'});
+    console.log("before navigate")
+    console.log(id, this.data.commodities)
+    const commodity_id = this.data.commodities[id].id;
+    const seller_id = this.data.commodities[id].seller_id;
+    console.log(commodity_id, seller_id)
+    console.log("start navigate")
+    my.navigateTo({url:'../card/card?id='+commodity_id+'&seller_id='+seller_id});
   },
   fetchCurrentCommodities(commodityType) {
     this.setData({ currentCommodities: [] });

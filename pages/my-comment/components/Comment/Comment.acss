@@ -28,7 +28,7 @@
   width: 125rpx;
   height: 125rpx;
   border-radius:60px;
-  margin-top: 15rpx;
+  margin-top: 10rpx;
 }
 .user-profile__right {
   margin-left: 15rpx;
@@ -41,39 +41,42 @@
 }
 .user-profile__name {
   font-size: 30rpx;
-  color: #333;
+  font-family:"微软雅黑";
+  font-weight:bold;
+  color: rgb(45, 53, 40);
   margin: 5rpx;
   margin-left: 10rpx;
   line-height: 50rpx;
 }
 .user-profile__sex {
-  background: #eee;
+  background: rgb(255, 255, 255);
   border-radius: 10000rpx;
-  color: #333;
-  height: 45rpx;
-  width: 55rpx;
-  margin: 5rpx 10rpx 0;
+  color: rgb(255, 255, 255);
+  height: 38rpx;
+  width: 48rpx;
+  margin: 5rpx 0rpx 3rpx 0;
 }
 .user-profile__sex image{
-  height: 35rpx;
-  width: 35rpx;
+  height: 33rpx;
+  width: 33rpx;
   margin-top: 5rpx;
   margin-left: 10rpx;
 }
 .user-profile__tag {
-  background: #ddd;
+  background: rgb(168, 185, 169);
   border-radius: 10000rpx;
-  font-size: 25rpx;
-  color: #333;
+  font-size: 22rpx;
+  color:rgb(255, 255, 255);
   margin: 5rpx 10rpx 0;
-  padding: 6rpx 15rpx 10rpx;
+  padding: 6rpx 15rpx 5rpx;
+  letter-spacing:2rpx;
 }
 .user-profile__time {
-  font-size: 25rpx;
-  color: #333;
+  font-size: 22rpx;
+  color: rgb(124, 124, 124);
   margin: 5rpx;
   margin-left: 10rpx;
-  line-height: 50rpx;
+  line-height: 30rpx;
 }
 
 .score-item {
@@ -92,19 +95,20 @@
   position: relative;
   flex-direction: column;
   justify-content: stretch;
-  background: #ddd;
-  border-radius: 12rpx;
+  background: rgb(241, 241, 241);
+  border-radius: 20rpx;
   overflow: hidden;
   box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
   margin: 10rpx 5rpx 5rpx rpx;
 }
 .comment-item image{
   flex-shrink: 0;
-  width: 240rpx;
-  height: 240rpx;
+  width: 220rpx;
+  height: 220rpx;
   overflow: hidden;
-  border-radius:5rpx;
-  margin: 10rpx;
+  border-radius:20rpx;
+  margin: 20rpx 10rpx 20rpx;
+
 }
 .comment-item__container {
   flex-grow: 1;
@@ -114,62 +118,91 @@
   padding: 10rpx 5rpx 5rpx;
 }
 .comment-item__body {
+  margin-top: 10rpx;
   margin-bottom: 5rpx;
   display: flex;
   flex-direction: row;
 }
 .comment-item__title {
-  font-size: 36rpx;
+  font-size: 35rpx;
+  font-family: '微软雅黑';
+  font-weight: bold;
   color: #333;
   text-align: left;
   line-height: 40rpx;
   margin-top: 3rpx;
 }
 .comment-item__subtitle {
-  background: #f8f8f8;
-  font-size: 24rpx;
-  color: #999;
+  background: #79a165;
+  font-size: 22rpx;
+  color: rgb(255, 255, 255);
   line-height: 40rpx;
   border-radius: 8rpx;
   display: inline-block;
-  padding-left: 5rpx;
-  padding-right: 5rpx;
+  padding-left: 9rpx;
+  padding-right: 9rpx;
   margin-left: 10rpx;
 
 }
 
 .comment-item__design {
+  /* display: flex; */
+  /* flex-direction: column; */
+  text-align: start;
+  /* justify-content: space-between; */
+}
+.comment-item__design2 {
   display: flex;
+  width: 50%;
+  margin-bottom: 8rpx;
+  border-radius: 20rpx;
+  /* background: rgb(255, 255, 255); */
   flex-direction: column;
   text-align: start;
   /* justify-content: space-between; */
 }
 .comment-item__design-addition {
+  margin:1rpx 5rpx;
   display: flex;
-  flex-direction: row;
-  font-size: 28rpx;
+  flex-direction: column;
+  font-size: 19rpx;
+  margin: 3rpx 8rpx;
+  color:  rgb(104, 104, 104);
 }
 
 .comment-item__design-temperature {
   display: flex;
-  flex-direction: row;
-  font-size: 28rpx;
+  flex-direction: column;
+  font-size: 19rpx;
+  margin:3rpx 8rpx;
+  color: rgb(104, 104, 104);
 }
 
 .comment-item__design-sweetness {
   display: flex;
-  flex-direction: row;
-  font-size: 28rpx;
+  flex-direction: column;
+  font-size: 19rpx;
+  margin:3rpx 8rpx;
+  color: rgb(104, 104, 104)
 }
 
 .comment-item__detail {
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color:  rgb(104, 104, 104);
   padding: 3rpx;
-  border-radius:5rpx;
-  font-size: 24rpx;
+  border-radius:15rpx;
+  font-size: 80%;
   height: 60rpx;
+  margin-bottom: 14rpx;
+  margin-right: 8rpx;
+  
 }
-
+.comment-item__detail__text{
+  padding: 5rpx;
+}
 
 .comment-item__score {
   font-size: 22rpx;
