@@ -6,22 +6,29 @@
     mode="aspectFill" src="/asserts/picture/onedotdot.jpg"  onError="imageError" onLoad="imageLoad" />
 
   <container className="container-item">
-    <view class="aline">
+    <view class="aline" style="margin-top: -10px; margin-bottom: -10px;">
       <title
         hasLine="true"
         className="changeColor"
         onActionTap="titleGo"
         >{{SellerName}}
       </title>
+      
     </view>
-    <view class="aline" style="font-size: 13px; color: #777777;">
-      月售1
+    <view class="aline" style="display: flex; font-size: 13px; color: #777777;">
+      <view style="padding-right: 20px" > 月售12 </view>
+      <view style="padding-right: 20px" > 大约39分钟 </view>
+      <view style="padding-right: 20px" > 前面还有6杯正在排队 </view>
     </view>
     <view class="aline">
-      <view style="font-size: 20px; color: #f36436;">
-        ￥18起
+      <view style="display: flex; margin-top: 20px;">
+        <view style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
+          <tag size="sm" type="primary">有点甜</tag>
+        </view>
+        <view style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
+          <tag size="sm" type="primary">NB</tag>
+        </view>
       </view>
-    
     </view>
   </container>
   
@@ -33,73 +40,7 @@
   
 <!-- 奶茶 -->
   <view a:if="{{activeTabId==0}}">
-  
-  <view
-    class="masonry-col"
-    a:for="{{masonryData}}"
-  >
-    <view
-      onTap="onTapCommodity"
-      data-id="{{item.id}}"
-      class="masonry-item"
-      style="flex-direction:{{columns===1?'row':'column'}};"
-    >
-      <image
-        class="masonry-item__rank"
-        a:if="{{index<3&&isRanking}}"
-        lazy-load="{{true}}"
-        src="{{index === 0
-          ? 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Uv3oTbU0A5AAAAAAAAAAAABkARQnAQ'
-          : index === 1
-            ? 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_ag8S6t0xtcAAAAAAAAAAABkARQnAQ'
-            : index === 2
-              ? 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*2lPbRp3l8Z8AAAAAAAAAAABkARQnAQ'
-              : ''}}"
-        mode="scaleToFill"
-      />
-      <image
-        src="{{item.cover}}"
-        mode="aspectFill"
-        class="masonry-item__background"
-        style="height:{{columns===1?280:342}}rpx;width:{{columns===1?'280rpx':'100%'}}"
-        onTap="jumpToGoods"
-      />
-        <view class="masonry-item__container">
-          <view class="masonry-item__body">
-            <view class="masonry-item__title">{{item.title}}</view>
-            <view class="masonry-item__subtitle">{{item.subtitle}}</view>
-          </view>
-          <view>
-            <view
-              a:if="{{item.canSelfPickUp}}"
-              class="masonry-item__self-pick-up"
-            >
-              可自提
-            </view>
-            <view class="masonry-item__footer">
-
-              <view class="masonry-item__footer-left">
-                <view class="masonry-item__price-logo">¥</view>
-                <view class="masonry-item__price">
-                  {{item.price}}
-                </view>
-                <view class="masonry-item__score">
-                  得分：{{item.score}}
-                </view>
-                <view class="masonry-item__sales">
-                  月销量：{{item.sales}}
-                </view>
-              </view>
-              <image
-                mode="scaleToFill"
-                src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*7iWdR5ix18UAAAAAAAAAAABkARQnAQ"
-                class="masonry-item__shopping-cart"
-              />
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
+  奶茶
   </view>
 
 <!-- 评价 -->
@@ -107,63 +48,4 @@
   评价
   </view>
 
-  <container className="container-item">
-      <view class="aline">
-        <title
-          hasLine="true"
-          className="subTitle"
-          onActionTap="titleGo"
-          >商品描述
-        </title>
-      </view>
-      <view a:for="{{descriptor}}" style="width:100%; ">
-        <view class="aline" style="display: flex; padding-top: 5px">
-          <view style="width:20%; line-height:20px; font-size: 13px; color: #777777;">
-            商品描述
-          </view>
-          <view style="padding-left:5px; line-height:20px; width:80%; font-size: 14px; color: #000000; word-break:break-all;">
-            商品描述ssfdsdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-          </view>
-        </view>
-    </view>
-  </container>
-
-  <view style="margin-top: 10px;" />
-  <view>
-    <card thumb="{{thumb}}" 
-      title="杨枝甘露" 
-      subTitle="古茗" 
-      onCardClick="toggle" 
-      action="描述文字" 
-      onActionClick="onActionClick" 
-      extraAction="点击卡片展开/收起↑" 
-      onExtraActionClick="onExtraActionClick" 
-      info="点击了第三个card" 
-      expand="{{expand3rd}}" 
-      bgImg="../asserts/picture/yangzhiganlu.jpg" />
-  </view>
-  <view style="margin-top: 10px;" />
-  <view style="display: flex;">
-    <view style="width: 50%;">
-    <card thumb="{{thumb}}" 
-      title="描述" 
-      style="width: 30%;"
-      subTitle="副标题非必填3" 
-      onCardClick="onCardClick" 
-      info="点击了第三个card" 
-      bgImg="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*OjyRRqjLM6MAAAAAAAAAAABkARQnAQ"
-      expand
-    />
-    </view>
-    <view style="width: 50%;">
-    <card thumb="{{thumb}}" 
-      title="配料表" 
-      subTitle="芒果、红茶" 
-      onCardClick="onCardClick" 
-      info="点击了第三个card" 
-      bgImg="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*OjyRRqjLM6MAAAAAAAAAAABkARQnAQ"
-      expand
-    />
-    </view>
-  </view>
 </view>

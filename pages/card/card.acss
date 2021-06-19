@@ -41,15 +41,38 @@
 
 .aline {
   width: 100% !important;
-  margin: 4rpx;
+  /* margin: 4rpx; */
 }
 
 .changeColor {
   font-size: 24px;
-    width: 100%;
+  width: 100%;
+  margin-bottom: -10px;
 }
 
 .subTitle {
   font-size: 16px;
     width: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  background-color: white;
+}
+
+.row-title {
+  flex: 1;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.row-extra {
+  flex-basis: initial;
+  font-size: 32rpx;
+  color: #888;
+  margin-right: 12px;
 }

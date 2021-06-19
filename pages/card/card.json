@@ -3,6 +3,9 @@
   "usingComponents":{
     "container": "mini-ali-ui/es/container/index",
     "card": "mini-ali-ui/es/card/index",
-    "title": "mini-ali-ui/es/title/index"
+    "title": "mini-ali-ui/es/title/index",
+    "tag": "mini-ali-ui/es/tag/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "am-switch": "mini-ali-ui/es/am-switch/index"
   }
 }

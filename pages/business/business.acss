@@ -45,11 +45,40 @@
 }
 
 .changeColor {
-  font-size: 24px;
-    width: 100%;
+  font-size: 28px;
+  width: 100%;
+  padding-top: -90px;
 }
 
 .subTitle {
   font-size: 16px;
     width: 100%;
+}
+.am-title {
+  padding-top: 24rpx;
+}
+.container {
+  padding: 24rpx;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  background-color: white;
+}
+
+.row-title {
+  flex: 1;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.row-extra {
+  flex-basis: initial;
+  font-size: 32rpx;
+  color: #888;
+  margin-right: 12px;
 }
