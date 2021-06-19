@@ -22,19 +22,21 @@
           </view>
           <view class="user-profile__achievement">
             <image
-              src="/asserts/icon/achievement/changxindaren.png"
+              src="{{achievementsData.pic[item.medals[0]]}}"
+              mode="scaleToFill"
+            />
+            <!-- {{achievementsData.pic[item.medals[0]]}}
+            {{item.medals[0]}} -->
+          </view>
+          <view class="user-profile__achievement">
+            <image
+              src="{{achievementsData.pic[item.medals[1]]}}"
               mode="scaleToFill"
             />
           </view>
           <view class="user-profile__achievement">
             <image
-              src="/asserts/icon/achievement/zailaiyibei.png"
-              mode="scaleToFill"
-            />
-          </view>
-          <view class="user-profile__achievement">
-            <image
-              src="/asserts/icon/achievement/tizhongchaobiao.png"
+              src="{{achievementsData.pic[item.medals[2]]}}"
               mode="scaleToFill"
             />
           </view>
@@ -78,7 +80,7 @@
             粉丝
           </view>
         </view>
-        <view class="user-profile__info" onClick="jumpToComment">
+        <view class="user-profile__info">
           <view class="user-profile__infocount">
             {{item.comment}}
           </view>

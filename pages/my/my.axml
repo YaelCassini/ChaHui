@@ -2,7 +2,7 @@
   <view class="user-profile">
     <image
       class="user-profile__avatar"
-      src="/asserts/my/avatar.jpg"    
+      src="{{currentUser.avatar}}"    
       mode="scaleToFill"
     />
     <view class="user-profile__right">
@@ -62,16 +62,16 @@
 
   <view class="achievements">
     <view
-      a:for="{{achievements}}"
+      a:for="{{currentUser.medals}}"
       class="achievements__item"
       onTap="onAchievementClick"
     >
       <image
         class="achievements__cover"
-        src="{{item.cover}}"
+        src="{{achievementsData.pic[item]}}"
         mode="scaleToFill"
       />
-      <view class="achievements__title">{{item.title}}</view>
+      <view class="achievements__title">{{achievementsData.name[item]}}</view>
     </view>
   </view>
 

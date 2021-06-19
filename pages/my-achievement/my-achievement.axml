@@ -1,4 +1,3 @@
-<view>
   <view class="entries">
     <view
       a:for="{{achievements}}"
@@ -12,6 +11,4 @@
       />
       <view class="entries__title">{{item.title}}</view>
     </view>
-  </view>
-  
-</view>
+  </view> 
