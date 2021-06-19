@@ -1,0 +1,51 @@
+<view class="container">
+
+  <image class="image"
+    data-name="test"
+    onTap="onTap"
+    mode="aspectFill" src="/asserts/picture/onedotdot.jpg"  onError="imageError" onLoad="imageLoad" />
+
+  <container className="container-item">
+    <view class="aline" style="margin-top: -10px; margin-bottom: -10px;">
+      <title
+        hasLine="true"
+        className="changeColor"
+        onActionTap="titleGo"
+        >{{SellerName}}
+      </title>
+      
+    </view>
+    <view class="aline" style="display: flex; font-size: 13px; color: #777777;">
+      <view style="padding-right: 20px" > 月售12 </view>
+      <view style="padding-right: 20px" > 大约39分钟 </view>
+      <view style="padding-right: 20px" > 前面还有6杯正在排队 </view>
+    </view>
+    <view class="aline">
+      <view style="display: flex; margin-top: 20px;">
+        <view style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
+          <tag size="sm" type="primary">有点甜</tag>
+        </view>
+        <view style="padding-right: 5px; margin-top: -20px; padding-top: 0px; height = 100%">
+          <tag size="sm" type="primary">NB</tag>
+        </view>
+      </view>
+    </view>
+  </container>
+  
+  <tab
+    activeId="{{activeTabId}}"
+    onActiveTabChange="onActiveTabChange"
+    tabs="{{tabs}}"
+  />
+  
+<!-- 奶茶 -->
+  <view a:if="{{activeTabId==0}}">
+  奶茶
+  </view>
+
+<!-- 评价 -->
+  <view a:if="{{activeTabId==1}}">
+  评价
+  </view>
+
+</view>

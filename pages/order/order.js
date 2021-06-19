@@ -18,7 +18,6 @@ Page({
         })
         .catch(console.error);
       this.setData({["orderList"]:this.data.orderList})
-
   },
 
   onButtomBtnTap() {

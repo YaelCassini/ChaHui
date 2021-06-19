@@ -1,52 +1,52 @@
 {
-  "pages": [
-    "pages/community/community",
-    "pages/shopping-cart/shopping-cart",
-    "pages/my/my",
-    "pages/category/category",
-    "pages/search/search",
-    "pages/order/order",
-    "pages/my-ticket/my-ticket",
-    "pages/home/home",
-    "pages/card/card",
-    "pages/my-setting/my-setting",
-    "pages/my-comment/my-comment"
-  ],
-  "window": {
-    "defaultTitle": "茶荟",
-    "titleBarColor": "#fff",
-    "pullRefresh": false
-  },
-  "tabBar": {
-    "textColor": "#333333",
-    "selectedColor": "#00b386",
-    "backgroundColor": "#f2f2f2",
-    "items": [   
-      {
-        "pagePath": "pages/home/home",
-        "icon": "./asserts/icon/home.png",
-        "activeIcon": "./asserts/icon/home-active.png",
-        "name": "首页"
-      },
-      {
-        "pagePath": "pages/community/community",
-        "icon": "./asserts/icon/community.png",
-        "activeIcon": "./asserts/icon/community-active.png",
-        "name": "社区"
-      },
-      {
-        "pagePath": "pages/order/order",
-        "icon": "./asserts/icon/order.png",
-        "activeIcon": "./asserts/icon/order-active.png",
-        "name": "订单"
-      },
-      {
-        "pagePath": "pages/my/my",
-        "icon": "./asserts/icon/mine.png",
-        "activeIcon": "./asserts/icon/mine-active.png",
-        "name": "我的"
-      }
-    ]
-  },
-  "debug": true
+    "pages": [
+        "pages/community/community",
+        "pages/shopping-cart/shopping-cart",
+        "pages/my/my",
+        "pages/category/category",
+        "pages/search/search",
+        "pages/order/order",
+        "pages/my-ticket/my-ticket",
+        "pages/home/home",
+        "pages/card/card",
+        "pages/my-setting/my-setting",
+        "pages/my-comment/my-comment",
+        "pages/business/business"
+    ],
+    "window": {
+        "defaultTitle": "茶荟",
+        "titleBarColor": "#fff",
+        "pullRefresh": false
+    },
+    "tabBar": {
+        "textColor": "#333333",
+        "selectedColor": "#00b386",
+        "backgroundColor": "#f2f2f2",
+        "items": [{
+                "pagePath": "pages/home/home",
+                "icon": "./asserts/icon/home.png",
+                "activeIcon": "./asserts/icon/home-active.png",
+                "name": "首页"
+            },
+            {
+                "pagePath": "pages/community/community",
+                "icon": "./asserts/icon/community.png",
+                "activeIcon": "./asserts/icon/community-active.png",
+                "name": "社区"
+            },
+            {
+                "pagePath": "pages/order/order",
+                "icon": "./asserts/icon/order.png",
+                "activeIcon": "./asserts/icon/order-active.png",
+                "name": "订单"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "icon": "./asserts/icon/mine.png",
+                "activeIcon": "./asserts/icon/mine-active.png",
+                "name": "我的"
+            }
+        ]
+    },
+    "debug": true
 }

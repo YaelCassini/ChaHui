@@ -2,9 +2,7 @@ Page({
   data: {
     thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
     expand3rd: false,
-    GoodName: '波霸奶茶',
-    tag: [
-      'hello','hello2','hello3','hello4', 'test'],
+    SellerName: '一点点',
     descriptor: [{
       title: '商品描述',
       content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
@@ -13,7 +11,18 @@ Page({
       content: '波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，波霸奶茶美滋滋美滋滋美滋滋，',
     }] ,
     src: '../asserts/picture/yangzhiganlu.jpg',
-
+    activeTabId: 0,
+    tabs: [{
+        id: 0,
+        title: '奶茶',
+      },{
+        id: 1,
+        title: '评价',
+      }]
+  },
+  onActiveTabChange(id) {
+    this.setData({ activeTabId: id });
+    this.fetchCurrentCommodities(id);
   },
   onCardClick(ev) {
     my.alert({
