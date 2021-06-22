@@ -11,7 +11,7 @@ Page({
     searchValue: '',
     tabs: [
       {
-        id: ALL,
+        id: NEW,
         title: '附近的店',
       },
       {
@@ -19,16 +19,12 @@ Page({
         title: '人气店家',
       },
       {
-        id: NEW,
+        id: ALL,
         title: '猜你喜欢',
       },
-      {
-        id: PRICE,
-        title: '大家在看',
-        sortable: true,
-      },
+
     ],
-    activeTabId: ALL,
+    activeTabId: NEW,
     currentCommodities: [],
     selectedCommodityId: '',
     showCommodityDrawer: false,

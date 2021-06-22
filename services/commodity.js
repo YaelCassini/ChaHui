@@ -3,9 +3,10 @@ import {
   searchTrend,
   allCommodity,
   trendCommodity,
+  priceCommodity,
   commodityDetail,
 } from "./__mock__/commodity";
-import { ALL, TREND } from "../asserts/CommodityType";
+import { ALL, TREND,NEW,PRICE } from "../asserts/CommodityType";
 
 export const getSearchTrend = () => {
   // return request(`${URL_PREFIX}/trend`);
@@ -19,6 +20,8 @@ export const getCommodity = ({ type = 1 }) => {
       return Promise.resolve(allCommodity);
     case TREND:
       return Promise.resolve(trendCommodity);
+    case NEW:
+      return Promise.resolve(priceCommodity);  
     default:
       return Promise.resolve([]);
   }
