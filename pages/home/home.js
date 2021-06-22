@@ -44,6 +44,11 @@ Page({
     // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
     my.navigateTo({url:'../business/business?id='+seller_id});
   },
+  onTapjumpGood(m_id){
+    const commodity_id = this.data.commodities[id].id;
+    const seller_id = this.data.commodities[id].seller_id;
+    my.navigateTo({url:'../card/card?id='+commodity_id+'&seller_id='+seller_id});
+  },
   onCloseCommodityDrawer() {
     this.setData({ showCommodityDrawer: false });
   },

@@ -43,9 +43,9 @@
             明星店家
           </view> -->
           <view class="masonry-item__goods__container">
-            <view class="masonry-item__goods"  a:for="{{item.goods}}">
+            <view class="masonry-item__goods"  a:for="{{item.goods}}" >
             <image  class="masonry-masonry-item__goods__item" 
-             
+              catchTap="onTapGoods" data-id="{{item.id}}"
               a:if="{{columns===3}}"
               style="height:100%;width:100%"
               lazy-load="{{true}}"

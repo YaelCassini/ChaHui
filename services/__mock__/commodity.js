@@ -156,7 +156,7 @@ export const priceCommodity = {
       sales: 1589,
       score:4.9,
       seller_id: 0,
-      goods:[{path:"../../asserts/picture/caomeixiaoquexing.jpg"},{path:"../../asserts/picture/boba.jpg"},{path:"../../asserts/picture/yangzhiganlu.jpg"}],
+      goods:[{id:1,path:"../../asserts/picture/caomeixiaoquexing.jpg"},{id:2,path:"../../asserts/picture/boba.jpg"},{id:3,path:"../../asserts/picture/yangzhiganlu.jpg"}],
     
     },
     {

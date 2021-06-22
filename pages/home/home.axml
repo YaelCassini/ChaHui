@@ -35,6 +35,7 @@
     masonryData="{{currentCommodities}}"
     isGood="{{activeTabId===PRICE}}"
     onTapCommodity="onTapCommodity"
+    onTapjumpGood="onTapjumpGood"
   />
   <empty
     a:else
