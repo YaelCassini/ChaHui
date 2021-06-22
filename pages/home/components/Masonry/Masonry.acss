@@ -43,8 +43,10 @@
   margin-bottom: 15rpx;
 }
 .masonry-item__title {
-  font-size: 35rpx;
-
+  margin-top: 10rpx;
+  font-size: 38rpx;
+  font-weight: 550;
+  font-family: "微软雅黑";
   color: #333;
   text-align: left;
   line-height: 37rpx;
@@ -60,12 +62,22 @@
   padding: 3rpx 10rpx;
   margin-bottom: 12rpx;
 }
-.masonry-item__goods{
+.masonry-item__goods__container{
   display: flex;
+  
+}
+.masonry-item__goods{
+  
+  margin: 8rpx;
+  flex-direction: row;
+  height: 115rpx;
+  width: 115rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
 
 }
 .masonry-item__goods__item{
-  flex-direction: row;
+  padding: 10rpx;
 }
 .masonry_score {
   color: #F44C2C;

@@ -29,7 +29,7 @@
         src="{{item.cover}}"
         mode="aspectFill"
         class="masonry-item__background"
-        style="height:{{columns===1?280:342}}rpx;width:{{columns===1?'280rpx':columns===2?'100%':columns===3?'310rpx':''}}"
+        style="height:{{columns===1?280:342}}rpx;width:{{columns===1?'280rpx':columns===2?'100%':columns===3?'300rpx':''}}"
       />
       <view class="masonry-item__container">
         <view class="masonry-item__body">
@@ -42,14 +42,20 @@
           >
             明星店家
           </view> -->
-          <view class="masonry-item__goods">
-            <image 
-              class="masonry-masonry-item__goods__item"
+          <view class="masonry-item__goods__container">
+            <view class="masonry-item__goods"  a:for="{{item.goods}}">
+            <image  class="masonry-masonry-item__goods__item" 
+             
               a:if="{{columns===3}}"
+              style="height:100%;width:100%"
               lazy-load="{{true}}"
-              src="{{item.goods}}">
+              src="{{item.path}}">
             </image>
+          
+            
           </view>
+          </view>
+          
           <view class="masonry_score">
             <image mode="scaleToFill" 
             src="../../../../asserts/picture/star.png" 

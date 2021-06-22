@@ -41,6 +41,7 @@
 }
 .masonry-item__body {
   margin-bottom: 15rpx;
+  padding: 10rpx;
 }
 
 .masonry-item__sale {
