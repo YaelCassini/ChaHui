@@ -132,6 +132,66 @@ export const trendCommodity = {
   ],
 };
 
+export const priceCommodity = {
+  data: [
+    {
+      id: 0,
+      cover:
+        "../../asserts/picture/chabaidao.jpg",
+      title: "茶百道",
+      canSelfPickUp: false,
+      price: 39,
+      sales: 1749,
+      score:4.7,
+      seller_id: 1,
+    },
+    {
+      id: 1,
+      cover:
+        "../../asserts/picture/yidiandian.jpg",
+      title: "一点点",
+      canSelfPickUp: false,
+      price: 39,
+      sales: 1589,
+      score:4.9,
+      seller_id: 0,
+    },
+    {
+      id: 2,
+      cover:
+        "../../asserts/picture/cuoneixiaojuancun.jpg",
+      title: "厝内小眷村",
+      canSelfPickUp: false,
+      price: 30,
+      sales: 1130,
+      score:4.7,
+      seller_id: 5,
+    },
+    {
+      id: 3,
+      cover:
+        "../../asserts/picture/shop/coco.jpg",
+      title: "coco",
+      canSelfPickUp: false,
+      price: 30,
+      sales: 1092,
+      score:4.6,
+      seller_id: 3,
+    },
+    {
+      id: 4,
+      cover:
+        "../../asserts/picture/shop/xi.png",
+      title: "喜茶",
+      canSelfPickUp: false,
+      price: 30,
+      sales: 989,
+      score:4.3,
+      seller_id: 4,
+    },
+  ],
+};
+
 export const commodityDetail = {
   data: {
     cover:
