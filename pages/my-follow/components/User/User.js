@@ -6,7 +6,7 @@ const achievementsData = {
     "奶茶行家",
     "体重超标",
     "再来一杯",
-    "遍尝百家"
+    "百家斩"
   ],
   pic:[
     '../../asserts/icon/achievement/chakangengduo.png',

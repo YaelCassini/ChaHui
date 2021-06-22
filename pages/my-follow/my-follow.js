@@ -7,47 +7,36 @@ Page({
     searchValue: '',
     activeTabId: 1,
     currentCommodities: [],
+    myfollows:[],
     selectedCommodityId: '',
+    followList:[],
     // achievementsData,
   },
   onLoad() {
-    // Set data from db
-      my.serverless.db.collection('user')
-        .find()
-        .then(res => {
-          //console.log(res.result)
-          this.data.userList = res.result
-          this.setData({["currentCommodities"]:this.data.userList})
-          //console.log(this.data.userList)
+    my.serverless.db.collection('user')
+      .find({userID: "000001"},{projection: {followUser: 1,_id:0}})
+      .then(res => {
+        this.data.followList = res.result[0]["followUser"]
+        //this.data.followList = res.result
+        this.setData({["myfollows"]:this.data.followList})
+        //console.log(this.data.followList)
+        //console.log(this.data.myfans)
+        
+        // Set data from db
+        my.serverless.db.collection('user')
+          //.find({userID:{$in: ["000003", "000004", "000002"]}})
+          .find({userID: {$in: this.data.myfollows}})
+          .then(res => {
+            console.log(res.result)
+            this.data.userList = res.result
+            this.setData({["currentCommodities"]:this.data.userList})
+            //console.log(this.data.userList)
+          })
+          .catch(console.error);
+          this.setData({["currentCommodities"]:this.data.userList});
         })
         .catch(console.error);
-      this.setData({["currentCommodities"]:this.data.userList});
+      // this.setData({["myfans"]:this.data.followList});    
       // console.log(currentCommodities);
   },
-  // onShow() {
-  //   // const { searchValue = '' } = getApp();
-  //   // this.setData({ searchValue });
-  //   // this.fetchCurrentCommodities(this.data.activeTabId);
-  // },
-  // getCommodityDetailPagePath(id) {
-  //   return `/pages/commodity/commodity?id=${id}`;
-  // },
-  // mapCommodityItemToViewList(commodities = []) {
-  //   return commodities.map(item => ({
-  //     ...item,
-  //     url: this.getCommodityDetailPagePath(item.id),
-  //   }));
-  // },
-  // fetchCurrentCommodities(commodityType) {
-  //   this.setData({ currentCommodities: [] });
-  //   getCommodity({ type: commodityType })
-  //     .then(({ data = [] }) =>
-  //       this.setData({
-  //         currentCommodities: this.mapCommodityItemToViewList(data),
-  //       })
-  //     )
-  //     .catch(err =>
-  //       log.error('handbag.fetchCurrentCommodities.getComment1', err)
-  //     );
-  // },
 });
