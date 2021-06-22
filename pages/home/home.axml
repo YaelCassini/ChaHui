@@ -30,7 +30,7 @@
   />
   <masonry
     a:if="{{currentCommodities.length>0}}"
-    columns="{{activeTabId===ALL?2:1}}"
+    columns="{{activeTabId===ALL?2:activeTabId===TREND?1:3}}"
     isRanking="{{activeTabId===TREND}}"
     masonryData="{{currentCommodities}}"
     isGood="{{activeTabId===PRICE}}"

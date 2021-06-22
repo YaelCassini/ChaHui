@@ -1,6 +1,6 @@
 <view
   class="masonry"
-  style="grid-template-columns:{{columns===1?'1fr':'1fr 1fr'}};"
+  style="grid-template-columns:{{columns===1?'1fr':columns===2?'1fr 1fr':columns===3?'1fr':'1fr 1fr'}};"
 >
   <view
     class="masonry-col"
@@ -10,7 +10,7 @@
       onTap="onTapCommodity"
       data-id="{{item.id}}"
       class="masonry-item"
-      style="flex-direction:{{columns===1?'row':'column'}};"
+      style="flex-direction:{{columns===1?'row':columns===2?'column':columns===3?'row':''}};"
     >
       <image
         class="masonry-item__rank"
@@ -29,7 +29,7 @@
         src="{{item.cover}}"
         mode="aspectFill"
         class="masonry-item__background"
-        style="height:{{columns===1?280:342}}rpx;width:{{columns===1?'280rpx':'100%'}}"
+        style="height:{{columns===1?280:342}}rpx;width:{{columns===1?'280rpx':columns===2?'100%':columns===3?'310rpx':''}}"
       />
       <view class="masonry-item__container">
         <view class="masonry-item__body">
@@ -42,6 +42,14 @@
           >
             明星店家
           </view> -->
+          <view class="masonry-item__goods">
+            <image 
+              class="masonry-masonry-item__goods__item"
+              a:if="{{columns===3}}"
+              lazy-load="{{true}}"
+              src="{{item.goods}}">
+            </image>
+          </view>
           <view class="masonry_score">
             <image mode="scaleToFill" 
             src="../../../../asserts/picture/star.png" 

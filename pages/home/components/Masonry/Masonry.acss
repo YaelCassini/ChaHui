@@ -60,6 +60,13 @@
   padding: 3rpx 10rpx;
   margin-bottom: 12rpx;
 }
+.masonry-item__goods{
+  display: flex;
+
+}
+.masonry-item__goods__item{
+  flex-direction: row;
+}
 .masonry_score {
   color: #F44C2C;
   font-size: 30rpx;
