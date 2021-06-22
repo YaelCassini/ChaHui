@@ -72,6 +72,8 @@
 
   </view>
 
+  <view class = "blank"></view>
+
   </view>
   <!-- 评价 -->
   <view class="container__comment">
@@ -82,6 +84,7 @@
       </view>
     </view>
   </view>
+  
   
 
 
