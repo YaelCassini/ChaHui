@@ -31,7 +31,7 @@ Page({
           '../../asserts/icon/wish.png',
         onClick: () =>
           my.navigateTo({
-            url: '/pages/my-achievement/my-achievement',
+            url: '/pages/my-wish/my-wish',
           }),
       },
       {

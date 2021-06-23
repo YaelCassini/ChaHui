@@ -1,0 +1,21 @@
+<import-sjs
+  name="EmptyType"
+  from="../../components/Empty/empty-type.sjs"
+/>
+<!-- 奶茶 -->
+  <view>奶茶
+    <!-- <scroll-view class='category-container' scroll-y='true' scroll-with-animation='true'>
+      <view a:if='{{category.level == 1}}' class="category {{categorySelected.id==category.id?'active':''}}" a:for='{{categories}}' a:for-item='category' key='{{id}}' data-id='{{category.id}}' ref-numbers='{{categories}}' onTap='antmoveAction' data-antmove-tap='onCategoryClick'>
+        <view class="name {{categorySelected.id==category.id?'active':''}}">
+          {{category.name}}
+        </view>
+      </view>
+    </scroll-view> -->
+    <masonry
+      a:if="{{commodities.length>0}}"
+      columns="{{1}}"
+      masonryData="{{commodities}}" 
+   />
+
+
+  </view>

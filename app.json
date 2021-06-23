@@ -16,7 +16,8 @@
     "pages/my-fans/my-fans",
     "pages/my-achievement/my-achievement",
     "pages/business/business",
-    "pages/my-shop/my-shop"
+    "pages/my-shop/my-shop",
+    "pages/my-wish/my-wish"
   ],
   "window": {
     "defaultTitle": "茶荟",
