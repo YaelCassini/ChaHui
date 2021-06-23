@@ -144,7 +144,7 @@ export const priceCommodity = {
       sales: 1749,
       score:4.7,
       seller_id: 1,
-      goods:[{path:"../../asserts/picture/caomeixiaoquexing.jpg"},{path:"../../asserts/picture/boba.jpg"},{path:"../../asserts/picture/yangzhiganlu.jpg"}],
+      goods:[{seller_id:0,goods_id:1,path:"../../asserts/picture/caomeixiaoquexing.jpg"},{seller_id:0,goods_id:2,path:"../../asserts/picture/boba.jpg"},{seller_id:0,goods_id:3,path:"../../asserts/picture/yangzhiganlu.jpg"}],
     },
     {
       id: 1,
@@ -156,7 +156,7 @@ export const priceCommodity = {
       sales: 1589,
       score:4.9,
       seller_id: 0,
-      goods:[{id:1,path:"../../asserts/picture/caomeixiaoquexing.jpg"},{id:2,path:"../../asserts/picture/boba.jpg"},{id:3,path:"../../asserts/picture/yangzhiganlu.jpg"}],
+      goods:[{seller_id:1,goods_id:1,path:"../../asserts/picture/caomeixiaoquexing.jpg"},{seller_id:1,goods_id:2,path:"../../asserts/picture/boba.jpg"},{seller_id:1,goods_id:3,path:"../../asserts/picture/yangzhiganlu.jpg"}],
     
     },
     {
@@ -169,7 +169,7 @@ export const priceCommodity = {
       sales: 1130,
       score:4.7,
       seller_id: 5,
-      goods:[{path:"../../asserts/picture/caomeixiaoquexing.jpg"},{path:"../../asserts/picture/boba.jpg"},{path:"../../asserts/picture/yangzhiganlu.jpg"}],
+      goods:[{seller_id:2,goods_id:1,path:"../../asserts/picture/caomeixiaoquexing.jpg"},{seller_id:2,goods_id:2,path:"../../asserts/picture/boba.jpg"},{seller_id:2,goods_id:3,path:"../../asserts/picture/yangzhiganlu.jpg"}],
     
     },
     {
@@ -182,7 +182,7 @@ export const priceCommodity = {
       sales: 1092,
       score:4.6,
       seller_id: 3,
-      goods:[{path:"../../asserts/picture/caomeixiaoquexing.jpg"},{path:"../../asserts/picture/boba.jpg"},{path:"../../asserts/picture/yangzhiganlu.jpg"}],
+      goods:[{seller_id:3,goods_id:1,path:"../../asserts/picture/caomeixiaoquexing.jpg"},{seller_id:3,goods_id:2,path:"../../asserts/picture/boba.jpg"},{seller_id:3,goods_id:3,path:"../../asserts/picture/yangzhiganlu.jpg"}],
     
     },
     {
@@ -195,7 +195,7 @@ export const priceCommodity = {
       sales: 989,
       score:4.3,
       seller_id: 4,
-      goods:[{path:"../../asserts/picture/caomeixiaoquexing.jpg"},{path:"../../asserts/picture/boba.jpg"},{path:"../../asserts/picture/yangzhiganlu.jpg"}],
+      goods:[{seller_id:4,goods_id:1,path:"../../asserts/picture/caomeixiaoquexing.jpg"},{seller_id:4,goods_id:2,path:"../../asserts/picture/boba.jpg"},{seller_id:4,goods_id:3,path:"../../asserts/picture/yangzhiganlu.jpg"}],
     
     },
   ],

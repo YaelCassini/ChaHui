@@ -7,6 +7,7 @@ Component({
     isRanking: false,
     onTapCommodity: () => {},
     jumpToGoods: () => {},
+    onTapjumpGoods: () => {},
   },
   didMount() {},
   didUpdate() {},
@@ -21,10 +22,11 @@ Component({
 		  console.log('我是点击事件')
       my.navigateTo({ url: '../card/card' })
     },
-    onTapjumpGood(event) {
-      var m_id=event.target.dataset.id;
-      console.log("test",m_id);
-      this.props.onTapCommodity(1,price);
+    onTapjumpGoods(event) {
+      var m_id=event.target.dataset.id.goods_id;
+      var s_id=event.target.dataset.id.seller_id;
+      console.log(m_id,s_id);
+      this.props.onTapjumpGoods(m_id,s_id);
       
     },
   },

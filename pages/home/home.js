@@ -9,6 +9,8 @@ Page({
     NEW,
     PRICE,
     searchValue: '',
+    SellerInfo:
+    [],
     tabs: [
       {
         id: NEW,
@@ -33,6 +35,8 @@ Page({
     const { searchValue = '' } = getApp();
     this.setData({ searchValue });
     this.fetchCurrentCommodities(this.data.activeTabId);
+     console.log("test1",this.data.SellerInfo);
+    // console.log("test",this.data.currentCommodities)
   },
   onActiveTabChange(id) {
     this.setData({ activeTabId: id });
@@ -43,11 +47,10 @@ Page({
     console.log(seller_id)
     // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
     my.navigateTo({url:'../business/business?id='+seller_id});
+    console.log("test2",this.data.currentCommodities)
   },
-  onTapjumpGood(m_id){
-    const commodity_id = this.data.commodities[id].id;
-    const seller_id = this.data.commodities[id].seller_id;
-    my.navigateTo({url:'../card/card?id='+commodity_id+'&seller_id='+seller_id});
+  onTapjumpGoods(m_id,s_id){
+    my.navigateTo({url:'../card/card?id='+m_id+'&seller_id='+s_id});
   },
   onCloseCommodityDrawer() {
     this.setData({ showCommodityDrawer: false });
@@ -67,7 +70,9 @@ Page({
       .then(({ data = [] }) =>
         this.setData({
           currentCommodities: this.mapCommodityItemToViewList(data),
+          
         })
+        
       )
       .catch(err =>
         log.error('handbag.fetchCurrentCommodities.getAllCommodity', err)
@@ -80,5 +85,26 @@ Page({
       content: '添加成功，在购物车等亲',
       duration: 3000,
     });
+  },
+
+  onLoad(){
+    this.fetchCurrentCommodities();
+    // seller info
+    my.serverless.db.collection('seller').find()
+      .then(res => {
+        this.setData({["SellerInfo"]:res.result})
+        // console.log(res.result);
+      })
+      .catch(console.error);  
+    // commodity info
+    // console.log(this.data.SellerInfo);
+    my.serverless.db.collection('commodity').find({
+        seller_id: { $eq: this.data.seller_id }
+      })
+      .then(res => {
+        this.setData({["commodities"]:res.result})
+      })
+      .catch(console.error);
+    // this.onAddSellerInfo()
   },
 });

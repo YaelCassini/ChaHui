@@ -33,9 +33,10 @@
     columns="{{activeTabId===ALL?2:activeTabId===TREND?1:3}}"
     isRanking="{{activeTabId===TREND}}"
     masonryData="{{currentCommodities}}"
+    masonryData2="{{SellerInfo}}"
     isGood="{{activeTabId===PRICE}}"
     onTapCommodity="onTapCommodity"
-    onTapjumpGood="onTapjumpGood"
+    onTapjumpGoods="onTapjumpGoods"
   />
   <empty
     a:else

@@ -61,6 +61,7 @@ Page({
         this.setData({["commodities"]:res.result})
       })
       .catch(console.error);
+      // console.log("test",this.commodities);
     // this.onAddSellerInfo()
   },
   onShow() {
