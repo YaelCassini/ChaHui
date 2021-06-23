@@ -144,18 +144,18 @@ export const priceCommodity = {
       sales: 1749,
       score:4.7,
       seller_id: 1,
-      goods:[{seller_id:0,goods_id:1,path:"../../asserts/picture/caomeixiaoquexing.jpg"},{seller_id:0,goods_id:2,path:"../../asserts/picture/boba.jpg"},{seller_id:0,goods_id:3,path:"../../asserts/picture/yangzhiganlu.jpg"}],
+      goods:[{seller_id:0,goods_id:1},{seller_id:0,goods_id:2},{seller_id:0,goods_id:3}],
     },
     {
       id: 1,
       cover:
         "../../asserts/picture/yidiandian.jpg",
-      title: "一点点",
+      title: "一点点", 
       canSelfPickUp: false,
       price: 39,
       sales: 1589,
       score:4.9,
-      seller_id: 0,
+      seller_id: 0, 
       goods:[{seller_id:1,goods_id:1,path:"../../asserts/picture/caomeixiaoquexing.jpg"},{seller_id:1,goods_id:2,path:"../../asserts/picture/boba.jpg"},{seller_id:1,goods_id:3,path:"../../asserts/picture/yangzhiganlu.jpg"}],
     
     },

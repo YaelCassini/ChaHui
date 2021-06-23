@@ -33,22 +33,40 @@ Page({
   onLoad(){
     // this.fetchCurrentCommodities();
     // seller info
+    var temp=[];
     my.serverless.db.collection('seller').find()
       .then(res => {
-        console.log(res.result);
-        this.setData({["currentCommodities"]:res.result})
         // console.log(res.result);
+        
+        // console.log(res.result);
+        temp=res.result;
+        console.log("temp",temp)
+        for(var i=0;i<6;i++){
+          
+          my.serverless.db.collection('commodity').find({
+            seller_id: { $eq: i }
+          })
+          .then(res => {
+            var goods_pic=[];
+            goods_pic.push(res.result[0])
+            goods_pic.push(res.result[1])
+            goods_pic.push(res.result[2])
+            
+            // this.setData({["commodities"]:res.result})
+            // this.setData({["currentCommodities[i].test"]:goods_pic})
+            temp[i-1].test=goods_pic
+            console.log(temp)
+          })
+          .catch(console.error);
+        }
+        this.setData({["currentCommodities"]:temp})
       })
       .catch(console.error);  
+    // console.log(temp)
+    
     // commodity info
     // console.log(this.data.SellerInfo);
-    // my.serverless.db.collection('commodity').find({
-    //     seller_id: { $eq: this.data.seller_id }
-    //   })
-    //   .then(res => {
-    //     this.setData({["commodities"]:res.result})
-    //   })
-    //   .catch(console.error);
+    
     // this.onAddSellerInfo()
   },
   onShow() {

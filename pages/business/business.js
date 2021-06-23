@@ -50,6 +50,8 @@ Page({
     my.serverless.db.collection('seller').find()
       .then(res => {
         this.setData({["SellerInfo"]:res.result[options.id]})
+        // console.log("result",res.result)
+        // console.log("option",options.id)
       })
       .catch(console.error);
     // commodity info
