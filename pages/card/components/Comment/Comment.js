@@ -35,7 +35,15 @@ Component({
             duration: 2000,
           });
         })
-        .catch(console.error);  
+        .catch(error =>{
+          console.log("failed add to collection");
+          my.showToast({
+            type: 'fail',
+            content: '该评价已在我的收藏中',
+            duration: 2000,
+          });
+          console.error;
+        });  
     },
   },
 });
