@@ -78,7 +78,12 @@ Page({
       },
     ],
   },
+
   onLoad() {},
+  jumpToHotComment()
+  {
+    console.log("this is jump to HotComment");
+  },
   changeIndicatorDots(e) {
     this.setData({
       indicatorDots: !this.data.indicatorDots,
