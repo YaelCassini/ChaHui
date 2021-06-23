@@ -77,11 +77,11 @@ Page({
     selectedCommodity: 0,
     WriteComment:
     {
-      score: 4,
-      temperature: "少冰",
-      sweetness: "七分糖",
-      addstuff: "奶霜",
-      writing: "很好喝",
+      score: 5,
+      temperature: "常温",
+      sweetness: "三分糖",
+      addstuff: "珍珠",
+      writing: "好喝，真的好喝！",
     }
   },
   onLoad() {
@@ -97,7 +97,7 @@ Page({
           console.log(this.data.orderList)
         })
         .catch(console.error);
-      this.useAccountDoComment("000003", 0, 1)
+      this.useAccountDoComment("000004", 0, 3)
   },
   handleCallBack(data) {
     my.alert({
@@ -159,9 +159,12 @@ Page({
         this.data.commentInfo.time = year+"-"+month+"-"+date+" "+hour+":"+minute;
 
         my.serverless.db.collection('commodity')
-        .find({seller_id: sellerId},{id: commodityId})
+        .find(
+          {id: {$eq:commodityId},
+          seller_id: {$eq:sellerId}})
         .then(res => {
           
+          console.log("commodity", commodityId, res)
           this.data.commentInfo.cover = res.result[0].pic
           this.data.commentInfo.title = res.result[0].name
                     
