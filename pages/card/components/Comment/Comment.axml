@@ -65,7 +65,9 @@
       <view class="score-item__star" a:if="{{item.score>=5}}"> <image src = "/asserts/icon/star1.png"></image> </view>
       <view class="score-item__star" a:else> <image src = "/asserts/icon/star0.png"></image> </view>
 
+      <button onTap="AddtoCollection"  data-id="{{item}}" class="comment-item__subtitle">收藏测评</button>
     </view>
+
 
 
     <view
@@ -79,7 +81,7 @@
       <view class="comment-item__container">
         <view class="comment-item__body">
           <view class="comment-item__title">{{item.title}}</view>
-          <button onTap="AddtoCollection"  data-id="{{item}}" class="comment-item__subtitle">收藏</button>
+          <button onTap="AddtoWish"  data-id="{{item}}" class="comment-item__subtitle">加入愿望单</button>
         </view>
           <view class="comment-item__design">
           <view class="comment-item__design2">

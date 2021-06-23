@@ -2,6 +2,11 @@
   name="EmptyType"
   from="../../components/Empty/empty-type.sjs"
 />
+<tab
+    activeId="{{activeTabId}}"
+    onActiveTabChange="onActiveTabChange"
+    tabs="{{tabs}}"
+/>
 <view disable-scroll=false>
   <comment
     a:if="{{currentCommodities.length>0}}"

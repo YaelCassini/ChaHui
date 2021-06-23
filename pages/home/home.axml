@@ -2,13 +2,13 @@
   name="EmptyType"
   from="../../components/Empty/empty-type.sjs"
 />
-<commodity-drawer
+<!-- <commodity-drawer
   commodityId="{{selectedCommodityId}}"
   show="{{showCommodityDrawer}}"
   onClose="onCloseCommodityDrawer"
   onConfirm="onConfirm"
-/>
-<view disable-scroll="{{showCommodityDrawer}}">
+/> -->
+<view class="content" disable-scroll=true>
 
   <location />
   <view class="search-nav">

@@ -4,6 +4,21 @@ Page({
     currentCommodities: [],
     selectedCommodityId: '',
     showCommodityDrawer: false,
+    activeTabId: 0,
+    tabs: [
+      {
+        id: 0,
+        title: '最新',
+      },
+      {
+        id: 1,
+        title: '最热',
+      },
+      {
+        id: 2,
+        title: '好友圈',
+      },
+    ],
   },
   onLoad()
   {
@@ -13,5 +28,9 @@ Page({
         this.setData({["currentCommodities"]:res.result})
       })
       .catch(console.error);
+  },
+  onActiveTabChange(id) {
+    this.setData({ activeTabId: id });
+    // this.fetchCurrentCommodities(id);
   },
 });

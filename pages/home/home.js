@@ -19,10 +19,6 @@ Page({
         id: TREND,
         title: '人气店家',
       },
-      {
-        id: ALL,
-        title: '猜你喜欢',
-      },
 
     ],
     activeTabId: NEW,

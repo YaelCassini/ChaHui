@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "我的收藏",
+  "defaultTitle": "热门评测",
   "usingComponents": {
     "comment": "/pages/my-collection/components/Comment/Comment",
     "search": "/components/Search/Search",

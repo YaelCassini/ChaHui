@@ -98,6 +98,7 @@ require('../../pages/my-achievement/my-achievement?hash=3e2e5e2d473d03821badb545
 require('../../pages/my-shop/my-shop?hash=32d7d2807ed4e666ef03b4b3fe8c38ecf2e34e68');
 require('../../pages/my-wish/my-wish?hash=51de122843dd2e2a42f1ae1d1b016af1c756c195');
 require('../../pages/hot-comment/hot-comment?hash=5e997e0f2af536b7d695e874e98cc0d48d6ea05e');
+require('../../pages/hot-item/hot-item?hash=4e7b9cf6c1993213ed46d336fc6cebb0486ea438');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

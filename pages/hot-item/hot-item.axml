@@ -1,0 +1,37 @@
+<import-sjs
+  name="EmptyType"
+  from="../../components/Empty/empty-type.sjs"
+/>
+<tab
+    activeId="{{activeTabId}}"
+    onActiveTabChange="onActiveTabChange"
+    tabs="{{tabs}}"
+/>
+<!-- 奶茶 -->
+<view>
+  <masonry
+    a:if="{{commodities.length>0}}"
+    columns="{{1}}"
+    masonryData="{{commodities}}" 
+    onTapCommodity="onTapCommodity"
+  />
+
+  <view class="submitClass" form-type="submit" bindtap="submitForm">
+      <view class="subtextcontainer">
+      <image mode="scaleToFill" 
+        src="../../../../asserts/icon/milktea.png"
+        style="width:80rpx;height:80rpx;"/>
+        <view class="subtextcontainer__text">
+          <text style="color:#ffffff;font-size:50rpx;font-font-weight:bord;">￥</text>
+          <text style="color:rgb(103, 180, 107);font-size:50rpx;padding:20rpx;">{{cost}}</text>
+        </view>
+    </view>
+   <view class="subutton" size="default" type="primary" >
+      <view class="subutton__text"><text decode="true">结 算</text></view>
+   </view>
+
+  </view>
+
+  <view class = "blank"></view>
+
+</view>

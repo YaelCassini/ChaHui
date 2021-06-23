@@ -1,13 +1,22 @@
+const recommendpics = [
+  '../../asserts/picture/low-hot.jpg',
+  '../../asserts/picture/recommend2.jpg',
+  '../../asserts/picture/recommend3.jpg',
+  '../../asserts/picture/recommend2.jpg',
+  '../../asserts/picture/recommend.jpg'
+];
 Page({
   data: {
     background: ['blue', 'red', 'yellow'],
     indicatorDots: true,
-    autoplay: false,
+    autoplay: true,
     vertical: false,
     interval: 1000,
+    interval2: 3000,
     circular: false, 
     recommend:['../../asserts/picture/recommend.jpg','../../asserts/picture/recommend2.jpg','../../asserts/picture/recommend3.jpg'],
  
+    recommendpic:'../../asserts/picture/low-hot.jpg',
     activeIndex: 1,
     failIndex: 0,
     size: 0,
@@ -20,11 +29,11 @@ Page({
     }, {
       title: '夏季果茶',
     }, {
-      title: '冷萃咖啡',
+      title: '风味咖啡',
     }, {
-      title: '步骤3',
+      title: '芝士奶盖',
     }, {
-      title: '步骤3',
+      title: '冷萃冰沙',
     }],
     
     orderList: [
@@ -83,6 +92,16 @@ Page({
   jumpToHotComment()
   {
     console.log("this is jump to HotComment");
+    my.navigateTo({
+      url: '/pages/hot-comment/hot-comment',
+    })
+  },
+  jumpToHotItem()
+  {
+    console.log("this is jump to HotItem");
+    my.navigateTo({
+      url: '/pages/hot-item/hot-item',
+    })
   },
   changeIndicatorDots(e) {
     this.setData({
@@ -111,12 +130,20 @@ Page({
   },
   nextStep() {
     this.setData({
-      activeIndex: this.data.activeIndex + 1,
+      activeIndex: this.data.activeIndex%5 + 1,
+    });
+    var picindex = (this.data.activeIndex-1)%5;
+    this.setData({
+      recommendpic: recommendpics[picindex],
     });
   },
   preStep() {
     this.setData({
-      activeIndex: this.data.activeIndex - 1,
+      activeIndex: (this.data.activeIndex+5-2)%5+1,
+    });
+    var picindex = (this.data.activeIndex-1)%5;
+    this.setData({
+      recommendpic: recommendpics[picindex],
     });
   },
   onCardClick(ev) {

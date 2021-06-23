@@ -1,5 +1,5 @@
 .masonry {
-  padding: 0 8rpx;
+  padding: 0rpx;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;

@@ -18,7 +18,8 @@
     "pages/my-achievement/my-achievement",
     "pages/my-shop/my-shop",
     "pages/my-wish/my-wish",
-    "pages/hot-comment/hot-comment"
+    "pages/hot-comment/hot-comment",
+    "pages/hot-item/hot-item"
   ],
   "window": {
     "defaultTitle": "茶荟",

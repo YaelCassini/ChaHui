@@ -54,6 +54,10 @@ button {
   background-color: rgb(99, 182, 120);
   border: 0; padding: 0;
 }
+button :active{
+  color:red;
+  background: #79a165;
+}
 
 .bc_blue {
   background-color: rgb(147, 211, 163);

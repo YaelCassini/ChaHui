@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "热门单品",
+  "usingComponents": {
+    "empty": "/components/Empty/Empty",
+    "masonry": "/pages/my-wish/components/Masonry/Masonry",
+    "tab": "/components/Tab/Tab"
+  }
+}

@@ -16,13 +16,14 @@
     </swiper>
   </container>
 
-  <container onTap="jumpToHotComment" className="container-item">
-    <title onTap="jumpToHotComment" slot="header" hasLine="true" showIcon="true">热门评测</title>
+<view onTap="jumpToHotComment">
+  <container className="container-item">
+    <title slot="header" hasLine="true" showIcon="true">热门评测</title>
       <swiper indicator-dots="{{indicatorDots}}" class="item"
           style="height:250px"
           autoplay="{{autoplay}}"
           vertical="{{vertical}}"
-          interval="{{interval}}"
+          interval="{{interval2}}"
           circular="{{circular}}">
       <block a:for="{{recommend}}">
         <swiper-item>
@@ -45,14 +46,17 @@
       </block>
     </swiper>
   </container>
+</view>
 
+
+<view onTap="jumpToHotItem">
   <container className="container-item" type="onewithtwo">
     <title slot="header" hasLine="true" showIcon="true">热门单品</title>
     <view class="grid-item" style ="height: 300rpx;background-image: url('../../asserts/picture/zhaopaiyuyuannaicha.jpg');background-size:100% " slot="first"></view>
     <view class="grid-item" slot="second" style="background-image: url('../../asserts/picture/heilongtang1.jpg');background-size:100% " ></view>
     <view class="grid-item" slot="third" style="background-image: url('../../asserts/picture/boba.jpg');background-size:100% "></view>
   </container>
-
+</view>
 
 
 
@@ -64,7 +68,7 @@
       items="{{items}}"
     />   
     <container className="item">
-      <view class="item" style="background-image: url('../../asserts/picture/low-hot.jpg');background-size:100%"></view>
+      <view id="recommend" class="item" style="background-image: url({{recommendpic}});background-size:100%"></view>
     </container>
 
     <button style="margin-left: 0px;" type="primary" size="mini" onTap="preStep">上一个</button>
