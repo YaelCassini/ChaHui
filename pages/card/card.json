@@ -8,6 +8,6 @@
     "list-item": "mini-ali-ui/es/list/list-item/index",
     "am-switch": "mini-ali-ui/es/am-switch/index",
     "empty": "/components/Empty/Empty",
-    "comment": "/pages/my-comment/components/Comment/Comment"
+    "comment": "/pages/card/components/Comment/Comment"
   }
 }

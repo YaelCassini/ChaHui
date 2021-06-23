@@ -48,8 +48,7 @@ Page({
           duration: 2000,
         });
       })
-      .catch(console.error);
-      
+      .catch(console.error);  
   },
   onCardClick(ev) {
     my.alert({
