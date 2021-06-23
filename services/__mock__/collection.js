@@ -37,7 +37,7 @@ export const Comment1 = {
     {
       isMyComment: false,
       name: 'XYZ',
-      avatar: "/asserts/my/avatar.jpg",
+      avatar: "/asserts/my/000004.jpg",
       sex: 2,
       tag1:"奶盖爱好者",
       tag2:"只爱七分糖",
@@ -57,7 +57,7 @@ export const Comment1 = {
     {
       isMyComment: false,
       name: '茶百道代言人',
-      avatar: "/asserts/my/avatar.jpg",
+      avatar: "/asserts/my/000002.jpg",
       sex: 2,
       tag1:"果茶爱好者",
       tag2:"酷爱满糖",
@@ -77,7 +77,7 @@ export const Comment1 = {
     {
       isMyComment: false,
       name: '我爱奶茶',
-      avatar: "/asserts/my/avatar.jpg",
+      avatar: "/asserts/my/000003.jpg",
       sex: 1,
       tag1:"果茶爱好者",
       tag2:"只爱三分糖",
@@ -97,7 +97,7 @@ export const Comment1 = {
     {
       isMyComment: false,
       name: '拒绝身材焦虑',
-      avatar: "/asserts/my/avatar.jpg",
+      avatar: "/asserts/my/000002.jpg",
       sex: 2,
       tag1:"每天喝粥",
       tag2:"只爱三分糖",

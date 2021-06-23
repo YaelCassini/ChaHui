@@ -28,7 +28,7 @@
     </view>
 
     <view style="height:20p; width:30%; margin-top: -10px">
-      <button style="margin-left: 50px; margin-bottom: -10px; width: 160px;" type="primary" size="mini">加入收藏</button>
+      <button onTap="AddtoWish" style="margin-left: 50px; margin-bottom: -10px; width: 160px;" type="primary" size="mini">加入收藏</button>
       <button style="margin-left: 50px; margin-bottom: -10px; width: 160px;" type="primary" size="mini">立即购买</button>
     </view>
   </container>

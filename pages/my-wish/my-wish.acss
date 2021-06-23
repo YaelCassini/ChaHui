@@ -1,40 +1,52 @@
-.search-nav {
+.submitClass{
+  position: fixed;
+  
+  bottom: 25rpx;
+  width: 93%;
   display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 24rpx;
-  box-sizing: border-box;
+  margin-left: 3%;
+  align-items: center;     /* 垂直居中 */
+  height: 110rpx;
+  border-radius: 80rpx;
+  background-color: rgb(73, 73, 73) !important;
+  box-shadow: 0 0 10rpx rgba(66, 66, 66, 0.6);
+
 }
-.search-nav__input {
-  flex-grow: 1;
-  margin-right: 36rpx;
+.subutton{
+  flex-direction: row;
+  height: 100%;
+  width:180rpx;
+  margin-left: auto;
+  
+  border-radius: 80rpx;
+  right: 0;
+  background-color: rgb(72, 124, 75);
 }
-.empty-position {
-  margin-top: 117rpx;
+.subutton__text{
+  font-size: 35rpx;
+  font-family: '幼圆';
+  color: white;
+  line-height: 110rpx;
+  text-align: center;
+}
+.subtextcontainer{
+  flex-direction: row;
+  height: 100%;
+  display: flex;
+  align-self:center;
+  padding: 0px 20px;
+  margin-right: 70rpx;
+  margin-bottom: 10rpx;
+  align-items: center;     /* 垂直居中 */
+  margin-top: 10rpx;
+  width: 50%;
+}
+.subtextcontainer__text{
+  padding: 0 20rpx;
+  
 }
 
-.bottom-bar {
-  width: 100vw;
-  height: 80rpx;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  background: white;
+.blank{ 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 0 20rpx rgba(0,0,0,0.2);
-  padding: 0 40rpx;
-}
-.bottom-btn {
-  width: 200rpx;
-  height: 60rpx;
-  background: #FF9966;
-  color: white;
-  font-weight: bold;
-  font-size: 32rpx;
-  line-height: 60rpx;
-  margin-right: 40rpx;
-  border-radius: 30rpx;
+  height: 160rpx;
 }

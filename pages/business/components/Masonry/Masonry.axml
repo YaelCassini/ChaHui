@@ -12,7 +12,7 @@
       class="masonry-item"
       style="flex-direction:{{columns===1?'row':'column'}};"
     >
-      <image
+      <!-- <image
         class="masonry-item__rank"
         a:if="{{index<3&&isRanking}}"
         lazy-load="{{true}}"
@@ -24,7 +24,7 @@
               ? 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*2lPbRp3l8Z8AAAAAAAAAAABkARQnAQ'
               : ''}}"
         mode="scaleToFill"
-      />
+      /> -->
       <image
         src="{{item.pic}}"
         mode="aspectFill"
@@ -34,6 +34,7 @@
       <view class="masonry-item__container">
         <view class="masonry-item__body">
           <view class="masonry-item__title">{{item.name}}</view>
+          <view class="masonry-item__subtitle">{{item.bussname}}</view>
         </view>
         <view>
           <!-- <view

@@ -27,9 +27,9 @@ Page({
           '../../asserts/icon/achievement/zailaiyibei.png',
       },
       {
-        title: '遍尝百家',
+        title: '百茶斩',
         cover:
-          '../../asserts/icon/achievement/bianchangbaijia.png',
+          '../../asserts/icon/achievement/baichazhan.png',
       },
     ],
   },

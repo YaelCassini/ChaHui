@@ -35,6 +35,17 @@ Page({
     expand3rd: false,
     
   },
+  AddtoWish()
+  {
+    console.log("enter function");
+    console.log(this.data.CommodityInfo);
+    my.serverless.db.collection('wish').insertOne(this.data.CommodityInfo)
+      .then(res => {
+        console.log("success add to wish");
+      })
+      .catch(console.error);
+      
+  },
   onCardClick(ev) {
     my.alert({
       content: ev.info,
@@ -102,4 +113,5 @@ Page({
   },
   fetchCurrentCommodities(commodityType) {
   },
+  
 });

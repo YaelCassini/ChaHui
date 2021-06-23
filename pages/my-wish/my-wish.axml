@@ -3,19 +3,29 @@
   from="../../components/Empty/empty-type.sjs"
 />
 <!-- 奶茶 -->
-  <view>奶茶
-    <!-- <scroll-view class='category-container' scroll-y='true' scroll-with-animation='true'>
-      <view a:if='{{category.level == 1}}' class="category {{categorySelected.id==category.id?'active':''}}" a:for='{{categories}}' a:for-item='category' key='{{id}}' data-id='{{category.id}}' ref-numbers='{{categories}}' onTap='antmoveAction' data-antmove-tap='onCategoryClick'>
-        <view class="name {{categorySelected.id==category.id?'active':''}}">
-          {{category.name}}
-        </view>
-      </view>
-    </scroll-view> -->
-    <masonry
-      a:if="{{commodities.length>0}}"
-      columns="{{1}}"
-      masonryData="{{commodities}}" 
-   />
+<view>
+  <masonry
+    a:if="{{commodities.length>0}}"
+    columns="{{1}}"
+    masonryData="{{commodities}}" 
+  />
 
+  <view class="submitClass" form-type="submit" bindtap="submitForm">
+      <view class="subtextcontainer">
+      <image mode="scaleToFill" 
+        src="../../../../asserts/icon/milktea.png"
+        style="width:80rpx;height:80rpx;"/>
+        <view class="subtextcontainer__text">
+          <text style="color:#ffffff;font-size:50rpx;font-font-weight:bord;">￥</text>
+          <text style="color:rgb(103, 180, 107);font-size:50rpx;padding:20rpx;">{{cost}}</text>
+        </view>
+    </view>
+   <view class="subutton" size="default" type="primary" >
+      <view class="subutton__text"><text decode="true">结 算</text></view>
+   </view>
 
   </view>
+
+  <view class = "blank"></view>
+
+</view>

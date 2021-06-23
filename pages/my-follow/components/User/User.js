@@ -6,7 +6,7 @@ const achievementsData = {
     "奶茶行家",
     "体重超标",
     "再来一杯",
-    "百家斩"
+    "百茶斩"
   ],
   pic:[
     '../../asserts/icon/achievement/chakangengduo.png',
@@ -15,7 +15,7 @@ const achievementsData = {
     '../../asserts/icon/achievement/naichahangjia.png',
     '../../asserts/icon/achievement/tizhongchaobiao.png',
     '../../asserts/icon/achievement/zailaiyibei.png',
-    '../../asserts/icon/achievement/bianchangbaijia.png'
+    '../../asserts/icon/achievement/baichazhan.png'
   ]
 };
 
