@@ -69,7 +69,7 @@
                 {{item.price}}
               </view> -->
               <view class="masonry-item__sales">
-                {{item.sales}}人在喝
+                {{item.salePerMonth}}人在喝
               </view>
             </view>
             <!-- <image
