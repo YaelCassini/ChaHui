@@ -12,19 +12,6 @@
       class="masonry-item"
       style="flex-direction:{{columns===1?'row':'column'}};"
     >
-      <!-- <image
-        class="masonry-item__rank"
-        a:if="{{index<3&&isRanking}}"
-        lazy-load="{{true}}"
-        src="{{index === 0
-          ? 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Uv3oTbU0A5AAAAAAAAAAAABkARQnAQ'
-          : index === 1
-            ? 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_ag8S6t0xtcAAAAAAAAAAABkARQnAQ'
-            : index === 2
-              ? 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*2lPbRp3l8Z8AAAAAAAAAAABkARQnAQ'
-              : ''}}"
-        mode="scaleToFill"
-      /> -->
       <image
         src="{{item.pic}}"
         mode="aspectFill"
@@ -34,15 +21,9 @@
       <view class="masonry-item__container">
         <view class="masonry-item__body">
           <view class="masonry-item__title">{{item.name}}</view>
-          <!-- <view class="masonry-item__subtitle">{{item.bussname}}试一试</view> -->
+          <view class="masonry-item__subtitle">{{item.bussname}}</view>
         </view>
         <view>
-          <!-- <view
-            a:if="{{item.canSelfPickUp}}"
-            class="masonry-item__self-pick-up"
-          >
-            明星店家
-          </view> -->
           <view class="masonry-item__sales">
             
               <view class="masonry-item__price-logo" style="space=ensp;">¥ {{item.price}}</view>

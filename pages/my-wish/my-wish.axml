@@ -8,6 +8,7 @@
     a:if="{{commodities.length>0}}"
     columns="{{1}}"
     masonryData="{{commodities}}" 
+    onTapCommodity="onTapCommodity"
   />
 
   <view class="submitClass" form-type="submit" bindtap="submitForm">

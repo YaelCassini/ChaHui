@@ -42,6 +42,11 @@ Page({
     my.serverless.db.collection('wish').insertOne(this.data.CommodityInfo)
       .then(res => {
         console.log("success add to wish");
+        my.showToast({
+          type: 'success',
+          content: '已将该单品加入愿望单',
+          duration: 2000,
+        });
       })
       .catch(console.error);
       

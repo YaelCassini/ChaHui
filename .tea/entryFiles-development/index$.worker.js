@@ -76,6 +76,7 @@ require('../../node_modules/mini-ali-ui/es/am-radio/index?hash=5a0c180d5ccf7c9d4
 require('../../node_modules/mini-ali-ui/es/picker-item/index?hash=5a0c180d5ccf7c9d483dd4817cdab5489824013c');
 require('../../pages/my-follow/components/User/User?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../pages/business/components/Masonry/Masonry?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
+require('../../pages/my-wish/components/Masonry/Masonry?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../pages/community/community?hash=fadb02f92b9940602f0b2594946e244094bb7d90');
 require('../../pages/shopping-cart/shopping-cart?hash=32d7d2807ed4e666ef03b4b3fe8c38ecf2e34e68');
 require('../../pages/my/my?hash=3e2e5e2d473d03821badb5452a72c12422f436f6');
@@ -93,7 +94,7 @@ require('../../pages/my-fans/my-fans?hash=fc7fa7c57352ef3ff627e27882f3efcc540558
 require('../../pages/my-achievement/my-achievement?hash=3e2e5e2d473d03821badb5452a72c12422f436f6');
 require('../../pages/business/business?hash=2777d7285a2bceab3d2c6a50819455305dd15c02');
 require('../../pages/my-shop/my-shop?hash=32d7d2807ed4e666ef03b4b3fe8c38ecf2e34e68');
-require('../../pages/my-wish/my-wish?hash=bdeb8d6ceeec4955e36f07f5209294b84ceba85c');
+require('../../pages/my-wish/my-wish?hash=51de122843dd2e2a42f1ae1d1b016af1c756c195');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

@@ -2,6 +2,6 @@
   "defaultTitle": "愿望单",
   "usingComponents": {
     "empty": "/components/Empty/Empty",
-    "masonry": "/pages/business/components/Masonry/Masonry"
+    "masonry": "/pages/my-wish/components/Masonry/Masonry"
   }
 }

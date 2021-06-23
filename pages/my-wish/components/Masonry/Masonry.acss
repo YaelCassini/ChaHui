@@ -63,15 +63,15 @@
   text-align: left;
   line-height: 37rpx;
 }
-/* .masonry-item__subtitle {
+.masonry-item__subtitle {
   background: rgb(168, 185, 169);
   border-radius: 10000rpx;
   font-size: 22rpx;
   color:rgb(255, 255, 255);
-  margin: 5rpx 10rpx 0;
+  margin: 0rpx 10rpx 0;
   padding: 6rpx 15rpx 5rpx;
   letter-spacing:2rpx;
-} */
+}
 
 .masonry-item__self-pick-up {
   display: inline-block;
