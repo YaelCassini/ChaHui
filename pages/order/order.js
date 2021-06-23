@@ -2,6 +2,7 @@ Page({
   data: {
     myIdentity:
     {
+      userName: "奶茶品鉴大师",
       isMyComment: true,
       avatar: "/asserts/my/avatar.jpg",
       sex: 1,
@@ -55,6 +56,7 @@ Page({
       userid: 0,
       seller_id: 0,
       commodity_id: 0,
+      user_name: "奶茶品鉴大师",
       isMyComment: true,
       avatar: "/asserts/my/avatar.jpg",
       sex: 1,
@@ -75,12 +77,27 @@ Page({
     selectedCommodity: 0,
     WriteComment:
     {
-      score: 0,
-      temperature: "",
-      sweetness: "",
-      addstuff: "",
-      writing: "",
+      score: 5,
+      temperature: "常温",
+      sweetness: "三分糖",
+      addstuff: "珍珠",
+      writing: "好喝，真的好喝！",
     }
+  },
+  onLoad() {
+      // insert data
+      // this.onAddOrder()
+      // Set data from db
+      my.serverless.db.collection('order')
+        .find()
+        .then(res => {
+          console.log("res", res.result)
+          this.data.orderList = res.result
+          this.setData({["orderList"]:this.data.orderList})
+          console.log(this.data.orderList)
+        })
+        .catch(console.error);
+      this.useAccountDoComment("000004", 0, 3)
   },
   handleCallBack(data) {
     my.alert({
@@ -107,19 +124,66 @@ Page({
       console.log("start navigate")
       my.navigateTo({url:'../card/card?id='+commodity_id+'&seller_id='+seller_id});
   },
-  onLoad() {
-      // insert data
-      // this.onAddOrder()
-      // Set data from db
-      my.serverless.db.collection('order')
-        .find()
+  useAccountDoComment(userId, sellerId, commodityId)
+  {
+    my.serverless.db.collection('user').find({
+          userID: userId})
+      .then(res => {
+
+      this.data.commentInfo.seller_id = sellerId,
+      this.data.commentInfo.commodity_id = commodityId,
+      this.data.commentInfo.isMyComment = false,
+      this.data.commentInfo.avatar = res.result[0].avatar,
+      this.data.commentInfo.sex = res.result[0].sex,
+      this.data.commentInfo.tag1 = res.result[0].tag1,
+      this.data.commentInfo.tag2 = res.result[0].tag2,
+      this.data.commentInfo.user_name = res.result[0].name,
+
+      this.data.commentInfo.score = this.data.WriteComment.score,
+      this.data.commentInfo.addition = this.data.WriteComment.addstuff,
+      this.data.commentInfo.temperature = this.data.WriteComment.temperature,
+      this.data.commentInfo.sweetness = this.data.WriteComment.sweetness,
+      this.data.commentInfo.detail = this.data.WriteComment.writing,
+      this.data.commentInfo.url = '../card/card?id='+commodityId+'&seller_id='+sellerId
+      
+      my.getServerTime({
+        success: (res) => {
+        var now = new Date(res.time);
+        var year = now.getFullYear();
+        var month = now.getMonth();
+        var date = now.getDate();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        console.log("Time: ",year,month,date,hour,minute)
+        
+        this.data.commentInfo.time = year+"-"+month+"-"+date+" "+hour+":"+minute;
+
+        my.serverless.db.collection('commodity')
+        .find(
+          {id: {$eq:commodityId},
+          seller_id: {$eq:sellerId}})
         .then(res => {
-          console.log("res", res.result)
-          this.data.orderList = res.result
-          this.setData({["orderList"]:this.data.orderList})
-          console.log(this.data.orderList)
+          
+          console.log("commodity", commodityId, res)
+          this.data.commentInfo.cover = res.result[0].pic
+          this.data.commentInfo.title = res.result[0].name
+                    
+          my.serverless.db.collection('seller')
+            .find({id: sellerId})
+            .then(res => {
+              this.data.commentInfo.subtitle = res.result[0].name;
+
+              my.serverless.db.collection('comment').insertOne(this.data.commentInfo)
+                .then(res => {
+                })
+                .catch(console.error);
+
         })
         .catch(console.error);
+        })
+        .catch(console.error);
+      }})})
+      .catch(console.error);
   },
 
   onButtomBtnTap(event) {

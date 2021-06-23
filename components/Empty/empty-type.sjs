@@ -3,8 +3,8 @@ export default {
   empty_store: {
     cover:
       "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*13iTQpYauJUAAAAAAAAAAABkARQnAQ",
-    title: "当前门店暂时没有商品",
-    description: "您可以切换其他门店查看商品",
+    title: "当前项目暂时没有评论",
+    description: "您可以购买评论或者查看其他商品",
     action: "/pages/handbag/handbag",
     actionName: "切换门店",
     openType: "switchTab",
