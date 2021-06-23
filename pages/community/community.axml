@@ -1,5 +1,42 @@
 
 <view class="page">
+  <container className="container-item">
+    <title slot="header" hasLine="true" showIcon="true">热门评测</title>
+      <swiper indicator-dots="{{indicatorDots}}" class="item"
+          style="height:250px"
+          autoplay="{{autoplay}}"
+          vertical="{{vertical}}"
+          interval="{{interval}}"
+          circular="{{circular}}">
+      <block a:for="{{recommend}}">
+        <swiper-item>
+          <view style="height:190px; position: relative;">
+            
+            <card thumb="{{thumb}}" 
+              title="发士大夫" 
+              subTitle="发士大夫士大夫" 
+              onCardClick="toggle" 
+              action="描述文字士大夫士大夫士大夫" 
+              onActionClick="onActionClick" 
+              extraAction="点击卡片展开/收起↑" 
+              onExtraActionClick="onExtraActionClick" 
+              info="点击了第三个card" 
+              expand=true
+              bgImg="../../asserts/picture/cover_recommend.jpg" />
+            <view class="test-mask">fasddddddddddddddasdfdddddddddddddddddddddddddddddddddd fffffffffffffffffffffffffffffffffffffff</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </container>
+
+  <container className="container-item" type="onewithtwo">
+    <title slot="header" hasLine="true" showIcon="true">热门单品</title>
+    <view class="grid-item" style ="height: 300rpx;background-image: url('../../asserts/picture/zhaopaiyuyuannaicha.jpg');background-size:100% " slot="first"></view>
+    <view class="grid-item" slot="second" style="background-image: url('../../asserts/picture/heilongtang1.jpg');background-size:100% " ></view>
+    <view class="grid-item" slot="third" style="background-image: url('../../asserts/picture/boba.jpg');background-size:100% "></view>
+  </container>
+
 
   <container className="container-item">
     <title slot="header">精选和推荐</title>
@@ -34,39 +71,8 @@
       
   </container>
 
-  <container className="container-item" type="onewithtwo">
-    <title slot="header" hasLine="true" showIcon="true">热门单品</title>
-    <view class="grid-item" style ="height: 300rpx;background-image: url('../../asserts/picture/zhaopaiyuyuannaicha.jpg');background-size:100% " slot="first"></view>
-    <view class="grid-item" slot="second" style="background-image: url('../../asserts/picture/heilongtang1.jpg');background-size:100% " ></view>
-    <view class="grid-item" slot="third" style="background-image: url('../../asserts/picture/boba.jpg');background-size:100% "></view>
-  </container>
+  
    
-  <container className="container-item">
-    <title slot="header" hasLine="true" showIcon="true">热门评测</title>
-      <swiper indicator-dots="{{indicatorDots}}" class="item"
-          style="height:250px"
-          autoplay="{{autoplay}}"
-          vertical="{{vertical}}"
-          interval="{{interval}}"
-          circular="{{circular}}">
-      <block a:for="{{recommend}}">
-        <swiper-item>
-          <view style="height:190px; position: relative;">
-            
-            <card thumb="{{thumb}}" 
-              title="发士大夫" 
-              subTitle="发士大夫士大夫" 
-              onCardClick="toggle" 
-              action="描述文字士大夫士大夫士大夫" 
-              onActionClick="onActionClick" 
-              extraAction="点击卡片展开/收起↑" 
-              onExtraActionClick="onExtraActionClick" 
-              info="点击了第三个card" 
-              expand=true
-              bgImg="../../asserts/picture/cover_recommend.jpg" />
-            <view class="test-mask">fasddddddddddddddasdfdddddddddddddddddddddddddddddddddd fffffffffffffffffffffffffffffffffffffff</view>
-          </view>
-        </swiper-item>
-      </block>
-    </swiper>
-  </container>
+
+
+</view>

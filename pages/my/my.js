@@ -83,7 +83,7 @@ Page({
           console.log(this.data.userList[0])
         })
         .catch(console.error);
-      this.setData({["currentUser"]:this.data.userList[0]})
+      // this.setData({["currentUser"]:this.data.userList[0]})
   },
   onAchievementClick() {
     my.navigateTo({

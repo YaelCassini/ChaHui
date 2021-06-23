@@ -2,39 +2,39 @@
   <view style="margin-top: 10px;"></view>
   <view class="setting">
 
-    <input-item data-field="name" 
+    <input-item data-field="currentUser.name" 
       placeholder="昵称" 
       type="text" 
-      value="{{name}}" 
+      value="{{currentUser.name}}" 
       clear="{{true}}" 
       onInput="onItemInput" 
       onClear="onClear">昵称</input-item>
-    <input-item data-field="introduction" 
+    <input-item data-field="currentUser.introduction" 
       placeholder="简介" 
       type="text" 
-      value="{{introduction}}" 
+      value="{{currentUser.introduction}}" 
       clear="{{true}}" 
       onInput="onItemInput" 
       onClear="onClear">简介</input-item>
     <picker-item
       data-field="sex"
-      placeholder="性别"
+      placeholder="女"
       value="{{sex}}"
       onPickerTap="onPickerTap1"
     >
       性别
     </picker-item>
-    <input-item data-field="IDtag1" 
+    <input-item data-field="currentUser.tag1" 
       placeholder="奶茶身份①" 
       type="text" 
-      value="{{IDtag1}}" 
+      value="{{currentUser.tag1}}" 
       clear="{{true}}" 
       onInput="onItemInput" 
       onClear="onClear">奶茶身份①</input-item>
-    <input-item data-field="IDtag2" 
+    <input-item data-field="currentUser.tag2" 
       placeholder="奶茶身份①" 
       type="text" 
-      value="{{IDtag2}}" 
+      value="{{currentUser.tag2}}" 
       clear="{{true}}" 
       onInput="onItemInput" 
       onClear="onClear">奶茶身份②</input-item>
@@ -63,19 +63,6 @@
       展示勋章①
     </picker-item>
   </view>
-  <button type="primary">保存修改</button>
+  <button onTap="saveChange" type="primary">保存修改</button>
   <button type="primary">退出登录</button>
-  <!-- <block a:for="{{navList}}">
-    <list-item
-      thumb="{{item.thumb}}"
-      className="list-item"
-      arrow="{{true}}"
-      onClick="onListClick"
-      data-index="{{index}}"
-      key="items-{{index}}"
-      last="{{index === (items.length - 1)}}"
-    >
-      {{item.name}}
-    </list-item>
-  </block> -->
 </view>
