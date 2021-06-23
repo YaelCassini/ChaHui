@@ -48,8 +48,15 @@ Page({
           duration: 2000,
         });
       })
-      .catch(console.error);
-      
+      .catch(error =>{
+        console.log("failed add to wish");
+        my.showToast({
+          type: 'fail',
+          content: '该单品已在愿望单中',
+          duration: 2000,
+        });
+        console.error;
+      });  
   },
   onCardClick(ev) {
     my.alert({

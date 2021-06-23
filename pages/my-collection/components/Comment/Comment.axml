@@ -6,10 +6,9 @@
   <view
     class="comment-col"
     a:for="{{commentData}}"
-    style="background:{{item.isMyComment?'#eee':'#fff'}};"
+    style="background:{{item.isMyComment?'#fff':'#fff'}};"
   >
-    <!-- <view 
-      a:if="{{!item.isMyComment}}"
+    <view 
       class="user-profile">
       <image
         class="user-profile__avatar"
@@ -46,7 +45,7 @@
           {{item.time}}
         </view>
       </view>
-    </view> -->
+    </view>
     
     <view
       class="score-item"
