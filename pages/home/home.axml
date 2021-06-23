@@ -38,9 +38,9 @@
     onTapCommodity="onTapCommodity"
     onTapjumpGoods="onTapjumpGoods"
   />
-  <empty
+  <!-- <empty
     a:else
     type="{{searchValue?EmptyType.EMPTY_SEARCH_RESULT:EmptyType.EMPTY_STORE}}"
     className="empty-position"
-  />
+  /> -->
 </view>

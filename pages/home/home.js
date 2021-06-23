@@ -9,8 +9,7 @@ Page({
     NEW,
     PRICE,
     searchValue: '',
-    SellerInfo:
-    [],
+    // SellerInfo:[],
     tabs: [
       {
         id: NEW,
@@ -31,19 +30,40 @@ Page({
     selectedCommodityId: '',
     showCommodityDrawer: false,
   },
+  onLoad(){
+    // this.fetchCurrentCommodities();
+    // seller info
+    my.serverless.db.collection('seller').find()
+      .then(res => {
+        console.log(res.result);
+        this.setData({["currentCommodities"]:res.result})
+        // console.log(res.result);
+      })
+      .catch(console.error);  
+    // commodity info
+    // console.log(this.data.SellerInfo);
+    // my.serverless.db.collection('commodity').find({
+    //     seller_id: { $eq: this.data.seller_id }
+    //   })
+    //   .then(res => {
+    //     this.setData({["commodities"]:res.result})
+    //   })
+    //   .catch(console.error);
+    // this.onAddSellerInfo()
+  },
   onShow() {
-    const { searchValue = '' } = getApp();
-    this.setData({ searchValue });
-    this.fetchCurrentCommodities(this.data.activeTabId);
-     console.log("test1",this.data.SellerInfo);
+    // const { searchValue = '' } = getApp();
+    // this.setData({ searchValue });
+    // this.fetchCurrentCommodities(this.data.activeTabId);
+    //  console.log("test1",this.data.SellerInfo);
     // console.log("test",this.data.currentCommodities)
   },
   onActiveTabChange(id) {
     this.setData({ activeTabId: id });
-    this.fetchCurrentCommodities(id);
+    // this.fetchCurrentCommodities(id);
   },
   onTapCommodity(id) {
-    const seller_id = this.data.currentCommodities[id].seller_id
+    const seller_id = this.data.currentCommodities[id].id
     console.log(seller_id)
     // this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
     my.navigateTo({url:'../business/business?id='+seller_id});
@@ -87,24 +107,5 @@ Page({
     });
   },
 
-  onLoad(){
-    this.fetchCurrentCommodities();
-    // seller info
-    my.serverless.db.collection('seller').find()
-      .then(res => {
-        this.setData({["SellerInfo"]:res.result})
-        // console.log(res.result);
-      })
-      .catch(console.error);  
-    // commodity info
-    // console.log(this.data.SellerInfo);
-    my.serverless.db.collection('commodity').find({
-        seller_id: { $eq: this.data.seller_id }
-      })
-      .then(res => {
-        this.setData({["commodities"]:res.result})
-      })
-      .catch(console.error);
-    // this.onAddSellerInfo()
-  },
+  
 });
