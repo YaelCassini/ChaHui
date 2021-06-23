@@ -20,12 +20,12 @@
   >
     {{EmptyType[type].description}}
   </view>
-  <navigator
+  <!-- <navigator
     a:if="{{EmptyType[type].actionName}}"
     class="empty__nav"
     url="{{EmptyType[type].action}}"
     open-type="{{EmptyType[type].openType}}"
   >
     {{EmptyType[type].actionName}}
-  </navigator>
+  </navigator> -->
 </view>
