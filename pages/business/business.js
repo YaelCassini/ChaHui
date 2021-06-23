@@ -45,7 +45,7 @@ Page({
   onLoad(options)
   {
     this.data.seller_id = parseInt(options.id);
-    this.fetchCurrentCommodities(1);
+    this.fetchCurrentCommodities();
     // seller info
     my.serverless.db.collection('seller').find()
       .then(res => {
@@ -87,18 +87,16 @@ Page({
     
   },
 
-  fetchCurrentCommodities(commodityType) {
+  fetchCurrentCommodities() {
     this.setData({ currentCommodities: [] });
-    getCommodity({ type: commodityType })
-      .then(
-        ({ data = [] }) =>
-        this.setData({
-          currentCommodities: data,
-        })
-      )
-      .catch(err =>
-        log.error('handbag.fetchCurrentCommodities.getComment1', err)
-      );
+    
+    my.serverless.db.collection('comment').find({
+        seller_id: { $eq: this.data.seller_id }
+      })
+      .then(res => {
+        this.setData({["currentCommodities"]:res.result})
+      })
+      .catch(console.error);
   },
   async onAddSellerInfo() {
     my.showLoading({

@@ -2,6 +2,7 @@
   <view
     a:for="{{orderList}}"
     class="order-section"
+    a:for-index="orderIndex"
   >
     <view class="order-section-header">
       <view class="order-section-header__time">{{item.time}}</view>
@@ -11,12 +12,16 @@
       class="order-section-body"
       a:for="{{item.commodity}}"
       a:for-item="eachCommodity"
+      a:for-index="commodityIndex"
     >
       <image
         class="order-section-body__image"
         lazy-load="{{true}}"
         src="{{eachCommodity.image}}"
         mode="scaleToFill"
+        data-order-id="{{orderIndex}}"
+        data-commodity-id="{{commodityIndex}}"
+        onTap="CommodityNav"
       />
       <view class="order-section-body__middle">
         <view class="order-section-body__title">
@@ -29,8 +34,14 @@
       <view class="order-section-body__right">
         <view class="order-section-body__price">¥ {{eachCommodity.price}}</view>
         <view class="order-section-body__num">x{{eachCommodity.num}}</view>
-      <button style="margin-right: 10px;" type="primary" size="mini" onTap="onButtomBtnTap">评论</button>
-
+      <view a:if="{{eachCommodity.commented==false}}" 
+        onTap="onTapCommodity"
+        data-id="{{item.id}}">
+        <button data-order-id="{{orderIndex}}" data-commodity-id="{{commodityIndex}}" style="margin-right: 10px;" type="primary" size="mini" onTap="onButtomBtnTap">评论</button>
+      </view>
+      <view a:if="{{eachCommodity.commented==true}}">
+        <button style="margin-right: 10px; background-color:#888888;" type="primary" size="mini">评论</button>
+      </view>
       </view>
     </view>
     <view class="order-section-footer">
@@ -49,14 +60,14 @@
       </view>
 
       <view style = "width: 100%; margin-top:-15px">
-        <view class="title" style=" font-weight:bold;">推荐温度</view>
+        <view class="title" style=" font-weight:bold;" >推荐温度</view>
           <view class="page-section">
             <view class="page-section-demo" style="padding-left:10px; margin-top:-20px">
-              <radio-group name="radio-group">
-                <label style="margin-right:15px;"><radio value="radio1" />少冰</label>
-                <label style="margin-right:15px;"><radio value="radio2" />去冰</label>
-                <label style="margin-right:15px;"><radio value="radio3" />常温</label>
-                <label style="margin-right:15px;"><radio value="radio4" />热饮</label>
+              <radio-group name="radio-group" onChange="temperatureChange">
+                <label style="margin-right:15px;"><radio value="少冰" />少冰</label>
+                <label style="margin-right:15px;"><radio value="去冰" />去冰</label>
+                <label style="margin-right:15px;"><radio value="常温" />常温</label>
+                <label style="margin-right:15px;"><radio value="热饮" />热饮</label>
               </radio-group>
             </view>
           </view>
@@ -66,12 +77,12 @@
         <view class="title" style=" font-weight:bold;">推荐甜度</view>
           <view class="page-section">
             <view class="page-section-demo" style="padding-left:10px; margin-top:-20px">
-              <radio-group name="radio-group">
-                <label style="margin-right:15px;"><radio value="radio1" />不加糖</label>
-                <label style="margin-right:15px;"><radio value="radio2" />三分糖</label>
-                <label style="margin-right:15px;"><radio value="radio3" />五分糖</label>
-                <label style="margin-right:15px;"><radio value="radio4" />七分糖</label>
-                <label style="margin-right:15px;"><radio value="radio5" />正常糖</label>
+              <radio-group name="radio-group" onChange="sweetnessChange">
+                <label style="margin-right:15px;"><radio value="不加糖" />不加糖</label>
+                <label style="margin-right:15px;"><radio value="三分糖" />三分糖</label>
+                <label style="margin-right:15px;"><radio value="五分糖" />五分糖</label>
+                <label style="margin-right:15px;"><radio value="七分糖" />七分糖</label>
+                <label style="margin-right:15px;"><radio value="正常糖" />正常糖</label>
               </radio-group>
             </view>
           </view>
@@ -81,12 +92,12 @@
         <view class="title" style=" font-weight:bold;">推荐加料</view>
         <view class="page-section">
         <view class="page-section-demo" style="padding-left:10px; margin-top:-20px">
-          <checkbox-group name="checkbox">
-            <label style="margin-right:5px;"><checkbox value="checkbox1" />燕麦</label>
-            <label style="margin-right:5px;"><checkbox value="checkbox2" />花生</label>
-            <label style="margin-right:5px;"><checkbox value="checkbox3" />奶霜</label>
-            <label style="margin-right:5px;"><checkbox value="checkbox4" />布丁</label>
-            <label style="margin-right:5px;"><checkbox value="checkbox5" />红豆</label>
+          <checkbox-group name="checkbox" onChange="addstuffChange">
+            <label style="margin-right:5px;"><checkbox value="燕麦" />燕麦</label>
+            <label style="margin-right:5px;"><checkbox value="花生" />花生</label>
+            <label style="margin-right:5px;"><checkbox value="奶霜" />奶霜</label>
+            <label style="margin-right:5px;"><checkbox value="布丁" />布丁</label>
+            <label style="margin-right:5px;"><checkbox value="红豆" />红豆</label>
           </checkbox-group>
         </view>
       </view>

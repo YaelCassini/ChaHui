@@ -71,12 +71,21 @@ Page({
   },
   async onLoad(options)
   {
-    await this.fetchCurrentCommodities(1);
-    
     console.log(options)
     const id = parseInt(options.id);
     const seller_id = parseInt(options.seller_id);
     console.log(id, seller_id)
+
+    this.setData({ currentCommodities: [] });
+    
+    my.serverless.db.collection('comment').find({
+        seller_id: { $eq: seller_id },
+        commodity_id: { $eq: id }
+      })
+      .then(res => {
+        this.setData({["currentCommodities"]:res.result})
+      })
+      .catch(console.error);
 
     my.serverless.db.collection('commodity').findOne({
         id: { $eq: id },
@@ -92,16 +101,5 @@ Page({
     // this.onAddCommodity()
   },
   fetchCurrentCommodities(commodityType) {
-    this.setData({ currentCommodities: [] });
-    getCommodity({ type: commodityType })
-      .then(
-        ({ data = [] }) =>
-        this.setData({
-          currentCommodities: data,
-        })
-      )
-      .catch(err =>
-        log.error('handbag.fetchCurrentCommodities.getComment1', err)
-      );
   },
 });
