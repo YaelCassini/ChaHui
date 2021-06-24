@@ -89,7 +89,7 @@ Page({
       // this.onAddOrder()
       // Set data from db
       my.serverless.db.collection('order')
-        .find({},{ sort: {time: 1}})
+        .find({},{ sort: {_id: -1}})
         .then(res => {
           console.log("res", res.result)
           this.data.orderList = res.result

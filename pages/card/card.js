@@ -18,22 +18,53 @@ Page({
       tag: [{value:'-'},],
     },
     // {
-    //   id: 5,
-    //   seller_id: 4,
-    //   name: '芝芝芒芒',
-    //   price: '35',
-    //   salePerMonth: '170',
-    //   score: '4.4',
+    //   id: 6,
+    //   seller_id: 2,
+    //   name: '白桃仙人',
+    //   price: '18',
+    //   salePerMonth: '87',
+    //   score: '4.7',
     //   description:
-    //   [{type: "商品描述", content: "冷650m1甄选当季台芒搭配清幽绿妍茶底新鲜现制，清新绵密。"},
-    //    {type: "主要原料", content: "芝士、芒果"},
+    //   [{type: "商品描述", content: "“仙”气十足：瓜不过分“甜”，桃页不过分“香”"},
     //   ],
-    //   pic: '/asserts/picture/commodity/0027.jpg',
-    //   tag: [{value:'芒香浓郁'},{value:'满满芒果肉'},{value:'细腻芝士'},],
+    //   pic: '/asserts/picture/commodity/0032.jpg',
+    //   tag: [{value:'很甜'},{value:'果味纯正'}],
     // },
     
     expand3rd: false,
     
+  },
+  async onLoad(options)
+  {
+    console.log(options)
+    const id = parseInt(options.id);
+    const seller_id = parseInt(options.seller_id);
+    console.log(id, seller_id)
+
+    // this.onAddCommodity()
+    
+    this.setData({ currentCommodities: [] });
+    
+    my.serverless.db.collection('comment').find({
+        seller_id: { $eq: seller_id },
+        commodity_id: { $eq: id }
+      })
+      .then(res => {
+        this.setData({["currentCommodities"]:res.result})
+      })
+      .catch(console.error);
+
+    my.serverless.db.collection('commodity').findOne({
+        id: { $eq: id },
+        seller_id: { $eq: seller_id }
+      })
+      .then(res => {
+        this.setData({["CommodityInfo"]:res.result})
+      })
+      .catch(console.error);
+    console.log("finish")
+  },
+  onShow() {
   },
   AddtoWish()
   {
@@ -91,37 +122,6 @@ Page({
     this.setData({
       expand3rd: !this.data.expand3rd,
     });
-  },
-  async onLoad(options)
-  {
-    console.log(options)
-    const id = parseInt(options.id);
-    const seller_id = parseInt(options.seller_id);
-    console.log(id, seller_id)
-
-    this.setData({ currentCommodities: [] });
-    
-    my.serverless.db.collection('comment').find({
-        seller_id: { $eq: seller_id },
-        commodity_id: { $eq: id }
-      })
-      .then(res => {
-        this.setData({["currentCommodities"]:res.result})
-      })
-      .catch(console.error);
-
-    my.serverless.db.collection('commodity').findOne({
-        id: { $eq: id },
-        seller_id: { $eq: seller_id }
-      })
-      .then(res => {
-        this.setData({["CommodityInfo"]:res.result})
-      })
-      .catch(console.error);
-    console.log("finish")
-  },
-  onShow() {
-    // this.onAddCommodity()
   },
   fetchCurrentCommodities(commodityType) {
   },
