@@ -2,8 +2,8 @@ const recommendpics = [
   '../../asserts/picture/low-hot.jpg',
   '../../asserts/picture/recommend2.jpg',
   '../../asserts/picture/recommend3.jpg',
-  '../../asserts/picture/recommend2.jpg',
-  '../../asserts/picture/recommend.jpg'
+  '../../asserts/picture/recommend4.jpg',
+  '../../asserts/picture/recommend5.jpg'
 ];
 Page({
   data: {

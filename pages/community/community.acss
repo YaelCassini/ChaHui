@@ -30,6 +30,10 @@
   width: 184rpx;
   height: 184rpx;
 }
+.image{
+  margin-top: 20rpx;
+  height:300rpx;
+}
 .order-section-body__title {
   font-size: 24rpx;
   color: #333;
@@ -103,7 +107,7 @@
 .item {
   background: #eeeeee;
   text-align: center;
-  height: 400rpx;
+  height: 350rpx;
 }
 
 .grid-item {

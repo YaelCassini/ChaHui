@@ -25,13 +25,9 @@
           vertical="{{vertical}}"
           interval="{{interval2}}"
           circular="{{circular}}">
-      <block a:for="{{recommend}}">
         <swiper-item>
           <view style="height:190px; position: relative;">
-            
-            <card thumb="{{thumb}}" 
-              title="发士大夫" 
-              subTitle="发士大夫士大夫" 
+            <card thumb="{{thumb}}" Z
               onCardClick="toggle" 
               action="描述文字士大夫士大夫士大夫" 
               onActionClick="onActionClick" 
@@ -40,10 +36,9 @@
               info="点击了第三个card" 
               expand=true
               bgImg="../../asserts/picture/cover_recommend.jpg" />
-            <view class="test-mask">fasddddddddddddddasdfdddddddddddddddddddddddddddddddddd fffffffffffffffffffffffffffffffffffffff</view>
+            <!-- <view class="test-mask">fasddddddddddddddasdfdddddddddddddddddddddddddddddddddd fffffffffffffffffffffffffffffffffffffff</view> -->
           </view>
         </swiper-item>
-      </block>
     </swiper>
   </container>
 </view>
@@ -68,7 +63,11 @@
       items="{{items}}"
     />   
     <container className="item">
-      <view id="recommend" class="item" style="background-image: url({{recommendpic}});background-size:100%"></view>
+      <!-- <view id="recommend" class="item" style="background-image: url({{recommendpic}});background-size:100%"></view> -->
+      <image class="image"
+        onTap="onTap"
+        mode='aspectFill' src="{{recommendpic}}" onError="imageError"/>
+
     </container>
 
     <button style="margin-left: 0px;" type="primary" size="mini" onTap="preStep">上一个</button>
