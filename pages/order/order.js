@@ -77,11 +77,11 @@ Page({
     selectedCommodity: 0,
     WriteComment:
     {
-      score: 5,
-      temperature: "常温",
-      sweetness: "三分糖",
-      addstuff: "珍珠",
-      writing: "好喝，真的好喝！",
+      score: 2,
+      temperature: "少冰",
+      sweetness: "五分糖",
+      addstuff: "无加料",
+      writing: "这个搭配有够奇怪的",
     }
   },
   onLoad() {
@@ -89,7 +89,7 @@ Page({
       // this.onAddOrder()
       // Set data from db
       my.serverless.db.collection('order')
-        .find()
+        .find({},{ sort: {time: 1}})
         .then(res => {
           console.log("res", res.result)
           this.data.orderList = res.result
@@ -97,7 +97,7 @@ Page({
           console.log(this.data.orderList)
         })
         .catch(console.error);
-      this.useAccountDoComment("000004", 0, 3)
+      // this.useAccountDoComment("000006", 3, 4)
   },
   handleCallBack(data) {
     my.alert({

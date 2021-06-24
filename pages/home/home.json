@@ -7,6 +7,16 @@
     "search": "/components/Search/Search",
     "empty": "/components/Empty/Empty",
     "category-nav": "/components/category-nav/category-nav",
-    "tab": "/components/Tab/Tab"
+    "tab": "/components/Tab/Tab",
+    "title": "/components/Title/Title",
+    "popup": "mini-ali-ui/es/popup/index",
+    "list": "mini-ali-ui/es/list/index",
+    "input-item": "mini-ali-ui/es/input-item/index",
+    "am-icon": "mini-ali-ui/es/am-icon/index",
+    "container": "mini-ali-ui/es/container/index",
+    "multi-liner": "mini-ali-ui/es/multi-liner/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "filter": "mini-ali-ui/es/filter/index",
+    "filter-item": "mini-ali-ui/es/filter/filter-item/index"
   }
 }

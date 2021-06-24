@@ -1,9 +1,10 @@
+/**! __CODEPLACEHOLDER_START__ */ /*[PositionForHostEntryCodeBegin]*/ /**! __CODEPLACEHOLDER_END__ */
 if(!self.__appxInited) {
 self.__appxInited = 1;
 
 
 require('./config$');
-
+require('./importScripts$');
 
       function getUserAgentInPlatformWeb() {
         return typeof navigator !== 'undefined' ? navigator.swuserAgent || navigator.userAgent || '' : '';
@@ -86,9 +87,9 @@ require('../../pages/category/category?hash=132dec136945b3b0a66fc76febf44a6e21f0
 require('../../pages/search/search?hash=ef4fb84887010afe7b7bb71b7080a3b22dd7a410');
 require('../../pages/order/order?hash=a2528adc7fb10265c840f8e051b5adb5432bd218');
 require('../../pages/my-ticket/my-ticket?hash=d6b8fa15a17672571e95a1bb0f53f7d98c60308b');
-require('../../pages/home/home?hash=7ce3d2799c65128e52db7a63e9cccc4c7c4b031a');
+require('../../pages/home/home?hash=53fee496b801592e1dd9615bcaad303e87962805');
 require('../../pages/card/card?hash=77ebc7dcfebe464a4c1ca5015b7f23324f3cb7ba');
-require('../../pages/business/business?hash=0f0839496ebbe0d9cf567b4bbcec9f0e23ae1f2a');
+require('../../pages/business/business?hash=2b2bc03efc09910c562e8f634b2b41f4c9d5c14e');
 require('../../pages/my-setting/my-setting?hash=e8d9165148084b5197ce4ba4fb3222f7e3756919');
 require('../../pages/my-comment/my-comment?hash=2d07ca871cd851f39d56985d64b7fe24a682606a');
 require('../../pages/my-collection/my-collection?hash=5e997e0f2af536b7d695e874e98cc0d48d6ea05e');

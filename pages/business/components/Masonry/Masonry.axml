@@ -48,7 +48,7 @@
               <view class="masonry-item__price-logo" style="space=ensp;">¥ {{item.price}}</view>
         
            
-          <image mode="scaleToFill" catchTap="addtoShoppingcar" data-id="{{item.price}}"
+          <image mode="scaleToFill" catchTap="addtoShoppingcar" data-id="{{index}}"
             src="../../../../asserts/icon/purchase.png"
             style="width: 50rpx;height:50rpx;float:right;"
           />
