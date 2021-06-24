@@ -109,6 +109,18 @@ Page({
       .catch(console.error);
       // console.log("test",this.commodities);
     // this.onAddSellerInfo()
+
+    if(options.reorder=="true")
+    {
+      var order = my.getStorageSync({ key: 'order' }).data
+      console.log("hello")
+      console.log(parseInt(order.sum))
+      this.data.cost = parseInt(order.sum)
+      this.data.orderInfo.commodity = order.commodity
+      this.data.orderInfo.commodity.forEach(each=>{
+        each.commented = false
+      })
+    }
   },
   onShow() {
     
@@ -159,6 +171,7 @@ Page({
         
         this.data.orderInfo.time = year+"-"+month+"-"+date+" "+hour+":"+minute;
         this.data.orderInfo.total = this.data.orderInfo.commodity.length;
+        this.data.orderInfo.sum = this.data.cost + ".00";
         console.log(this.data.orderInfo)
 
         

@@ -197,9 +197,14 @@ Page({
       showBottom: true,
     });
   },
-  onOneMoreOrder(){
+  onOneMoreOrder(event){
+    var oid = this.data.selectedOrder = event.target.dataset.orderId;
+    console.log(oid)
+    console.log(this.data.orderList[parseInt(oid)])
+    var seller_id = this.data.orderList[parseInt(oid)].seller_id
+    my.setStorageSync({ key: 'order', data: this.data.orderList[parseInt(oid)] })
     my.navigateTo({
-              url: '/pages/business/business',
+              url: '/pages/business/business?id='+seller_id+'&reorder=true'
           })
   },
   onPopupClose() {
