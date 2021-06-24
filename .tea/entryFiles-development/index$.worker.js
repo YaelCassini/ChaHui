@@ -1,10 +1,9 @@
-/**! __CODEPLACEHOLDER_START__ */ /*[PositionForHostEntryCodeBegin]*/ /**! __CODEPLACEHOLDER_END__ */
 if(!self.__appxInited) {
 self.__appxInited = 1;
 
 
 require('./config$');
-require('./importScripts$');
+
 
       function getUserAgentInPlatformWeb() {
         return typeof navigator !== 'undefined' ? navigator.swuserAgent || navigator.userAgent || '' : '';

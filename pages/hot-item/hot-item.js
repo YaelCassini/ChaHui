@@ -74,6 +74,42 @@ Page({
   },
   onActiveTabChange(id) {
     this.setData({ activeTabId: id });
+    if(this.data.activeTabId==0)
+    {
+      my.serverless.db.collection('wish').find()
+      .then(res => {
+        console.log(res.result)
+        this.setData({["commodities"]:res.result})
+      })
+      .catch(console.error);
+    }
+    else if(this.data.activeTabId==1)
+    {
+      my.serverless.db.collection('wish').find({},{sort: {salePerMonth: -1}})
+      .then(res => {
+        console.log(res.result)
+        this.setData({["commodities"]:res.result})
+      })
+      .catch(console.error);
+    }
+    else if(this.data.activeTabId==2)
+    {
+      my.serverless.db.collection('wish').find({},{sort: {score: -1}})
+      .then(res => {
+        console.log(res.result)
+        this.setData({["commodities"]:res.result})
+      })
+      .catch(console.error);
+    }
+    else if(this.data.activeTabId==3)
+    {
+      my.serverless.db.collection('wish').find({seller_id: 1},{})
+      .then(res => {
+        console.log(res.result)
+        this.setData({["commodities"]:res.result})
+      })
+      .catch(console.error);
+    }
     // this.fetchCurrentCommodities(id);
   },
 
